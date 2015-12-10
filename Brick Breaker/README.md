@@ -7,3 +7,10 @@
 <b> <-- Game Over --> </b> <br>
 <img src="./images/LoseScene.gif"> 
 </p>
+
+---
+### TO-DO List
+
+- Add landscape support
+- Optimize the tiles arrangement for different screen resolution
+- Create more effects
