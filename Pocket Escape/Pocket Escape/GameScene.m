@@ -56,7 +56,8 @@
 }
 
 - (void) addPokemon {
-    self.pokemon = [SKSpriteNode spriteNodeWithImageNamed:@"Pokemon-0"];
+    NSString* pname = [NSString stringWithFormat:@"Pokemon-%d", randomize(0, 7)];
+    self.pokemon = [SKSpriteNode spriteNodeWithImageNamed:pname];
     [self setSpriteScale:self.pokemon To:0.4];
     self.pokemon.position    = CGPointMake(50, CGRectGetMidY(self.frame));
     self.pokemon.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius: self.pokemon.frame.size.width / 5];
@@ -74,9 +75,8 @@
 }
 
 - (void) addPocket {
-    CGFloat rand = [self randomFrom:0.01 To:0.98];
-    int select = rand > 0.5 ? 1 : 2;
-    NSString* pname = [NSString stringWithFormat:@"Pocket-%d", select];
+    CGFloat rand = [self randomFrom:0.01 To:0.95];
+    NSString* pname = [NSString stringWithFormat:@"Pocket-%d", randomize(1, 2)];
     SKSpriteNode* pocket = [SKSpriteNode spriteNodeWithImageNamed:pname];
     [self setSpriteScale:pocket To:0.3];
     pocket.name        = @"pocket";
@@ -195,10 +195,17 @@
     return [self random] * (max - min) + min;
 }
 
-//TODO: Generate an integer between start and end, inclusive.
-- (int) randomIntFrom: (int) start To: (int) end {
-    int res = 0;
-    return res;
+/**
+ *  generate a integer between start and end, inclusive
+ *
+ *  @param start
+ *  @param end
+ *
+ *  @return result integer
+ */
+int randomize(int start, int end) {
+    int n = end - start + 1;
+    return arc4random_uniform(n) + start;
 }
 
 /**
