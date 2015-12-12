@@ -7,7 +7,7 @@
 //
 
 #import <SpriteKit/SpriteKit.h>
-
+#import "GameScene.h"
 @interface GameStartScene : SKScene
 
 @end

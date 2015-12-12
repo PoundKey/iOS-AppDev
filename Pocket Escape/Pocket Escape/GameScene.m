@@ -13,7 +13,6 @@
 @property (nonatomic) GameEndScene* endScene;
 @end
 
-
 @implementation GameScene {
     
     @private
@@ -21,8 +20,8 @@
     CFTimeInterval prevTime;
     CFTimeInterval elapsedTime;
     SKAction* jumpSFX;
-    SKAction* collideSFX;
-    SKAction* bgmSFX;
+    AVAudioPlayer* bgmSFX;
+    
 }
 
 -(void)didMoveToView:(SKView *)view {
@@ -44,8 +43,10 @@
 
 - (void) initScene {
     frameSize = self.view.frame.size;
-    [self setBGImage:@"bg1" toScene:self];
+    NSString* bgImage = [NSString stringWithFormat:@"bg%d", randomize(0, 4)];
+    [self setBGImage:bgImage toScene:self];
     [self setSFX];
+    [self playBackgroundMusic];
     self.endScene = [GameEndScene sceneWithSize:self.view.frame.size];
     prevTime = 0.0;
     self.physicsBody                  = [SKPhysicsBody bodyWithEdgeLoopFromRect:self.frame];
@@ -56,8 +57,7 @@
 }
 
 - (void) addPokemon {
-    NSString* pname = [NSString stringWithFormat:@"Pokemon-%d", randomize(0, 7)];
-    self.pokemon = [SKSpriteNode spriteNodeWithImageNamed:pname];
+    self.pokemon = [SKSpriteNode spriteNodeWithImageNamed:self.selectedPokemon];
     [self setSpriteScale:self.pokemon To:0.4];
     self.pokemon.position    = CGPointMake(50, CGRectGetMidY(self.frame));
     self.pokemon.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius: self.pokemon.frame.size.width / 5];
@@ -69,7 +69,7 @@
 }
 
 - (void) jumpPokemon {
-    CGVector impluse = CGVectorMake(0.0, 36.0);
+    CGVector impluse = CGVectorMake(0.0, 28.0);
     [self runAction:jumpSFX];
     [self.pokemon.physicsBody applyImpulse:impluse];
 }
@@ -127,7 +127,15 @@
 
 -(void) setSFX {
     jumpSFX = [SKAction playSoundFileNamed:@"Sound/jump2" waitForCompletion:NO];
-    //brickSFX = [SKAction playSoundFileNamed:@"Sound/brickhit" waitForCompletion:NO];
+}
+
+- (void) playBackgroundMusic {
+    NSURL* url = [[NSBundle mainBundle] URLForResource:@"Sound/BGM" withExtension:@"mp3"];
+    bgmSFX = [[AVAudioPlayer alloc] initWithContentsOfURL:(NSURL *)url fileTypeHint:@"mp3" error:nil];
+    bgmSFX.numberOfLoops = -1;
+    bgmSFX.volume = 0.3;
+    [bgmSFX prepareToPlay];
+    [bgmSFX play];
 }
 
 - (void)didBeginContact:(SKPhysicsContact *)contact {
@@ -151,10 +159,12 @@
 }
 
 - (void) endGame: (BOOL) record {
-    NSString* bgImage = @"bg3";
+    [bgmSFX stop];
+    NSString* bgImage = @"bgEnd";
     [self setBGImage:bgImage toScene:self.endScene];
     [self.endScene setTimer:elapsedTime];
     [self.endScene setIsRecord:record];
+    [self.endScene setSelectedPokemon:self.selectedPokemon];
     [self removeAllActions];
     [self removeAllChildren];
     [self.view presentScene:self.endScene transition:[SKTransition doorsCloseHorizontalWithDuration:0.8]];
