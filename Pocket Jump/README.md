@@ -1,4 +1,4 @@
-## iOS SpriteKit: Brick Breaker
+## iOS SpriteKit: Pocket Jump
 <p align="center">
 <b> <-- Game Start --> </b> <br>
 <img src="./images/GameStart.gif"> <br> <br>
@@ -9,7 +9,7 @@
 </p>
 
 ---
-### TO-DO List
+### TO-DOs List
 
 - Add more pokemons
 - Create more effects to pokemon and pockets (e.g. jumping, particle emitter)
