@@ -43,6 +43,7 @@
     SKLabelNode* main = [self getLabelWithFront:@"Futura Medium" fontSize:18 fontColor:[SKColor whiteColor]];
     main.text = @"<< Main Menu";
     main.name = @"main";
+    main.zPosition = 3;
     main.position = CGPointMake(75, self.frame.size.height - 40);
     [self addChild:main];
 }

@@ -44,7 +44,7 @@
 - (void) initScene {
     [self setBGImage: @"bgStart" toScene:self];
     clickSFX = [SKAction playSoundFileNamed:@"Sound/click" waitForCompletion:NO];
-    totalPokemon = 8;
+    totalPokemon = 12;
     pokemon = 0;
 }
 

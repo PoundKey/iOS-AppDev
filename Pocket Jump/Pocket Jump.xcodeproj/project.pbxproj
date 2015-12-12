@@ -37,7 +37,7 @@
 		766B8D9F1C1BA63500F71861 /* GameStartScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameStartScene.m; sourceTree = "<group>"; };
 		76AB16DF1C1A36D300D02970 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		76D0D4211C1A323000D42D87 /* Sound */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Sound; sourceTree = "<group>"; };
-		76E9920E1C1A315D007B277C /* Pocket Escape.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pocket Escape.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		76E9920E1C1A315D007B277C /* Pocket Jump.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pocket Jump.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		76E992121C1A315D007B277C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		76E992141C1A315D007B277C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		76E992151C1A315D007B277C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -48,7 +48,7 @@
 		76E992201C1A315D007B277C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		76E992251C1A315D007B277C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		76E992271C1A315D007B277C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		76E9922C1C1A315D007B277C /* Pocket EscapeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pocket EscapeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		76E9922C1C1A315D007B277C /* Pocket Jump.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pocket Jump.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		76E992301C1A315D007B277C /* Pocket_EscapeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Pocket_EscapeTests.m; sourceTree = "<group>"; };
 		76E992321C1A315D007B277C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -83,8 +83,8 @@
 		76E9920F1C1A315D007B277C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				76E9920E1C1A315D007B277C /* Pocket Escape.app */,
-				76E9922C1C1A315D007B277C /* Pocket EscapeTests.xctest */,
+				76E9920E1C1A315D007B277C /* Pocket Jump.app */,
+				76E9922C1C1A315D007B277C /* Pocket Jump.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -132,9 +132,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		76E9920D1C1A315D007B277C /* Pocket Escape */ = {
+		76E9920D1C1A315D007B277C /* Pocket Jump */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 76E992351C1A315D007B277C /* Build configuration list for PBXNativeTarget "Pocket Escape" */;
+			buildConfigurationList = 76E992351C1A315D007B277C /* Build configuration list for PBXNativeTarget "Pocket Jump" */;
 			buildPhases = (
 				76E9920A1C1A315D007B277C /* Sources */,
 				76E9920B1C1A315D007B277C /* Frameworks */,
@@ -144,14 +144,14 @@
 			);
 			dependencies = (
 			);
-			name = "Pocket Escape";
+			name = "Pocket Jump";
 			productName = "Pocket Escape";
-			productReference = 76E9920E1C1A315D007B277C /* Pocket Escape.app */;
+			productReference = 76E9920E1C1A315D007B277C /* Pocket Jump.app */;
 			productType = "com.apple.product-type.application";
 		};
-		76E9922B1C1A315D007B277C /* Pocket EscapeTests */ = {
+		76E9922B1C1A315D007B277C /* Pocket JumpTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 76E992381C1A315D007B277C /* Build configuration list for PBXNativeTarget "Pocket EscapeTests" */;
+			buildConfigurationList = 76E992381C1A315D007B277C /* Build configuration list for PBXNativeTarget "Pocket JumpTests" */;
 			buildPhases = (
 				76E992281C1A315D007B277C /* Sources */,
 				76E992291C1A315D007B277C /* Frameworks */,
@@ -162,9 +162,9 @@
 			dependencies = (
 				76E9922E1C1A315D007B277C /* PBXTargetDependency */,
 			);
-			name = "Pocket EscapeTests";
+			name = "Pocket JumpTests";
 			productName = "Pocket EscapeTests";
-			productReference = 76E9922C1C1A315D007B277C /* Pocket EscapeTests.xctest */;
+			productReference = 76E9922C1C1A315D007B277C /* Pocket Jump.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -187,7 +187,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 76E992091C1A315D007B277C /* Build configuration list for PBXProject "Pocket Escape" */;
+			buildConfigurationList = 76E992091C1A315D007B277C /* Build configuration list for PBXProject "Pocket Jump" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -200,8 +200,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				76E9920D1C1A315D007B277C /* Pocket Escape */,
-				76E9922B1C1A315D007B277C /* Pocket EscapeTests */,
+				76E9920D1C1A315D007B277C /* Pocket Jump */,
+				76E9922B1C1A315D007B277C /* Pocket JumpTests */,
 			);
 		};
 /* End PBXProject section */
@@ -254,7 +254,7 @@
 /* Begin PBXTargetDependency section */
 		76E9922E1C1A315D007B277C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 76E9920D1C1A315D007B277C /* Pocket Escape */;
+			target = 76E9920D1C1A315D007B277C /* Pocket Jump */;
 			targetProxy = 76E9922D1C1A315D007B277C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -367,7 +367,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dyl.herokuapp.Pocket-Escape";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Pocket Jump";
 			};
 			name = Debug;
 		};
@@ -379,7 +379,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dyl.herokuapp.Pocket-Escape";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Pocket Jump";
 			};
 			name = Release;
 		};
@@ -391,8 +391,8 @@
 				INFOPLIST_FILE = "Pocket EscapeTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dyl.herokuapp.Pocket-EscapeTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pocket Escape.app/Pocket Escape";
+				PRODUCT_NAME = "Pocket Jump";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pocket Jump.app/Pocket Jump";
 			};
 			name = Debug;
 		};
@@ -403,15 +403,15 @@
 				INFOPLIST_FILE = "Pocket EscapeTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dyl.herokuapp.Pocket-EscapeTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pocket Escape.app/Pocket Escape";
+				PRODUCT_NAME = "Pocket Jump";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pocket Jump.app/Pocket Jump";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		76E992091C1A315D007B277C /* Build configuration list for PBXProject "Pocket Escape" */ = {
+		76E992091C1A315D007B277C /* Build configuration list for PBXProject "Pocket Jump" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				76E992331C1A315D007B277C /* Debug */,
@@ -420,7 +420,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		76E992351C1A315D007B277C /* Build configuration list for PBXNativeTarget "Pocket Escape" */ = {
+		76E992351C1A315D007B277C /* Build configuration list for PBXNativeTarget "Pocket Jump" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				76E992361C1A315D007B277C /* Debug */,
@@ -429,7 +429,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		76E992381C1A315D007B277C /* Build configuration list for PBXNativeTarget "Pocket EscapeTests" */ = {
+		76E992381C1A315D007B277C /* Build configuration list for PBXNativeTarget "Pocket JumpTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				76E992391C1A315D007B277C /* Debug */,
