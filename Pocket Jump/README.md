@@ -3,7 +3,8 @@
 <b> <-- Game Start --> </b> <br>
 <img src="./images/GameStart.gif"> <br> <br>
 <b> <-- Game Play --> </b> <br>
-<img src="./images/GamePlay.gif"> <br> <br>
+<img src="./images/GamePlay.gif"> <br>
+<img src="./images/GamePlay2.gif"> <br> <br>
 <b> <-- Game End --> </b> <br>
 <img src="./images/GameEnd.gif"> 
 </p>
