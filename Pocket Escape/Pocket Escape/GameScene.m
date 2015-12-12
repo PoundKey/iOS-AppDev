@@ -20,6 +20,9 @@
     CGSize frameSize;
     CFTimeInterval prevTime;
     CFTimeInterval elapsedTime;
+    SKAction* jumpSFX;
+    SKAction* collideSFX;
+    SKAction* bgmSFX;
 }
 
 -(void)didMoveToView:(SKView *)view {
@@ -42,6 +45,7 @@
 - (void) initScene {
     frameSize = self.view.frame.size;
     [self setBGImage:@"bg1" toScene:self];
+    [self setSFX];
     self.endScene = [GameEndScene sceneWithSize:self.view.frame.size];
     prevTime = 0.0;
     self.physicsBody                  = [SKPhysicsBody bodyWithEdgeLoopFromRect:self.frame];
@@ -52,11 +56,10 @@
 }
 
 - (void) addPokemon {
-    self.pokemon = [SKSpriteNode spriteNodeWithImageNamed:@"Pokemon_1"];
+    self.pokemon = [SKSpriteNode spriteNodeWithImageNamed:@"Pokemon-0"];
     [self setSpriteScale:self.pokemon To:0.4];
-    self.pokemon.name        = @"pokemon";
     self.pokemon.position    = CGPointMake(50, CGRectGetMidY(self.frame));
-    self.pokemon.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius: self.pokemon.frame.size.width / 4];
+    self.pokemon.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius: self.pokemon.frame.size.width / 5];
     self.pokemon.physicsBody.categoryBitMask    = pokemonCategory;
     self.pokemon.physicsBody.collisionBitMask   = edgeCategory;
     self.pokemon.physicsBody.contactTestBitMask = pocketCategory;
@@ -66,15 +69,19 @@
 
 - (void) jumpPokemon {
     CGVector impluse = CGVectorMake(0.0, 36.0);
+    [self runAction:jumpSFX];
     [self.pokemon.physicsBody applyImpulse:impluse];
 }
 
 - (void) addPocket {
-    SKSpriteNode* pocket = [SKSpriteNode spriteNodeWithImageNamed:@"Pocket"];
+    CGFloat rand = [self randomFrom:0.01 To:0.98];
+    int select = rand > 0.5 ? 1 : 2;
+    NSString* pname = [NSString stringWithFormat:@"Pocket-%d", select];
+    SKSpriteNode* pocket = [SKSpriteNode spriteNodeWithImageNamed:pname];
     [self setSpriteScale:pocket To:0.3];
     pocket.name        = @"pocket";
-    pocket.position    = CGPointMake(frameSize.width + pocket.size.width / 2, frameSize.height * [self randomFrom:0.03 To:0.95]);
-    pocket.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius: self.pokemon.frame.size.width / 6];
+    pocket.position    = CGPointMake(frameSize.width + pocket.size.width / 2, frameSize.height * rand);
+    pocket.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius: self.pokemon.frame.size.width / 8];
     pocket.physicsBody.categoryBitMask    = pocketCategory;
     pocket.physicsBody.collisionBitMask   = leftEdgeCategory;
     pocket.physicsBody.contactTestBitMask = pokemonCategory | leftEdgeCategory;
@@ -116,6 +123,11 @@
 - (void) setSpriteScale: (SKSpriteNode*) sprite To: (float) scale {
     sprite.xScale = scale;
     sprite.yScale = scale;
+}
+
+-(void) setSFX {
+    jumpSFX = [SKAction playSoundFileNamed:@"Sound/jump2" waitForCompletion:NO];
+    //brickSFX = [SKAction playSoundFileNamed:@"Sound/brickhit" waitForCompletion:NO];
 }
 
 - (void)didBeginContact:(SKPhysicsContact *)contact {
@@ -181,6 +193,12 @@
  */
 - (CGFloat) randomFrom: (float) min To: (float) max {
     return [self random] * (max - min) + min;
+}
+
+//TODO: Generate an integer between start and end, inclusive.
+- (int) randomIntFrom: (int) start To: (int) end {
+    int res = 0;
+    return res;
 }
 
 /**
