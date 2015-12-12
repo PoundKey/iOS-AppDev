@@ -18,6 +18,8 @@
     // Configure the view.
     SKView * skView = (SKView *)self.view;
     /* Sprite Kit applies additional optimizations to improve rendering performance */
+    skView.showsFPS = YES;
+    skView.showsNodeCount = YES;
     skView.showsPhysics  = YES;
     skView.ignoresSiblingOrder = YES;
     
@@ -46,7 +48,7 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Release any cached data, images, etc that aren't in use.
+    NSLog(@"Memory Warning Triggered... 3..2..1");
 }
 
 - (BOOL)prefersStatusBarHidden {

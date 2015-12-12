@@ -10,7 +10,7 @@
 
 @interface GameScene()
 @property (nonatomic) SKSpriteNode* pokemon;
-
+@property (nonatomic) GameEndScene* endScene;
 @end
 
 
@@ -24,6 +24,7 @@
 
 -(void)didMoveToView:(SKView *)view {
     [self initScene];
+    [self addLeftEdge];
     [self addPokemon];
     [self spawnPockets];
 
@@ -40,6 +41,9 @@
 
 - (void) initScene {
     frameSize = self.view.frame.size;
+    [self setBGImage:@"bg1" toScene:self];
+    self.endScene = [GameEndScene sceneWithSize:self.view.frame.size];
+    prevTime = 0.0;
     self.physicsBody                  = [SKPhysicsBody bodyWithEdgeLoopFromRect:self.frame];
     self.physicsBody.categoryBitMask  = edgeCategory;
     self.physicsWorld.gravity         = CGVectorMake(0, -3.2);
@@ -55,7 +59,7 @@
     self.pokemon.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius: self.pokemon.frame.size.width / 4];
     self.pokemon.physicsBody.categoryBitMask    = pokemonCategory;
     self.pokemon.physicsBody.collisionBitMask   = edgeCategory;
-    self.pokemon.physicsBody.contactTestBitMask = pokemonCategory;
+    self.pokemon.physicsBody.contactTestBitMask = pocketCategory;
     self.pokemon.physicsBody.allowsRotation     = NO;
     [self addChild:self.pokemon];
 }
@@ -72,13 +76,13 @@
     pocket.position    = CGPointMake(frameSize.width + pocket.size.width / 2, frameSize.height * [self randomFrom:0.03 To:0.95]);
     pocket.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius: self.pokemon.frame.size.width / 6];
     pocket.physicsBody.categoryBitMask    = pocketCategory;
-    pocket.physicsBody.collisionBitMask   = 0;
-    pocket.physicsBody.contactTestBitMask = pokemonCategory;
-    pocket.physicsBody.dynamic            = NO;
+    pocket.physicsBody.collisionBitMask   = leftEdgeCategory;
+    pocket.physicsBody.contactTestBitMask = pokemonCategory | leftEdgeCategory;
+    pocket.physicsBody.dynamic            = YES;
     pocket.physicsBody.affectedByGravity  = NO;
     [self addChild:pocket];
     
-    SKAction* movePocket = [SKAction moveByX:-frameSize.width - pocket.size.width y: 0.0
+    SKAction* movePocket = [SKAction moveByX:-frameSize.width - 2 * pocket.size.width y: 0.0
                                     duration: (NSTimeInterval) 10 * [self randomFrom:0.1 To:1.0]];
     [pocket runAction:movePocket];
 }
@@ -90,6 +94,17 @@
     [self runAction:[SKAction repeatActionForever:seq]];
 }
 
+- (void) addLeftEdge {
+    SKNode* leftEdge = [SKNode node];
+    CGPoint bottomLeft = CGPointMake(-20, 0);
+    CGPoint topLeft = CGPointMake(-20, frameSize.height);
+    leftEdge.physicsBody = [SKPhysicsBody bodyWithEdgeFromPoint:bottomLeft toPoint:topLeft];
+    leftEdge.physicsBody.categoryBitMask    = leftEdgeCategory;
+    leftEdge.physicsBody.collisionBitMask   = pocketCategory;
+    leftEdge.physicsBody.contactTestBitMask = pocketCategory;
+    [self addChild:leftEdge];
+}
+
 - (void) setBGImage: (NSString*) image toScene: (SKNode*) scene {
     SKSpriteNode* background = [SKSpriteNode spriteNodeWithImageNamed:image];
     background.size          = scene.frame.size;
@@ -98,24 +113,59 @@
     [scene addChild:background];
 }
 
-- (void) setLabel {
-    SKLabelNode *myLabel = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
-    myLabel.text     = @"Hello, World!";
-    myLabel.fontSize = 45;
-    myLabel.position = CGPointMake(CGRectGetMidX(self.frame),
-                                   CGRectGetMidY(self.frame));
-    [self addChild:myLabel];
-}
-
 - (void) setSpriteScale: (SKSpriteNode*) sprite To: (float) scale {
     sprite.xScale = scale;
     sprite.yScale = scale;
 }
 
 - (void)didBeginContact:(SKPhysicsContact *)contact {
-    
+    SKPhysicsBody* first  = contact.bodyA.categoryBitMask > contact.bodyB.categoryBitMask ?
+                            contact.bodyA : contact.bodyB; // return the SKNode with larger category
+    SKPhysicsBody* second = contact.bodyA.categoryBitMask > contact.bodyB.categoryBitMask ?
+                            contact.bodyB : contact.bodyA; // return the SKnode with smaller category
+    BOOL record;
+    switch (first.categoryBitMask) {
+        case pokemonCategory:
+            // RUNSFX
+            record = [self setRecord:elapsedTime];
+            [self endGame: record];
+            break;
+        case leftEdgeCategory:
+            [second.node removeFromParent];
+            break;
+        default:
+            break;
+    }
 }
 
+- (void) endGame: (BOOL) record {
+    NSString* bgImage = @"bg3";
+    [self setBGImage:bgImage toScene:self.endScene];
+    [self.endScene setTimer:elapsedTime];
+    [self.endScene setIsRecord:record];
+    [self removeAllActions];
+    [self removeAllChildren];
+    [self.view presentScene:self.endScene transition:[SKTransition doorsCloseHorizontalWithDuration:0.8]];
+}
+
+/**
+ *  Set record for the longest survival time.
+ */
+- (BOOL) setRecord: (float) result {
+    NSUserDefaults *def = [NSUserDefaults standardUserDefaults];
+    float record = [def floatForKey:@"record"];
+    if (record) {
+        if (result > record) {
+            [def setFloat:result forKey:@"record"];
+            return YES;
+        } else {
+            return NO;
+        }
+    } else {
+        [def setFloat:result forKey:@"record"];
+        return YES;
+    }
+}
 
 /**
  *  Returns a float value between 0 and 1
@@ -137,10 +187,11 @@
  Define the contactBody Bitmask
  */
 typedef NS_OPTIONS(int32_t, contactBodyCategory) {
-    edgeCategory     = 0x1,
-    pokemonCategory  = 0x1 << 1,
-    pocketCategory   = 0x1 << 2,
-    leftEdgeCategory = 0x1 << 3
+    pocketCategory   = 0x1,
+    edgeCategory     = 0x1 << 1,
+    leftEdgeCategory = 0x1 << 2,
+    pokemonCategory  = 0x1 << 3,
+    
 };
 
 @end

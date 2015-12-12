@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		766B8D9D1C1B987C00F71861 /* GameEndScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 766B8D9C1C1B987C00F71861 /* GameEndScene.m */; };
+		766B8DA01C1BA63500F71861 /* GameStartScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 766B8D9F1C1BA63500F71861 /* GameStartScene.m */; };
 		76AB16E01C1A36D300D02970 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76AB16DF1C1A36D300D02970 /* Assets.xcassets */; };
 		76D0D4221C1A323000D42D87 /* Sound in Resources */ = {isa = PBXBuildFile; fileRef = 76D0D4211C1A323000D42D87 /* Sound */; };
 		76E992131C1A315D007B277C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E992121C1A315D007B277C /* main.m */; };
@@ -29,6 +31,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		766B8D9B1C1B987C00F71861 /* GameEndScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameEndScene.h; sourceTree = "<group>"; };
+		766B8D9C1C1B987C00F71861 /* GameEndScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameEndScene.m; sourceTree = "<group>"; };
+		766B8D9E1C1BA63500F71861 /* GameStartScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameStartScene.h; sourceTree = "<group>"; };
+		766B8D9F1C1BA63500F71861 /* GameStartScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameStartScene.m; sourceTree = "<group>"; };
 		76AB16DF1C1A36D300D02970 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		76D0D4211C1A323000D42D87 /* Sound */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Sound; sourceTree = "<group>"; };
 		76E9920E1C1A315D007B277C /* Pocket Escape.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pocket Escape.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,6 +94,10 @@
 			children = (
 				76E992141C1A315D007B277C /* AppDelegate.h */,
 				76E992151C1A315D007B277C /* AppDelegate.m */,
+				766B8D9E1C1BA63500F71861 /* GameStartScene.h */,
+				766B8D9F1C1BA63500F71861 /* GameStartScene.m */,
+				766B8D9B1C1B987C00F71861 /* GameEndScene.h */,
+				766B8D9C1C1B987C00F71861 /* GameEndScene.m */,
 				76E992171C1A315D007B277C /* GameScene.h */,
 				76E992181C1A315D007B277C /* GameScene.m */,
 				76D0D4211C1A323000D42D87 /* Sound */,
@@ -226,6 +236,8 @@
 				76E992161C1A315D007B277C /* AppDelegate.m in Sources */,
 				76E992191C1A315D007B277C /* GameScene.m in Sources */,
 				76E992131C1A315D007B277C /* main.m in Sources */,
+				766B8D9D1C1B987C00F71861 /* GameEndScene.m in Sources */,
+				766B8DA01C1BA63500F71861 /* GameStartScene.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
