@@ -73,10 +73,10 @@
     rightSwitch.name = @"rightSwitch";
     leftSwitch.name = @"leftSwitch";
     CGPoint mid = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame));
-    rightSwitch.position = CGPointMake(mid.x + 160, mid.y);
-    leftSwitch.position = CGPointMake(mid.x - 160, mid.y);
-    [self setSpriteScale:rightSwitch To:0.5];
-    [self setSpriteScale:leftSwitch To:0.5];
+    rightSwitch.position = CGPointMake(mid.x + 165, mid.y);
+    leftSwitch.position = CGPointMake(mid.x - 165, mid.y);
+    [self setSpriteScale:rightSwitch To:0.6];
+    [self setSpriteScale:leftSwitch To:0.6];
     [self addChild:rightSwitch];
     [self addChild:leftSwitch];
 }

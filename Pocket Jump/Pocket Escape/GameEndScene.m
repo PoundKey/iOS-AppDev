@@ -30,7 +30,7 @@
 }
 
 - (void)addRestartLabel {
-    SKLabelNode* restart = [self getLabelWithFront:@"Chalkduster" fontSize:30 fontColor:[SKColor whiteColor]];
+    SKLabelNode* restart = [self getLabelWithFront:@"Chalkduster" fontSize:36 fontColor:[SKColor whiteColor]];
     restart.text = @"Restart";
     restart.name = @"restart";
     restart.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame));
@@ -51,7 +51,7 @@
 - (void) addTimerLabel {
     SKLabelNode* timer = [self getLabelWithFront:@"Futura Medium Italic" fontSize:15 fontColor:[SKColor whiteColor]];
     timer.text = [NSString stringWithFormat:@"Time Survived: %.02f Seconds", self.timer];
-    timer.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame) - 30);
+    timer.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame) - 36);
     [self addChild:timer];
 }
 
@@ -59,7 +59,7 @@
     if (self.isRecord) {
         SKLabelNode* highlight = [self getLabelWithFront:@"Futura Medium" fontSize:12 fontColor:[SKColor whiteColor]];
         highlight.text = @"(Congratulations, you reached a new record!)";
-        highlight.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame) - 45);
+        highlight.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame) - 50);
         [self addChild:highlight];
     }
 }

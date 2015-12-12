@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		766B8D9D1C1B987C00F71861 /* GameEndScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 766B8D9C1C1B987C00F71861 /* GameEndScene.m */; };
 		766B8DA01C1BA63500F71861 /* GameStartScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 766B8D9F1C1BA63500F71861 /* GameStartScene.m */; };
+		766B8DA31C1CB47D00F71861 /* Fire.sks in Resources */ = {isa = PBXBuildFile; fileRef = 766B8DA11C1CB47D00F71861 /* Fire.sks */; };
+		766B8DA41C1CB47D00F71861 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 766B8DA21C1CB47D00F71861 /* spark.png */; };
 		76AB16E01C1A36D300D02970 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76AB16DF1C1A36D300D02970 /* Assets.xcassets */; };
 		76D0D4221C1A323000D42D87 /* Sound in Resources */ = {isa = PBXBuildFile; fileRef = 76D0D4211C1A323000D42D87 /* Sound */; };
 		76E992131C1A315D007B277C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E992121C1A315D007B277C /* main.m */; };
@@ -35,6 +37,8 @@
 		766B8D9C1C1B987C00F71861 /* GameEndScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameEndScene.m; sourceTree = "<group>"; };
 		766B8D9E1C1BA63500F71861 /* GameStartScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameStartScene.h; sourceTree = "<group>"; };
 		766B8D9F1C1BA63500F71861 /* GameStartScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameStartScene.m; sourceTree = "<group>"; };
+		766B8DA11C1CB47D00F71861 /* Fire.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Fire.sks; sourceTree = "<group>"; };
+		766B8DA21C1CB47D00F71861 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
 		76AB16DF1C1A36D300D02970 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		76D0D4211C1A323000D42D87 /* Sound */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Sound; sourceTree = "<group>"; };
 		76E9920E1C1A315D007B277C /* Pocket Jump.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pocket Jump.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -108,6 +112,8 @@
 				76E992241C1A315D007B277C /* LaunchScreen.storyboard */,
 				76E992271C1A315D007B277C /* Info.plist */,
 				76E992111C1A315D007B277C /* Supporting Files */,
+				766B8DA11C1CB47D00F71861 /* Fire.sks */,
+				766B8DA21C1CB47D00F71861 /* spark.png */,
 			);
 			path = "Pocket Escape";
 			sourceTree = "<group>";
@@ -212,9 +218,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				76E992261C1A315D007B277C /* LaunchScreen.storyboard in Resources */,
+				766B8DA41C1CB47D00F71861 /* spark.png in Resources */,
 				76D0D4221C1A323000D42D87 /* Sound in Resources */,
 				76AB16E01C1A36D300D02970 /* Assets.xcassets in Resources */,
 				76E992211C1A315D007B277C /* Main.storyboard in Resources */,
+				766B8DA31C1CB47D00F71861 /* Fire.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -18,9 +18,6 @@
     // Configure the view.
     SKView * skView = (SKView *)self.view;
     /* Sprite Kit applies additional optimizations to improve rendering performance */
-    skView.showsFPS = YES;
-    skView.showsNodeCount = YES;
-    skView.showsPhysics  = YES;
     skView.ignoresSiblingOrder = YES;
     
     // Create and configure the scene.

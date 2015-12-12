@@ -21,6 +21,7 @@
     CFTimeInterval elapsedTime;
     SKAction* jumpSFX;
     AVAudioPlayer* bgmSFX;
+    SKEmitterNode* emitter;
     
 }
 
@@ -58,7 +59,7 @@
 
 - (void) addPokemon {
     self.pokemon = [SKSpriteNode spriteNodeWithImageNamed:self.selectedPokemon];
-    [self setSpriteScale:self.pokemon To:0.4];
+    [self setSpriteScale:self.pokemon To:0.45];
     self.pokemon.position    = CGPointMake(50, CGRectGetMidY(self.frame));
     self.pokemon.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius: self.pokemon.frame.size.width / 5];
     self.pokemon.physicsBody.categoryBitMask    = pokemonCategory;
@@ -127,6 +128,11 @@
 
 -(void) setSFX {
     jumpSFX = [SKAction playSoundFileNamed:@"Sound/jump2" waitForCompletion:NO];
+}
+
+
+- (void) setEmitter {
+    emitter = [NSKeyedUnarchiver unarchiveObjectWithFile:[[NSBundle mainBundle] pathForResource:@"Fire" ofType:@"sks"]];
 }
 
 - (void) playBackgroundMusic {
