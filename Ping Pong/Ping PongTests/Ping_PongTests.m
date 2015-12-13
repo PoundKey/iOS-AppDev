@@ -1,18 +1,18 @@
 //
-//  Pocket_EscapeTests.m
-//  Pocket EscapeTests
+//  Ping_PongTests.m
+//  Ping PongTests
 //
-//  Created by Chang Tong Xue on 2015-12-10.
+//  Created by Chang Tong Xue on 2015-12-12.
 //  Copyright © 2015 DX. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>
 
-@interface Pocket_EscapeTests : XCTestCase
+@interface Ping_PongTests : XCTestCase
 
 @end
 
-@implementation Pocket_EscapeTests
+@implementation Ping_PongTests
 
 - (void)setUp {
     [super setUp];
