@@ -9,12 +9,14 @@
 #import "GameScene.h"
 
 @implementation GameScene {
+    AVAudioPlayer* _bgmSFX;
     CGSize _size;
     SKSpriteNode* _player1;
     SKSpriteNode* _player2;
     SKSpriteNode* _ball;
     int _player1Score;
     int _player2Score;
+    BOOL _initialState;
 }
 
 -(void)didMoveToView:(SKView *)view {
@@ -23,13 +25,7 @@
 }
 
 - (void) initScene {
-    /**
-    NSLog(@"self.view.frame.size.width: %f", self.view.frame.size.width);
-    NSLog(@"self.view.frame.size.height: %f", self.view.frame.size.height);
-    NSLog(@"self.frame.size.width: %f", self.frame.size.width);
-    NSLog(@"self.frame.size.height: %f", self.frame.size.height);
-     */
-    
+    //[self playBackgroundMusic];
     _size = self.frame.size;
     _ball    = (SKSpriteNode*)[self childNodeWithName:@"ball"];
     _player1 = (SKSpriteNode*)[self childNodeWithName:@"player1"];
@@ -40,6 +36,7 @@
     
     _player1Score = 0;
     _player2Score = 0;
+    _initialState = YES;
     
     _ball.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame));
     _player1.position = CGPointMake(CGRectGetMidX(self.frame), 124);
@@ -50,8 +47,6 @@
     setup.restitution = 1;
     self.physicsBody  = setup;
     self.physicsWorld.contactDelegate = self;
-    
-    [self fireBall];
     
 }
 
@@ -128,7 +123,10 @@
 }
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    // TODO: Fire the ball by player
+    if (_initialState) {
+        _initialState = NO;
+        [self fireBall];
+    }
 }
 
 -(void)didBeginContact:(SKPhysicsContact *)contact {
@@ -148,6 +146,14 @@
     /* Called before each frame is rendered */
 }
 
+- (void) playBackgroundMusic {
+    NSURL* url = [[NSBundle mainBundle] URLForResource:@"Sound/BGM" withExtension:@"mp3"];
+    _bgmSFX = [[AVAudioPlayer alloc] initWithContentsOfURL:(NSURL *)url fileTypeHint:@"mp3" error:nil];
+    _bgmSFX.numberOfLoops = -1;
+    _bgmSFX.volume = 0.3;
+    [_bgmSFX prepareToPlay];
+    [_bgmSFX play];
+}
 
 /**
  *  generate a integer between start and end, inclusive

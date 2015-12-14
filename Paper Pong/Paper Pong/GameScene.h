@@ -7,7 +7,7 @@
 //
 
 #import <SpriteKit/SpriteKit.h>
-
+#import <AVFoundation/AVAudioPlayer.h>
 @interface GameScene : SKScene <SKPhysicsContactDelegate>
 
 @end
