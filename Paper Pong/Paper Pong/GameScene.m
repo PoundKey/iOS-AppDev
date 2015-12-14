@@ -101,12 +101,30 @@
 }
 
 
-
 - (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     for (UITouch* touch in touches) {
-        //TODO: Move player1 and player2
+        CGPoint loc = [touch locationInNode:self];
+        SKNode* node = [self nodeAtPoint:loc];
+        
+        if ([node.name isEqualToString:@"paddle1"]) {
+            [self movePlayer:_player1 to:loc];
+        } else if ([node.name isEqualToString:@"paddle2"]) {
+            [self movePlayer:_player2 to:loc];
+        }
     }
+}
+
+- (void)movePlayer: (SKSpriteNode*)player to: (CGPoint) loc {
+    float leftBound = player.frame.size.width / 2;;
+    float rightBound = self.frame.size.width - leftBound;;
+    CGPoint newPos = CGPointMake(loc.x, player.position.y);
     
+    if (newPos.x < leftBound) {
+        newPos.x = leftBound;
+    } else if (newPos.x > rightBound) {
+        newPos.x = rightBound;
+    }
+    player.position = newPos;
 }
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
