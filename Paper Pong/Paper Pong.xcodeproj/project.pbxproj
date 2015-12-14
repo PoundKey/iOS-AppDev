@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		76039F991C1EB079006829F2 /* GameEndScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 76039F981C1EB079006829F2 /* GameEndScene.m */; };
+		768F61601C1EA862009FDB5B /* blip.caf in Resources */ = {isa = PBXBuildFile; fileRef = 768F615C1C1EA862009FDB5B /* blip.caf */; };
+		768F61611C1EA862009FDB5B /* brickhit.caf in Resources */ = {isa = PBXBuildFile; fileRef = 768F615D1C1EA862009FDB5B /* brickhit.caf */; };
+		768F61621C1EA862009FDB5B /* gameover.caf in Resources */ = {isa = PBXBuildFile; fileRef = 768F615E1C1EA862009FDB5B /* gameover.caf */; };
+		768F61631C1EA862009FDB5B /* win.caf in Resources */ = {isa = PBXBuildFile; fileRef = 768F615F1C1EA862009FDB5B /* win.caf */; };
+		768F61651C1EA9E0009FDB5B /* levelWin.wav in Resources */ = {isa = PBXBuildFile; fileRef = 768F61641C1EA9E0009FDB5B /* levelWin.wav */; };
+		768F61671C1EA9F4009FDB5B /* BGM.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 768F61661C1EA9F4009FDB5B /* BGM.mp3 */; };
 		769295671C1D83CA0092EB64 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 769295661C1D83CA0092EB64 /* main.m */; };
 		7692956A1C1D83CA0092EB64 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 769295691C1D83CA0092EB64 /* AppDelegate.m */; };
 		7692956D1C1D83CA0092EB64 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 7692956C1C1D83CA0092EB64 /* GameScene.m */; };
@@ -18,6 +25,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		76039F971C1EB079006829F2 /* GameEndScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameEndScene.h; sourceTree = "<group>"; };
+		76039F981C1EB079006829F2 /* GameEndScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameEndScene.m; sourceTree = "<group>"; };
+		768F615C1C1EA862009FDB5B /* blip.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = blip.caf; sourceTree = "<group>"; };
+		768F615D1C1EA862009FDB5B /* brickhit.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = brickhit.caf; sourceTree = "<group>"; };
+		768F615E1C1EA862009FDB5B /* gameover.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gameover.caf; sourceTree = "<group>"; };
+		768F615F1C1EA862009FDB5B /* win.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = win.caf; sourceTree = "<group>"; };
+		768F61641C1EA9E0009FDB5B /* levelWin.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = levelWin.wav; sourceTree = "<group>"; };
+		768F61661C1EA9F4009FDB5B /* BGM.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = BGM.mp3; sourceTree = "<group>"; };
 		769295621C1D83CA0092EB64 /* Paper Pong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Paper Pong.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		769295661C1D83CA0092EB64 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		769295681C1D83CA0092EB64 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -44,6 +59,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		768F615B1C1EA862009FDB5B /* Sound */ = {
+			isa = PBXGroup;
+			children = (
+				768F61661C1EA9F4009FDB5B /* BGM.mp3 */,
+				768F615C1C1EA862009FDB5B /* blip.caf */,
+				768F615D1C1EA862009FDB5B /* brickhit.caf */,
+				768F61641C1EA9E0009FDB5B /* levelWin.wav */,
+				768F615E1C1EA862009FDB5B /* gameover.caf */,
+				768F615F1C1EA862009FDB5B /* win.caf */,
+			);
+			path = Sound;
+			sourceTree = "<group>";
+		};
 		769295591C1D83CA0092EB64 = {
 			isa = PBXGroup;
 			children = (
@@ -68,6 +96,9 @@
 				7692956B1C1D83CA0092EB64 /* GameScene.h */,
 				7692956C1C1D83CA0092EB64 /* GameScene.m */,
 				7692956E1C1D83CA0092EB64 /* GameScene.sks */,
+				76039F971C1EB079006829F2 /* GameEndScene.h */,
+				76039F981C1EB079006829F2 /* GameEndScene.m */,
+				768F615B1C1EA862009FDB5B /* Sound */,
 				769295701C1D83CA0092EB64 /* GameViewController.h */,
 				769295711C1D83CA0092EB64 /* GameViewController.m */,
 				769295731C1D83CA0092EB64 /* Main.storyboard */,
@@ -147,7 +178,13 @@
 			files = (
 				7692956F1C1D83CA0092EB64 /* GameScene.sks in Resources */,
 				7692957A1C1D83CA0092EB64 /* LaunchScreen.storyboard in Resources */,
+				768F61611C1EA862009FDB5B /* brickhit.caf in Resources */,
+				768F61671C1EA9F4009FDB5B /* BGM.mp3 in Resources */,
+				768F61651C1EA9E0009FDB5B /* levelWin.wav in Resources */,
 				769295771C1D83CA0092EB64 /* Assets.xcassets in Resources */,
+				768F61601C1EA862009FDB5B /* blip.caf in Resources */,
+				768F61631C1EA862009FDB5B /* win.caf in Resources */,
+				768F61621C1EA862009FDB5B /* gameover.caf in Resources */,
 				769295751C1D83CA0092EB64 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -163,6 +200,7 @@
 				7692956A1C1D83CA0092EB64 /* AppDelegate.m in Sources */,
 				7692956D1C1D83CA0092EB64 /* GameScene.m in Sources */,
 				769295671C1D83CA0092EB64 /* main.m in Sources */,
+				76039F991C1EB079006829F2 /* GameEndScene.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,6 +347,7 @@
 				769295801C1D83CA0092EB64 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
