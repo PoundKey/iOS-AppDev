@@ -11,9 +11,9 @@ static const CGFloat playerSpeed = 150.0;
 static const CGFloat zombieSpeed = 75.0;
 
 @implementation GameScene {
-    CGSize _size;
-    NSMutableArray* _zombies;
-    CGPoint _lastTouch;
+    CGSize frameSize;
+    NSMutableArray* zombies;
+    CGPoint lastTouch;
     BOOL initialState;
     CFTimeInterval prevTime;
     CFTimeInterval elapsedTime;
@@ -24,10 +24,10 @@ static const CGFloat zombieSpeed = 75.0;
 }
 
 - (void) initScene {
-    _size = self.frame.size;
+    frameSize = self.frame.size;
     self.physicsWorld.contactDelegate  = self;
     self.player = (SKSpriteNode*)[self childNodeWithName:@"player"];
-    _lastTouch = self.player.position;
+    lastTouch = self.player.position;
     prevTime = 0.0;
     
     self.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect:self.frame];
@@ -38,7 +38,7 @@ static const CGFloat zombieSpeed = 75.0;
 - (void) handleTouches: (NSSet*) touches {
     for (UITouch* touch in touches) {
         CGPoint loc = [touch locationInNode:self];
-        _lastTouch = loc;
+        lastTouch = loc;
     }
 }
 
@@ -85,8 +85,8 @@ static const CGFloat zombieSpeed = 75.0;
 
 - (void) updatePlayer {
     CGPoint pos = self.player.position;
-    if ([self shouldMove:pos to:_lastTouch]) {
-        [self rotateAndMove:self.player from:pos to:_lastTouch withSpeed:playerSpeed];
+    if ([self shouldMove:pos to:lastTouch]) {
+        [self rotateAndMove:self.player from:pos to:lastTouch withSpeed:playerSpeed];
     } else {
         self.player.physicsBody.resting = true;
     }
