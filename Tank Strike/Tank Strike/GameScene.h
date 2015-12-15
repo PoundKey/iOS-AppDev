@@ -10,6 +10,6 @@
 
 @interface GameScene : SKScene <SKPhysicsContactDelegate>
 @property (nonatomic) SKSpriteNode* player;
-@property (nonatomic) SKSpriteNode* camera;
-@property (nonatomic) SKSpriteNode* gate;
+@property (nonatomic) SKCameraNode* camera;
+@property (nonatomic) SKSpriteNode* goal;
 @end

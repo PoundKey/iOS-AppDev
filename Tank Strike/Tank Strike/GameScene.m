@@ -27,6 +27,8 @@ static const CGFloat enemySpeed = 75.0;
     frameSize = self.frame.size;
     self.physicsWorld.contactDelegate  = self;
     self.player = (SKSpriteNode*)[self childNodeWithName:@"player"];
+    self.goal = (SKSpriteNode*)[self childNodeWithName:@"goal"];
+    self.goal = (SKSpriteNode*)[self childNodeWithName:@"camera"];
     lastTouch = self.player.position;
     prevTime = 0.0;
     
@@ -34,7 +36,8 @@ static const CGFloat enemySpeed = 75.0;
     self.physicsBody.categoryBitMask  = edgeCategory;
     self.physicsWorld.gravity         = CGVectorMake(0, 0);
     
-    [self setNode:self.player categoryMask:playerCategory collisionMask:-1 contactMask:(gateCategory | enemyCategory)];
+    [self setNode:self.player categoryMask:playerCategory collisionMask:-1 contactMask:(goalCategory | enemyCategory)];
+    [self updateCamera];
 }
 
 - (void) handleTouches: (NSSet*) touches {
@@ -73,11 +76,12 @@ static const CGFloat enemySpeed = 75.0;
 }
 
 - (void) moveObject: (SKSpriteNode*) sprite from: (CGPoint) position to: (CGPoint) location withSpeed: (CGFloat) speed {
-    CGFloat angle = atan2(position.y - location.y, position.x - location.x) + M_PI;
+    CGFloat angle = atan2(position.y - location.y, position.x - location.x);
     CGFloat dx = speed * cos(angle);
     CGFloat dy = speed * sin(angle);
     CGVector velocity = CGVectorMake(dx, dy);
     sprite.physicsBody.velocity = velocity;
+    [self updateCamera];
 }
 
 - (void) rotateAndMove: (SKSpriteNode*) sprite from: (CGPoint) position to: (CGPoint) location withSpeed: (CGFloat) speed {
@@ -95,6 +99,10 @@ static const CGFloat enemySpeed = 75.0;
     
 }
 
+- (void) updateCamera {
+    self.camera.position = self.player.position;
+}
+
 -(void)update:(CFTimeInterval)currentTime {
     /* Called before each frame is rendered */
     if (prevTime == 0.0) prevTime = currentTime;
@@ -109,7 +117,7 @@ static const CGFloat enemySpeed = 75.0;
     
     if (first.categoryBitMask == enemyCategory) {
         // Game Over
-    } else if (first.categoryBitMask == gateCategory) {
+    } else if (first.categoryBitMask == goalCategory) {
         // Game Win
     }
 }
@@ -125,7 +133,7 @@ typedef NS_OPTIONS(int32_t, contactBodyCategory) {
     edgeCategory   = 0x1 << 0,
     playerCategory = 0x1 << 1,
     enemyCategory  = 0x1 << 2,
-    gateCategory   = 0x1 << 3,
+    goalCategory   = 0x1 << 3,
 };
 
 @end
