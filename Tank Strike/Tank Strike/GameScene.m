@@ -71,7 +71,7 @@ static const CGFloat enemySpeed = 75.0;
 
 - (void) rotateObject: (SKSpriteNode*) sprite from: (CGPoint) position to: (CGPoint) location {
     CGFloat angle = atan2(position.y - location.y, position.x - location.x);
-    SKAction* rotate = [SKAction rotateToAngle:angle + M_PI*0.5 duration:0.0];
+    SKAction* rotate = [SKAction rotateToAngle:angle + M_PI*0.5 duration:0];
     [sprite runAction:rotate];
 }
 
