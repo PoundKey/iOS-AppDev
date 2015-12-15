@@ -27,10 +27,10 @@ static const CGFloat enemySpeed = 75.0;
     frameSize = self.frame.size;
     self.physicsWorld.contactDelegate  = self;
     self.player = (SKSpriteNode*)[self childNodeWithName:@"player"];
-    self.goal = (SKSpriteNode*)[self childNodeWithName:@"goal"];
-    self.goal = (SKSpriteNode*)[self childNodeWithName:@"camera"];
-    lastTouch = self.player.position;
-    prevTime = 0.0;
+    self.goal   = (SKSpriteNode*)[self childNodeWithName:@"goal"];
+    self.camera = (SKCameraNode*)[self childNodeWithName:@"camera"];
+    lastTouch   = self.player.position;
+    prevTime    = 0.0;
     
     self.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect:self.frame];
     self.physicsBody.categoryBitMask  = edgeCategory;
@@ -76,7 +76,7 @@ static const CGFloat enemySpeed = 75.0;
 }
 
 - (void) moveObject: (SKSpriteNode*) sprite from: (CGPoint) position to: (CGPoint) location withSpeed: (CGFloat) speed {
-    CGFloat angle = atan2(position.y - location.y, position.x - location.x);
+    CGFloat angle = atan2(position.y - location.y, position.x - location.x) + M_PI;
     CGFloat dx = speed * cos(angle);
     CGFloat dy = speed * sin(angle);
     CGVector velocity = CGVectorMake(dx, dy);
