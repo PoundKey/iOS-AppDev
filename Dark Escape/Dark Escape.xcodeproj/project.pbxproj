@@ -15,6 +15,11 @@
 		7668EE591C1D59D3004F60D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7668EE571C1D59D3004F60D7 /* Main.storyboard */; };
 		7668EE5B1C1D59D3004F60D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7668EE5A1C1D59D3004F60D7 /* Assets.xcassets */; };
 		7668EE5E1C1D59D3004F60D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7668EE5C1C1D59D3004F60D7 /* LaunchScreen.storyboard */; };
+		76C5D6611C1F6EE000DA0CD8 /* fear_bg.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 76C5D65C1C1F6EE000DA0CD8 /* fear_bg.mp3 */; };
+		76C5D6621C1F6EE000DA0CD8 /* fear_lose.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 76C5D65D1C1F6EE000DA0CD8 /* fear_lose.mp3 */; };
+		76C5D6631C1F6EE000DA0CD8 /* fear_moan.wav in Resources */ = {isa = PBXBuildFile; fileRef = 76C5D65E1C1F6EE000DA0CD8 /* fear_moan.wav */; };
+		76C5D6641C1F6EE000DA0CD8 /* fear_wall.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 76C5D65F1C1F6EE000DA0CD8 /* fear_wall.mp3 */; };
+		76C5D6651C1F6EE000DA0CD8 /* fear_win.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 76C5D6601C1F6EE000DA0CD8 /* fear_win.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +36,11 @@
 		7668EE5A1C1D59D3004F60D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7668EE5D1C1D59D3004F60D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7668EE5F1C1D59D3004F60D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		76C5D65C1C1F6EE000DA0CD8 /* fear_bg.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = fear_bg.mp3; sourceTree = "<group>"; };
+		76C5D65D1C1F6EE000DA0CD8 /* fear_lose.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = fear_lose.mp3; sourceTree = "<group>"; };
+		76C5D65E1C1F6EE000DA0CD8 /* fear_moan.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = fear_moan.wav; sourceTree = "<group>"; };
+		76C5D65F1C1F6EE000DA0CD8 /* fear_wall.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = fear_wall.mp3; sourceTree = "<group>"; };
+		76C5D6601C1F6EE000DA0CD8 /* fear_win.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = fear_win.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +81,7 @@
 				7668EE541C1D59D3004F60D7 /* GameViewController.h */,
 				7668EE551C1D59D3004F60D7 /* GameViewController.m */,
 				7668EE571C1D59D3004F60D7 /* Main.storyboard */,
+				76C5D65B1C1F6EE000DA0CD8 /* Sounds */,
 				7668EE5A1C1D59D3004F60D7 /* Assets.xcassets */,
 				7668EE5C1C1D59D3004F60D7 /* LaunchScreen.storyboard */,
 				7668EE5F1C1D59D3004F60D7 /* Info.plist */,
@@ -85,6 +96,18 @@
 				7668EE4A1C1D59D3004F60D7 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		76C5D65B1C1F6EE000DA0CD8 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				76C5D65C1C1F6EE000DA0CD8 /* fear_bg.mp3 */,
+				76C5D65D1C1F6EE000DA0CD8 /* fear_lose.mp3 */,
+				76C5D65E1C1F6EE000DA0CD8 /* fear_moan.wav */,
+				76C5D65F1C1F6EE000DA0CD8 /* fear_wall.mp3 */,
+				76C5D6601C1F6EE000DA0CD8 /* fear_win.mp3 */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,10 +168,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76C5D6641C1F6EE000DA0CD8 /* fear_wall.mp3 in Resources */,
 				7668EE531C1D59D3004F60D7 /* GameScene.sks in Resources */,
+				76C5D6651C1F6EE000DA0CD8 /* fear_win.mp3 in Resources */,
+				76C5D6621C1F6EE000DA0CD8 /* fear_lose.mp3 in Resources */,
 				7668EE5E1C1D59D3004F60D7 /* LaunchScreen.storyboard in Resources */,
+				76C5D6611C1F6EE000DA0CD8 /* fear_bg.mp3 in Resources */,
 				7668EE5B1C1D59D3004F60D7 /* Assets.xcassets in Resources */,
 				7668EE591C1D59D3004F60D7 /* Main.storyboard in Resources */,
+				76C5D6631C1F6EE000DA0CD8 /* fear_moan.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +301,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Dark Escape/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dyl.herokuapp.Dark-Escape";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -284,6 +313,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Dark Escape/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dyl.herokuapp.Dark-Escape";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -309,6 +339,7 @@
 				7668EE641C1D59D3004F60D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
