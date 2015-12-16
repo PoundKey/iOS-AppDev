@@ -13,7 +13,7 @@
 }
 
 -(void)didMoveToView:(SKView *)view {
-
+    [self initScene];
 }
 
 - (void) initScene {
@@ -24,7 +24,7 @@
     UITouch *touched = [touches anyObject];
     SKNode* touchedNode = [self nodeAtPoint:[touched locationInNode:self]];
     NSString* nodeName = touchedNode.name;
-    if ([nodeName isEqualToString:@"start"]) {
+    if ([nodeName isEqualToString:@"restart"]) {
         [self runAction:clickSFX];
         GameScene* scene = [GameScene nodeWithFileNamed:@"GameScene"];
         scene.scaleMode = SKSceneScaleModeAspectFill;

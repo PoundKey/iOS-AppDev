@@ -17,16 +17,13 @@ static const CGFloat enemySpeed = 60.0;
     BOOL initialState;
     CFTimeInterval prevTime;
     CFTimeInterval elapsedTime;
+    SKAction* moveTank;
 }
 
 -(void)didMoveToView:(SKView *)view {
     [self initScene];
     [self addEnemies];
     [self updateCamera];
-    
-    for (SKNode* node in self.children) {
-        NSLog(@"Node: %@, categoryBitMask: %d", node.name, node.physicsBody.categoryBitMask);
-    }
 }
 
 - (void) initScene {
@@ -46,7 +43,20 @@ static const CGFloat enemySpeed = 60.0;
     enemies     = [[NSMutableArray alloc] init];
     lastTouch   = self.player.position;
     prevTime    = 0.0;
+    
+    moveTank = [SKAction playSoundFileNamed:@"ts-move" waitForCompletion:YES];
+}
 
+-(void)update:(CFTimeInterval)currentTime {
+    /* Called before each frame is rendered */
+    if (prevTime == 0.0) prevTime = currentTime;
+    elapsedTime = currentTime - prevTime;
+}
+
+
+- (void)didSimulatePhysics {
+    [self updatePlayer];
+    [self updateEnemies];
 }
 
 - (void) handleTouches: (NSSet*) touches {
@@ -54,11 +64,6 @@ static const CGFloat enemySpeed = 60.0;
         CGPoint loc = [touch locationInNode:self];
         lastTouch = loc;
     }
-}
-
-- (void)didSimulatePhysics {
-    [self updatePlayer];
-    [self updateEnemies];
 }
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
@@ -102,9 +107,11 @@ static const CGFloat enemySpeed = 60.0;
 - (void) updatePlayer {
     CGPoint pos = self.player.position;
     if ([self shouldMove:pos to:lastTouch]) {
+        if (![self.player hasActions]) [self.player runAction:moveTank];
         [self rotateAndMove:self.player from:pos to:lastTouch withSpeed:playerSpeed];
     } else {
         self.player.physicsBody.resting = true;
+        if([self.player hasActions]) [self.player removeAllActions];
     }
     
 }
@@ -138,11 +145,6 @@ static const CGFloat enemySpeed = 60.0;
     }
 }
 
--(void)update:(CFTimeInterval)currentTime {
-    /* Called before each frame is rendered */
-    if (prevTime == 0.0) prevTime = currentTime;
-    elapsedTime = currentTime - prevTime;
-}
 
 -(void)didBeginContact:(SKPhysicsContact *)contact {
     SKPhysicsBody* first  = contact.bodyA.categoryBitMask > contact.bodyB.categoryBitMask ?
