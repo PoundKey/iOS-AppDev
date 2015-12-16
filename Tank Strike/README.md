@@ -1,4 +1,4 @@
-## iOS SpriteKit: Dark Escape
+## iOS SpriteKit: Tank Strike
 <p align="center">
 <b> <-- Game Play --> </b> <br>
 <img src="./images/GamePlay.gif"> <br>

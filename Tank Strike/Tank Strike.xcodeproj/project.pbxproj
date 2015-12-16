@@ -17,10 +17,15 @@
 		7668EE591C1D59D3004F60D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7668EE571C1D59D3004F60D7 /* Main.storyboard */; };
 		7668EE5B1C1D59D3004F60D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7668EE5A1C1D59D3004F60D7 /* Assets.xcassets */; };
 		7668EE5E1C1D59D3004F60D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7668EE5C1C1D59D3004F60D7 /* LaunchScreen.storyboard */; };
-		76C5D6611C1F6EE000DA0CD8 /* fear_bg.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 76C5D65C1C1F6EE000DA0CD8 /* fear_bg.mp3 */; };
-		76C5D6621C1F6EE000DA0CD8 /* fear_lose.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 76C5D65D1C1F6EE000DA0CD8 /* fear_lose.mp3 */; };
-		76C5D6641C1F6EE000DA0CD8 /* fear_wall.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 76C5D65F1C1F6EE000DA0CD8 /* fear_wall.mp3 */; };
-		76C5D6651C1F6EE000DA0CD8 /* fear_win.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 76C5D6601C1F6EE000DA0CD8 /* fear_win.mp3 */; };
+		76B0BD981C212F0900EF33FB /* GameEndScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 76B0BD971C212F0900EF33FB /* GameEndScene.m */; };
+		76B0BD9B1C212F2700EF33FB /* GameStartScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 76B0BD9A1C212F2700EF33FB /* GameStartScene.m */; };
+		76B0BD9D1C212F5C00EF33FB /* GameStart.sks in Resources */ = {isa = PBXBuildFile; fileRef = 76B0BD9C1C212F5C00EF33FB /* GameStart.sks */; };
+		76B0BD9F1C212FCF00EF33FB /* GameEnd.sks in Resources */ = {isa = PBXBuildFile; fileRef = 76B0BD9E1C212FCF00EF33FB /* GameEnd.sks */; };
+		76B0BDA11C21384900EF33FB /* ts-start.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 76B0BDA01C21384900EF33FB /* ts-start.mp3 */; };
+		76C5D6611C1F6EE000DA0CD8 /* ts-bg.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 76C5D65C1C1F6EE000DA0CD8 /* ts-bg.mp3 */; };
+		76C5D6621C1F6EE000DA0CD8 /* ts-lose.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 76C5D65D1C1F6EE000DA0CD8 /* ts-lose.mp3 */; };
+		76C5D6641C1F6EE000DA0CD8 /* ts-val.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 76C5D65F1C1F6EE000DA0CD8 /* ts-val.mp3 */; };
+		76C5D6651C1F6EE000DA0CD8 /* ts-win.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 76C5D6601C1F6EE000DA0CD8 /* ts-win.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,10 +44,17 @@
 		7668EE5A1C1D59D3004F60D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7668EE5D1C1D59D3004F60D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7668EE5F1C1D59D3004F60D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		76C5D65C1C1F6EE000DA0CD8 /* fear_bg.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = fear_bg.mp3; sourceTree = "<group>"; };
-		76C5D65D1C1F6EE000DA0CD8 /* fear_lose.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = fear_lose.mp3; sourceTree = "<group>"; };
-		76C5D65F1C1F6EE000DA0CD8 /* fear_wall.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = fear_wall.mp3; sourceTree = "<group>"; };
-		76C5D6601C1F6EE000DA0CD8 /* fear_win.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = fear_win.mp3; sourceTree = "<group>"; };
+		76B0BD961C212F0900EF33FB /* GameEndScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameEndScene.h; sourceTree = "<group>"; };
+		76B0BD971C212F0900EF33FB /* GameEndScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameEndScene.m; sourceTree = "<group>"; };
+		76B0BD991C212F2700EF33FB /* GameStartScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameStartScene.h; sourceTree = "<group>"; };
+		76B0BD9A1C212F2700EF33FB /* GameStartScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameStartScene.m; sourceTree = "<group>"; };
+		76B0BD9C1C212F5C00EF33FB /* GameStart.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameStart.sks; sourceTree = "<group>"; };
+		76B0BD9E1C212FCF00EF33FB /* GameEnd.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameEnd.sks; sourceTree = "<group>"; };
+		76B0BDA01C21384900EF33FB /* ts-start.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "ts-start.mp3"; sourceTree = "<group>"; };
+		76C5D65C1C1F6EE000DA0CD8 /* ts-bg.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "ts-bg.mp3"; sourceTree = "<group>"; };
+		76C5D65D1C1F6EE000DA0CD8 /* ts-lose.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "ts-lose.mp3"; sourceTree = "<group>"; };
+		76C5D65F1C1F6EE000DA0CD8 /* ts-val.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "ts-val.mp3"; sourceTree = "<group>"; };
+		76C5D6601C1F6EE000DA0CD8 /* ts-win.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "ts-win.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +74,8 @@
 				7668EE521C1D59D3004F60D7 /* GameScene.sks */,
 				7663C9B11C20C1E8006E693D /* Wall.sks */,
 				7663C9B31C20C39C006E693D /* Blocks.sks */,
+				76B0BD9C1C212F5C00EF33FB /* GameStart.sks */,
+				76B0BD9E1C212FCF00EF33FB /* GameEnd.sks */,
 			);
 			name = Scenes;
 			sourceTree = "<group>";
@@ -87,8 +101,12 @@
 			children = (
 				7668EE4C1C1D59D3004F60D7 /* AppDelegate.h */,
 				7668EE4D1C1D59D3004F60D7 /* AppDelegate.m */,
+				76B0BD991C212F2700EF33FB /* GameStartScene.h */,
+				76B0BD9A1C212F2700EF33FB /* GameStartScene.m */,
 				7668EE4F1C1D59D3004F60D7 /* GameScene.h */,
 				7668EE501C1D59D3004F60D7 /* GameScene.m */,
+				76B0BD961C212F0900EF33FB /* GameEndScene.h */,
+				76B0BD971C212F0900EF33FB /* GameEndScene.m */,
 				7668EE541C1D59D3004F60D7 /* GameViewController.h */,
 				7668EE551C1D59D3004F60D7 /* GameViewController.m */,
 				7668EE571C1D59D3004F60D7 /* Main.storyboard */,
@@ -113,10 +131,11 @@
 		76C5D65B1C1F6EE000DA0CD8 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
-				76C5D65C1C1F6EE000DA0CD8 /* fear_bg.mp3 */,
-				76C5D65D1C1F6EE000DA0CD8 /* fear_lose.mp3 */,
-				76C5D65F1C1F6EE000DA0CD8 /* fear_wall.mp3 */,
-				76C5D6601C1F6EE000DA0CD8 /* fear_win.mp3 */,
+				76B0BDA01C21384900EF33FB /* ts-start.mp3 */,
+				76C5D65C1C1F6EE000DA0CD8 /* ts-bg.mp3 */,
+				76C5D65D1C1F6EE000DA0CD8 /* ts-lose.mp3 */,
+				76C5D65F1C1F6EE000DA0CD8 /* ts-val.mp3 */,
+				76C5D6601C1F6EE000DA0CD8 /* ts-win.mp3 */,
 			);
 			path = Sounds;
 			sourceTree = "<group>";
@@ -179,13 +198,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76C5D6641C1F6EE000DA0CD8 /* fear_wall.mp3 in Resources */,
+				76C5D6641C1F6EE000DA0CD8 /* ts-val.mp3 in Resources */,
+				76B0BD9D1C212F5C00EF33FB /* GameStart.sks in Resources */,
 				7668EE531C1D59D3004F60D7 /* GameScene.sks in Resources */,
-				76C5D6651C1F6EE000DA0CD8 /* fear_win.mp3 in Resources */,
-				76C5D6621C1F6EE000DA0CD8 /* fear_lose.mp3 in Resources */,
+				76C5D6651C1F6EE000DA0CD8 /* ts-win.mp3 in Resources */,
+				76C5D6621C1F6EE000DA0CD8 /* ts-lose.mp3 in Resources */,
 				7668EE5E1C1D59D3004F60D7 /* LaunchScreen.storyboard in Resources */,
-				76C5D6611C1F6EE000DA0CD8 /* fear_bg.mp3 in Resources */,
+				76C5D6611C1F6EE000DA0CD8 /* ts-bg.mp3 in Resources */,
+				76B0BD9F1C212FCF00EF33FB /* GameEnd.sks in Resources */,
 				7663C9B21C20C1E8006E693D /* Wall.sks in Resources */,
+				76B0BDA11C21384900EF33FB /* ts-start.mp3 in Resources */,
 				7663C9B41C20C39C006E693D /* Blocks.sks in Resources */,
 				7668EE5B1C1D59D3004F60D7 /* Assets.xcassets in Resources */,
 				7668EE591C1D59D3004F60D7 /* Main.storyboard in Resources */,
@@ -203,6 +225,8 @@
 				7668EE4E1C1D59D3004F60D7 /* AppDelegate.m in Sources */,
 				7668EE511C1D59D3004F60D7 /* GameScene.m in Sources */,
 				7668EE4B1C1D59D3004F60D7 /* main.m in Sources */,
+				76B0BD981C212F0900EF33FB /* GameEndScene.m in Sources */,
+				76B0BD9B1C212F2700EF33FB /* GameStartScene.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,7 +337,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "$(SRCROOT)/Tank Strike/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dyl.herokuapp.Tank-Strike";
 				PRODUCT_NAME = "Tank Strike";
@@ -325,7 +349,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "$(SRCROOT)/Tank Strike/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dyl.herokuapp.Tank-Strike";
 				PRODUCT_NAME = "Tank Strike";

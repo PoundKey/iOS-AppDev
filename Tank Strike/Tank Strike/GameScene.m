@@ -8,7 +8,7 @@
 
 #import "GameScene.h"
 static const CGFloat playerSpeed = 150.0;
-static const CGFloat enemySpeed = 75.0;
+static const CGFloat enemySpeed = 60.0;
 
 @implementation GameScene {
     CGSize frameSize;
@@ -21,23 +21,28 @@ static const CGFloat enemySpeed = 75.0;
 
 -(void)didMoveToView:(SKView *)view {
     [self initScene];
+    [self addEnemies];
+    [self updateCamera];
 }
 
 - (void) initScene {
     frameSize = self.frame.size;
     self.physicsWorld.contactDelegate  = self;
-    self.player = (SKSpriteNode*)[self childNodeWithName:@"player"];
-    self.goal   = (SKSpriteNode*)[self childNodeWithName:@"goal"];
-    lastTouch   = self.player.position;
-    prevTime    = 0.0;
-    
+    self.physicsWorld.gravity         = CGVectorMake(0, 0);
     self.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect:self.frame];
     self.physicsBody.categoryBitMask  = edgeCategory;
-    self.physicsWorld.gravity         = CGVectorMake(0, 0);
     
+    self.player = (SKSpriteNode*)[self childNodeWithName:@"player"];
+    self.player.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius: self.player.frame.size.width / 3];
     [self setNode:self.player categoryMask:playerCategory collisionMask:-1 contactMask:(goalCategory | enemyCategory)];
-    [self addEnemies];
-    [self updateCamera];
+    
+    self.goal   = (SKSpriteNode*)[self childNodeWithName:@"goal"];
+    [self setNode:self.player categoryMask:goalCategory collisionMask:-1 contactMask:playerCategory];
+    
+    enemies     = [[NSMutableArray alloc] init];
+    lastTouch   = self.player.position;
+    prevTime    = 0.0;
+
 }
 
 - (void) handleTouches: (NSSet*) touches {
@@ -71,13 +76,13 @@ static const CGFloat enemySpeed = 75.0;
  }
 
 - (void) rotateObject: (SKSpriteNode*) sprite from: (CGPoint) position to: (CGPoint) location {
-    CGFloat angle = atan2(position.y - location.y, position.x - location.x);
-    SKAction* rotate = [SKAction rotateToAngle:angle + M_PI*0.5 duration:0];
+    CGFloat angle = atan2(location.y - position.y, location.x - position.x);
+    SKAction* rotate = [SKAction rotateToAngle:angle - M_PI*0.5 duration:0];
     [sprite runAction:rotate];
 }
 
 - (void) moveObject: (SKSpriteNode*) sprite from: (CGPoint) position to: (CGPoint) location withSpeed: (CGFloat) speed {
-    CGFloat angle = atan2(position.y - location.y, position.x - location.x) + M_PI;
+    CGFloat angle = atan2(location.y - position.y, location.x - position.x);
     CGFloat dx = speed * cos(angle);
     CGFloat dy = speed * sin(angle);
     CGVector velocity = CGVectorMake(dx, dy);
@@ -87,7 +92,7 @@ static const CGFloat enemySpeed = 75.0;
 
 - (void) rotateAndMove: (SKSpriteNode*) sprite from: (CGPoint) position to: (CGPoint) location withSpeed: (CGFloat) speed {
     [self rotateObject:sprite from:position to:location];
-    [self moveObject:sprite from:position to:location withSpeed:playerSpeed];
+    [self moveObject:sprite from:position to:location withSpeed:speed];
 }
 
 - (void) updatePlayer {
@@ -114,8 +119,8 @@ static const CGFloat enemySpeed = 75.0;
 }
 
 - (BOOL) shouldMoveEnemy: (CGPoint) position to: (CGPoint) location {
-    BOOL condA = fabs(position.x - location.x) < 400;
-    BOOL condB = fabs(position.y - location.y) < 400;
+    BOOL condA = fabs(position.x - location.x) < 300; //initial: 285
+    BOOL condB = fabs(position.y - location.y) < 300; //initial: 161
     return condA || condB;
 }
 
@@ -124,8 +129,7 @@ static const CGFloat enemySpeed = 75.0;
         CGPoint position = enemy.position;
         CGPoint location = self.player.position;
         if ([self shouldMoveEnemy: position to:location]) {
-            [self rotateObject:enemy from:position to:location];
-            [self moveObject:enemy from:position to:location withSpeed:enemySpeed];
+            [self rotateAndMove:enemy from:position to:location withSpeed:enemySpeed];
         }
     }
 }
