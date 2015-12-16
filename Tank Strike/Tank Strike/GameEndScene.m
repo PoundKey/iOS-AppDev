@@ -20,6 +20,7 @@
 
 - (void) initScene {
     clickSFX = [SKAction playSoundFileNamed:@"ts-start" waitForCompletion:NO];
+    if (self.didWin) [self addEmitter];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
@@ -61,5 +62,14 @@
         message.text = @"";
     }
 }
+
+- (void) addEmitter {
+    NSString* eType = @"Spark";
+    SKEmitterNode* emitter = [NSKeyedUnarchiver unarchiveObjectWithFile:[[NSBundle mainBundle] pathForResource:eType ofType:@"sks"]];
+    emitter.position = CGPointMake(self.frame.size.width/2, self.frame.size.height - 20);
+    // [emiiter advanceSimulationTime:3];
+    [self addChild:emitter];
+}
+
 
 @end

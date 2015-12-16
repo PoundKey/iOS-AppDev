@@ -27,6 +27,8 @@
 		76E576071C221770007A0EEF /* ts-win.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 76E576061C221770007A0EEF /* ts-win.mp3 */; };
 		76E576091C221855007A0EEF /* ts-over.wav in Resources */ = {isa = PBXBuildFile; fileRef = 76E576081C221855007A0EEF /* ts-over.wav */; };
 		76E5760B1C221ACF007A0EEF /* ts-bomb.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 76E5760A1C221ACF007A0EEF /* ts-bomb.mp3 */; };
+		76E5760E1C22254C007A0EEF /* Spark.sks in Resources */ = {isa = PBXBuildFile; fileRef = 76E5760C1C22254C007A0EEF /* Spark.sks */; };
+		76E5760F1C22254C007A0EEF /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 76E5760D1C22254C007A0EEF /* spark.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +59,8 @@
 		76E576061C221770007A0EEF /* ts-win.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "ts-win.mp3"; sourceTree = "<group>"; };
 		76E576081C221855007A0EEF /* ts-over.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "ts-over.wav"; sourceTree = "<group>"; };
 		76E5760A1C221ACF007A0EEF /* ts-bomb.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "ts-bomb.mp3"; sourceTree = "<group>"; };
+		76E5760C1C22254C007A0EEF /* Spark.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Spark.sks; sourceTree = "<group>"; };
+		76E5760D1C22254C007A0EEF /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +77,8 @@
 		7663C9B01C20C194006E693D /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				76E5760C1C22254C007A0EEF /* Spark.sks */,
+				76E5760D1C22254C007A0EEF /* spark.png */,
 				7668EE521C1D59D3004F60D7 /* GameScene.sks */,
 				7663C9B11C20C1E8006E693D /* Wall.sks */,
 				7663C9B31C20C39C006E693D /* Blocks.sks */,
@@ -212,7 +218,9 @@
 				76E576091C221855007A0EEF /* ts-over.wav in Resources */,
 				76B0BDA11C21384900EF33FB /* ts-start.mp3 in Resources */,
 				7663C9B41C20C39C006E693D /* Blocks.sks in Resources */,
+				76E5760E1C22254C007A0EEF /* Spark.sks in Resources */,
 				7668EE5B1C1D59D3004F60D7 /* Assets.xcassets in Resources */,
+				76E5760F1C22254C007A0EEF /* spark.png in Resources */,
 				7668EE591C1D59D3004F60D7 /* Main.storyboard in Resources */,
 				76E5760B1C221ACF007A0EEF /* ts-bomb.mp3 in Resources */,
 			);

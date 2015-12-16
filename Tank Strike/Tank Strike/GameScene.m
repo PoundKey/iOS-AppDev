@@ -14,7 +14,7 @@ static const CGFloat enemySpeed = 60.0;
     CGSize frameSize;
     NSMutableArray* enemies;
     CGPoint lastTouch;
-    BOOL initialState;
+    BOOL gameState;
     CFTimeInterval prevTime;
     CFTimeInterval elapsedTime;
     SKAction* moveTank;
@@ -45,6 +45,7 @@ static const CGFloat enemySpeed = 60.0;
     enemies     = [[NSMutableArray alloc] init];
     lastTouch   = self.player.position;
     prevTime    = 0.0;
+    gameState   = YES;
     
     moveTank = [SKAction playSoundFileNamed:@"ts-move" waitForCompletion:YES];
 }
@@ -57,8 +58,10 @@ static const CGFloat enemySpeed = 60.0;
 
 
 - (void)didSimulatePhysics {
-    [self updatePlayer];
-    [self updateEnemies];
+    if (gameState) {
+        [self updatePlayer];
+        [self updateEnemies];
+    }
 }
 
 - (void) handleTouches: (NSSet*) touches {
@@ -153,9 +156,7 @@ static const CGFloat enemySpeed = 60.0;
                             contact.bodyA : contact.bodyB; // return the SKNode with larger category
     SKPhysicsBody* second = contact.bodyA.categoryBitMask > contact.bodyB.categoryBitMask ?
                             contact.bodyB : contact.bodyA; // return the SKnode with smaller category
-    //NSLog(@"first object: %d, second object: %d", first.categoryBitMask, second.categoryBitMask);
-    
-    
+
     if (first.categoryBitMask == enemyCategory) {
         [self gameOver:NO isRecord: NO];
     } else if (first.categoryBitMask == goalCategory) {
@@ -167,7 +168,7 @@ static const CGFloat enemySpeed = 60.0;
 - (void) gameOver: (BOOL) didWin isRecord: (BOOL) record {
     [bgmSFX stop];
     [self removeAllActions];
-    self.player.physicsBody.resting = true;
+    gameState = NO;
     
     NSString* SFX      = [NSString stringWithFormat:@"ts-%@", didWin ? @"win" : @"over"];
     SKAction* soundSFX = [SKAction playSoundFileNamed:SFX waitForCompletion:NO];
