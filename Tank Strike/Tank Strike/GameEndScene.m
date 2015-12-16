@@ -26,9 +26,9 @@
     NSString* nodeName = touchedNode.name;
     if ([nodeName isEqualToString:@"start"]) {
         [self runAction:clickSFX];
-        GameScene* gameScene = [GameScene nodeWithFileNamed:@"GameScene"];
-        gameScene.scaleMode = SKSceneScaleModeAspectFill;
-        [self.view presentScene:gameScene transition:[SKTransition doorsOpenHorizontalWithDuration:1.0]];
+        GameScene* scene = [GameScene nodeWithFileNamed:@"GameScene"];
+        scene.scaleMode = SKSceneScaleModeAspectFill;
+        [self.view presentScene:scene transition:[SKTransition doorsOpenHorizontalWithDuration:1.0]];
     }
 }
 

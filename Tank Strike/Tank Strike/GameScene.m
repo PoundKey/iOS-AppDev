@@ -23,6 +23,10 @@ static const CGFloat enemySpeed = 60.0;
     [self initScene];
     [self addEnemies];
     [self updateCamera];
+    
+    for (SKNode* node in self.children) {
+        NSLog(@"Node: %@, categoryBitMask: %d", node.name, node.physicsBody.categoryBitMask);
+    }
 }
 
 - (void) initScene {
@@ -37,7 +41,7 @@ static const CGFloat enemySpeed = 60.0;
     [self setNode:self.player categoryMask:playerCategory collisionMask:-1 contactMask:(goalCategory | enemyCategory)];
     
     self.goal   = (SKSpriteNode*)[self childNodeWithName:@"goal"];
-    [self setNode:self.player categoryMask:goalCategory collisionMask:-1 contactMask:playerCategory];
+    [self setNode:self.goal categoryMask:goalCategory collisionMask:-1 contactMask:playerCategory];
     
     enemies     = [[NSMutableArray alloc] init];
     lastTouch   = self.player.position;
@@ -145,12 +149,13 @@ static const CGFloat enemySpeed = 60.0;
                             contact.bodyA : contact.bodyB; // return the SKNode with larger category
     SKPhysicsBody* second = contact.bodyA.categoryBitMask > contact.bodyB.categoryBitMask ?
                             contact.bodyB : contact.bodyA; // return the SKnode with smaller category
-    NSLog(@"first object: %d, second object: %d", first.categoryBitMask, second.categoryBitMask);
-    BOOL record = [self setRecord:elapsedTime];
+    //NSLog(@"first object: %d, second object: %d", first.categoryBitMask, second.categoryBitMask);
+    
     
     if (first.categoryBitMask == enemyCategory) {
-        [self gameOver:NO isRecord: record];
+        [self gameOver:NO isRecord: NO];
     } else if (first.categoryBitMask == goalCategory) {
+        BOOL record = [self setRecord:elapsedTime];
         [self gameOver:YES isRecord: record];
     }
 }
@@ -160,6 +165,7 @@ static const CGFloat enemySpeed = 60.0;
     scene.scaleMode = SKSceneScaleModeAspectFill;
     scene.didWin    = didWin;
     scene.isRecord  = record;
+    scene.timer     = elapsedTime;
     [self.view presentScene:scene transition:[SKTransition doorsCloseHorizontalWithDuration:0.8]];
 }
 
