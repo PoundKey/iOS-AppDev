@@ -28,7 +28,6 @@ static const CGFloat enemySpeed = 75.0;
     self.physicsWorld.contactDelegate  = self;
     self.player = (SKSpriteNode*)[self childNodeWithName:@"player"];
     self.goal   = (SKSpriteNode*)[self childNodeWithName:@"goal"];
-    self.camera = (SKCameraNode*)[self childNodeWithName:@"camera"];
     lastTouch   = self.player.position;
     prevTime    = 0.0;
     

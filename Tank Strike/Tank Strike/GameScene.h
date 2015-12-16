@@ -9,7 +9,6 @@
 #import <SpriteKit/SpriteKit.h>
 
 @interface GameScene : SKScene <SKPhysicsContactDelegate>
-@property (nonatomic) SKSpriteNode* player;
-@property (nonatomic) SKCameraNode* camera;
+@property (nonatomic) SKSpriteNode* player;;
 @property (nonatomic) SKSpriteNode* goal;
 @end
