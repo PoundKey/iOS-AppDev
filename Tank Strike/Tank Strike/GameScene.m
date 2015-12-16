@@ -36,6 +36,7 @@ static const CGFloat enemySpeed = 75.0;
     self.physicsWorld.gravity         = CGVectorMake(0, 0);
     
     [self setNode:self.player categoryMask:playerCategory collisionMask:-1 contactMask:(goalCategory | enemyCategory)];
+    [self addEnemies];
     [self updateCamera];
 }
 
@@ -48,6 +49,7 @@ static const CGFloat enemySpeed = 75.0;
 
 - (void)didSimulatePhysics {
     [self updatePlayer];
+    [self updateEnemies];
 }
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
@@ -102,6 +104,32 @@ static const CGFloat enemySpeed = 75.0;
     self.camera.position = self.player.position;
 }
 
+- (void) addEnemies {
+    for (SKNode* child in self.children) {
+        if ([child.name isEqualToString:@"enemy"]) {
+            [self setNode:child categoryMask:enemyCategory collisionMask:-1 contactMask:playerCategory];
+            [enemies addObject:(SKSpriteNode*)child];
+        }
+    }
+}
+
+- (BOOL) shouldMoveEnemy: (CGPoint) position to: (CGPoint) location {
+    BOOL condA = fabs(position.x - location.x) < 400;
+    BOOL condB = fabs(position.y - location.y) < 400;
+    return condA || condB;
+}
+
+- (void) updateEnemies {
+    for (SKSpriteNode* enemy in enemies) {
+        CGPoint position = enemy.position;
+        CGPoint location = self.player.position;
+        if ([self shouldMoveEnemy: position to:location]) {
+            [self rotateObject:enemy from:position to:location];
+            [self moveObject:enemy from:position to:location withSpeed:enemySpeed];
+        }
+    }
+}
+
 -(void)update:(CFTimeInterval)currentTime {
     /* Called before each frame is rendered */
     if (prevTime == 0.0) prevTime = currentTime;
@@ -119,6 +147,10 @@ static const CGFloat enemySpeed = 75.0;
     } else if (first.categoryBitMask == goalCategory) {
         // Game Win
     }
+}
+
+- (void) gameOver: (BOOL) didWin {
+    //TODO: Proceed To end scene
 }
 
 - (void) setNode: (SKNode*) node categoryMask: (int32_t) m1 collisionMask: (int32_t) m2 contactMask: (int32_t) m3 {
