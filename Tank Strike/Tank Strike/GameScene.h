@@ -7,6 +7,7 @@
 //
 
 #import <SpriteKit/SpriteKit.h>
+#import "GameEndScene.h"
 
 @interface GameScene : SKScene <SKPhysicsContactDelegate>
 @property (nonatomic) SKSpriteNode* player;;

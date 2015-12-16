@@ -7,7 +7,10 @@
 //
 
 #import <SpriteKit/SpriteKit.h>
-
+#import "GameScene.h"
+#import "GameStartScene.h"
 @interface GameEndScene : SKScene
-
+@property (nonatomic) CFTimeInterval timer;
+@property (nonatomic) BOOL isRecord;
+@property (nonatomic) BOOL didWin;
 @end

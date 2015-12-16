@@ -145,16 +145,22 @@ static const CGFloat enemySpeed = 60.0;
                             contact.bodyA : contact.bodyB; // return the SKNode with larger category
     SKPhysicsBody* second = contact.bodyA.categoryBitMask > contact.bodyB.categoryBitMask ?
                             contact.bodyB : contact.bodyA; // return the SKnode with smaller category
+    NSLog(@"first object: %d, second object: %d", first.categoryBitMask, second.categoryBitMask);
+    BOOL record = [self setRecord:elapsedTime];
     
     if (first.categoryBitMask == enemyCategory) {
-        // Game Over
+        [self gameOver:NO isRecord: record];
     } else if (first.categoryBitMask == goalCategory) {
-        // Game Win
+        [self gameOver:YES isRecord: record];
     }
 }
 
-- (void) gameOver: (BOOL) didWin {
-    //TODO: Proceed To end scene
+- (void) gameOver: (BOOL) didWin isRecord: (BOOL) record {
+    GameEndScene* scene = [GameEndScene nodeWithFileNamed:@"GameEnd"];
+    scene.scaleMode = SKSceneScaleModeAspectFill;
+    scene.didWin    = didWin;
+    scene.isRecord  = record;
+    [self.view presentScene:scene transition:[SKTransition doorsCloseHorizontalWithDuration:0.8]];
 }
 
 - (void) setNode: (SKNode*) node categoryMask: (int32_t) m1 collisionMask: (int32_t) m2 contactMask: (int32_t) m3 {
@@ -162,6 +168,25 @@ static const CGFloat enemySpeed = 60.0;
     if (m1 > 0) body.categoryBitMask    = m1;
     if (m2 > 0) body.collisionBitMask   = m2;
     if (m3 > 0) body.contactTestBitMask = m3;
+}
+
+/**
+ *  Set record for the longest survival time.
+ */
+- (BOOL) setRecord: (float) result {
+    NSUserDefaults *def = [NSUserDefaults standardUserDefaults];
+    float record = [def floatForKey:@"record"];
+    if (record) {
+        if (result > record) {
+            [def setFloat:result forKey:@"record"];
+            return YES;
+        } else {
+            return NO;
+        }
+    } else {
+        [def setFloat:result forKey:@"record"];
+        return YES;
+    }
 }
 
 typedef NS_OPTIONS(int32_t, contactBodyCategory) {

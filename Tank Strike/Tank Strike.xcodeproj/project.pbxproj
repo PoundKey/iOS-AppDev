@@ -22,6 +22,7 @@
 		76B0BD9D1C212F5C00EF33FB /* GameStart.sks in Resources */ = {isa = PBXBuildFile; fileRef = 76B0BD9C1C212F5C00EF33FB /* GameStart.sks */; };
 		76B0BD9F1C212FCF00EF33FB /* GameEnd.sks in Resources */ = {isa = PBXBuildFile; fileRef = 76B0BD9E1C212FCF00EF33FB /* GameEnd.sks */; };
 		76B0BDA11C21384900EF33FB /* ts-start.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 76B0BDA01C21384900EF33FB /* ts-start.mp3 */; };
+		76B0BDA31C213E2800EF33FB /* ts-move.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 76B0BDA21C213E2800EF33FB /* ts-move.mp3 */; };
 		76C5D6611C1F6EE000DA0CD8 /* ts-bg.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 76C5D65C1C1F6EE000DA0CD8 /* ts-bg.mp3 */; };
 		76C5D6621C1F6EE000DA0CD8 /* ts-lose.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 76C5D65D1C1F6EE000DA0CD8 /* ts-lose.mp3 */; };
 		76C5D6641C1F6EE000DA0CD8 /* ts-val.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 76C5D65F1C1F6EE000DA0CD8 /* ts-val.mp3 */; };
@@ -51,6 +52,7 @@
 		76B0BD9C1C212F5C00EF33FB /* GameStart.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameStart.sks; sourceTree = "<group>"; };
 		76B0BD9E1C212FCF00EF33FB /* GameEnd.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameEnd.sks; sourceTree = "<group>"; };
 		76B0BDA01C21384900EF33FB /* ts-start.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "ts-start.mp3"; sourceTree = "<group>"; };
+		76B0BDA21C213E2800EF33FB /* ts-move.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "ts-move.mp3"; sourceTree = "<group>"; };
 		76C5D65C1C1F6EE000DA0CD8 /* ts-bg.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "ts-bg.mp3"; sourceTree = "<group>"; };
 		76C5D65D1C1F6EE000DA0CD8 /* ts-lose.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "ts-lose.mp3"; sourceTree = "<group>"; };
 		76C5D65F1C1F6EE000DA0CD8 /* ts-val.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "ts-val.mp3"; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 		76C5D65B1C1F6EE000DA0CD8 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				76B0BDA21C213E2800EF33FB /* ts-move.mp3 */,
 				76B0BDA01C21384900EF33FB /* ts-start.mp3 */,
 				76C5D65C1C1F6EE000DA0CD8 /* ts-bg.mp3 */,
 				76C5D65D1C1F6EE000DA0CD8 /* ts-lose.mp3 */,
@@ -202,6 +205,7 @@
 				76B0BD9D1C212F5C00EF33FB /* GameStart.sks in Resources */,
 				7668EE531C1D59D3004F60D7 /* GameScene.sks in Resources */,
 				76C5D6651C1F6EE000DA0CD8 /* ts-win.mp3 in Resources */,
+				76B0BDA31C213E2800EF33FB /* ts-move.mp3 in Resources */,
 				76C5D6621C1F6EE000DA0CD8 /* ts-lose.mp3 in Resources */,
 				7668EE5E1C1D59D3004F60D7 /* LaunchScreen.storyboard in Resources */,
 				76C5D6611C1F6EE000DA0CD8 /* ts-bg.mp3 in Resources */,
