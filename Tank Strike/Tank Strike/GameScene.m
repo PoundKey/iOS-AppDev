@@ -18,10 +18,12 @@ static const CGFloat enemySpeed = 60.0;
     CFTimeInterval prevTime;
     CFTimeInterval elapsedTime;
     SKAction* moveTank;
+    AVAudioPlayer* bgmSFX;
 }
 
 -(void)didMoveToView:(SKView *)view {
     [self initScene];
+    [self playBackgroundMusic];
     [self addEnemies];
     [self updateCamera];
 }
@@ -110,8 +112,8 @@ static const CGFloat enemySpeed = 60.0;
         if (![self.player hasActions]) [self.player runAction:moveTank];
         [self rotateAndMove:self.player from:pos to:lastTouch withSpeed:playerSpeed];
     } else {
-        self.player.physicsBody.resting = true;
         if([self.player hasActions]) [self.player removeAllActions];
+        self.player.physicsBody.resting = true;
     }
     
 }
@@ -163,19 +165,31 @@ static const CGFloat enemySpeed = 60.0;
 }
 
 - (void) gameOver: (BOOL) didWin isRecord: (BOOL) record {
-    GameEndScene* scene = [GameEndScene nodeWithFileNamed:@"GameEnd"];
-    scene.scaleMode = SKSceneScaleModeAspectFill;
-    scene.didWin    = didWin;
-    scene.isRecord  = record;
-    scene.timer     = elapsedTime;
-    [self.view presentScene:scene transition:[SKTransition doorsCloseHorizontalWithDuration:0.8]];
+    [bgmSFX stop];
+    [self removeAllActions];
+    self.player.physicsBody.resting = true;
+    
+    NSString* SFX      = [NSString stringWithFormat:@"ts-%@", didWin ? @"win" : @"over"];
+    SKAction* soundSFX = [SKAction playSoundFileNamed:SFX waitForCompletion:NO];
+    SKAction* bombSFX  = [SKAction playSoundFileNamed:@"ts-bomb" waitForCompletion:NO];
+    SKAction* sequence = [SKAction sequence: @[bombSFX, soundSFX]];
+    [self runAction:sequence completion:^{
+        GameEndScene* scene = [GameEndScene nodeWithFileNamed:@"GameEnd"];
+        scene.scaleMode = SKSceneScaleModeAspectFill;
+        scene.didWin    = didWin;
+        scene.isRecord  = record;
+        scene.timer     = elapsedTime;
+        [self.view presentScene:scene transition:[SKTransition doorsCloseHorizontalWithDuration:1.0]];
+    }];
 }
 
-- (void) setNode: (SKNode*) node categoryMask: (int32_t) m1 collisionMask: (int32_t) m2 contactMask: (int32_t) m3 {
-    SKPhysicsBody* body = node.physicsBody;
-    if (m1 > 0) body.categoryBitMask    = m1;
-    if (m2 > 0) body.collisionBitMask   = m2;
-    if (m3 > 0) body.contactTestBitMask = m3;
+- (void) playBackgroundMusic {
+    NSURL* url = [[NSBundle mainBundle] URLForResource:@"ts-bg" withExtension:@"mp3"];
+    bgmSFX = [[AVAudioPlayer alloc] initWithContentsOfURL:(NSURL *)url fileTypeHint:@"mp3" error:nil];
+    bgmSFX.numberOfLoops = -1;
+    bgmSFX.volume = 0.3;
+    [bgmSFX prepareToPlay];
+    [bgmSFX play];
 }
 
 /**
@@ -195,6 +209,13 @@ static const CGFloat enemySpeed = 60.0;
         [def setFloat:result forKey:@"record"];
         return YES;
     }
+}
+
+- (void) setNode: (SKNode*) node categoryMask: (int32_t) m1 collisionMask: (int32_t) m2 contactMask: (int32_t) m3 {
+    SKPhysicsBody* body = node.physicsBody;
+    if (m1 > 0) body.categoryBitMask    = m1;
+    if (m2 > 0) body.collisionBitMask   = m2;
+    if (m3 > 0) body.contactTestBitMask = m3;
 }
 
 typedef NS_OPTIONS(int32_t, contactBodyCategory) {
