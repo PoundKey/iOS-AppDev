@@ -15,11 +15,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="gy0-ZP-XcU">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" id="gy0-ZP-XcU">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gy0-ZP-XcU" id="iYY-im-W1I">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="567" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
@@ -95,8 +95,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu," textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="8Eo-MZ-o1k">
-                                <rect key="frame" x="20" y="171" width="560" height="135"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" editable="NO" text="Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu," textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="8Eo-MZ-o1k">
+                                <rect key="frame" x="20" y="183" width="560" height="94"/>
                                 <color key="backgroundColor" red="0.4205115264" green="0.86582851579999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -104,10 +104,9 @@
                         </subviews>
                         <color key="backgroundColor" red="0.42051152644411971" green="0.86582851579177267" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="8Eo-MZ-o1k" firstAttribute="leading" secondItem="BOO-OW-qOC" secondAttribute="leadingMargin" id="FNV-Dg-8ZQ"/>
-                            <constraint firstItem="8Eo-MZ-o1k" firstAttribute="trailing" secondItem="BOO-OW-qOC" secondAttribute="trailingMargin" id="QhX-fc-iJV"/>
-                            <constraint firstItem="8Eo-MZ-o1k" firstAttribute="top" secondItem="oMS-dU-Cjp" secondAttribute="bottom" constant="151" id="bez-MM-6L3"/>
-                            <constraint firstItem="rMe-Vh-yLV" firstAttribute="top" secondItem="8Eo-MZ-o1k" secondAttribute="bottom" constant="294" id="enb-fk-bZh"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="8Eo-MZ-o1k" secondAttribute="leading" id="hpK-nt-txZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="8Eo-MZ-o1k" secondAttribute="trailing" id="n1R-Mb-F1J"/>
+                            <constraint firstItem="8Eo-MZ-o1k" firstAttribute="top" secondItem="oMS-dU-Cjp" secondAttribute="bottom" constant="163" id="sOn-Sd-BmK"/>
                         </constraints>
                     </view>
                     <connections>
@@ -123,9 +122,11 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XAT-Hi-sfQ" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="j4T-1L-n25">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="j4T-1L-n25">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        <color key="barTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
