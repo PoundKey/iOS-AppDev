@@ -19,7 +19,7 @@
     SKView * skView = (SKView *)self.view;
     /* Sprite Kit applies additional optimizations to improve rendering performance */
     skView.ignoresSiblingOrder = YES;
-    
+    //skView.showsPhysics = YES;
     // Create and configure the scene.
     GameStartScene *scene = [GameStartScene nodeWithFileNamed:@"GameStart"];
     scene.scaleMode = SKSceneScaleModeAspectFill;

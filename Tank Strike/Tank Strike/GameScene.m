@@ -36,7 +36,7 @@ static const CGFloat enemySpeed = 60.0;
     self.physicsBody.categoryBitMask  = edgeCategory;
     
     self.player = (SKSpriteNode*)[self childNodeWithName:@"player"];
-    self.player.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius: self.player.frame.size.width / 3];
+    //self.player.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius: self.player.frame.size.width / 3];
     [self setNode:self.player categoryMask:playerCategory collisionMask:-1 contactMask:(goalCategory | enemyCategory)];
     
     self.goal   = (SKSpriteNode*)[self childNodeWithName:@"goal"];
