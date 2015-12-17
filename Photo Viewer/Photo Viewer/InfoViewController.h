@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  InfoViewController.h
 //  Photo Viewer
 //
 //  Created by Chang Tong Xue on 2015-12-16.
@@ -8,8 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface InfoViewController : UIViewController
+@property (nonatomic) NSString* note;
 
 @end
-

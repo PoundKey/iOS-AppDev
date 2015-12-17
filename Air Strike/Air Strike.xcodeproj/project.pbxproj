@@ -1,0 +1,428 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		76E991B51C197EA4007B277C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E991B41C197EA4007B277C /* main.m */; };
+		76E991B81C197EA4007B277C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E991B71C197EA4007B277C /* AppDelegate.m */; };
+		76E991BB1C197EA4007B277C /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E991BA1C197EA4007B277C /* GameScene.m */; };
+		76E991BD1C197EA4007B277C /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 76E991BC1C197EA4007B277C /* GameScene.sks */; };
+		76E991C01C197EA4007B277C /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E991BF1C197EA4007B277C /* GameViewController.m */; };
+		76E991C31C197EA4007B277C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76E991C11C197EA4007B277C /* Main.storyboard */; };
+		76E991C51C197EA4007B277C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76E991C41C197EA4007B277C /* Assets.xcassets */; };
+		76E991C81C197EA4007B277C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76E991C61C197EA4007B277C /* LaunchScreen.storyboard */; };
+		76E991D31C197EA4007B277C /* Air_StrikeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E991D21C197EA4007B277C /* Air_StrikeTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		76E991CF1C197EA4007B277C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 76E991A81C197EA4007B277C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 76E991AF1C197EA4007B277C;
+			remoteInfo = "Air Strike";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		76E991B01C197EA4007B277C /* Air Strike.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Air Strike.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		76E991B41C197EA4007B277C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		76E991B61C197EA4007B277C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		76E991B71C197EA4007B277C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		76E991B91C197EA4007B277C /* GameScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
+		76E991BA1C197EA4007B277C /* GameScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameScene.m; sourceTree = "<group>"; };
+		76E991BC1C197EA4007B277C /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		76E991BE1C197EA4007B277C /* GameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
+		76E991BF1C197EA4007B277C /* GameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
+		76E991C21C197EA4007B277C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		76E991C41C197EA4007B277C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		76E991C71C197EA4007B277C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		76E991C91C197EA4007B277C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		76E991CE1C197EA4007B277C /* Air StrikeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Air StrikeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		76E991D21C197EA4007B277C /* Air_StrikeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Air_StrikeTests.m; sourceTree = "<group>"; };
+		76E991D41C197EA4007B277C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		76E991AD1C197EA4007B277C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		76E991CB1C197EA4007B277C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		76E991A71C197EA4007B277C = {
+			isa = PBXGroup;
+			children = (
+				76E991B21C197EA4007B277C /* Air Strike */,
+				76E991D11C197EA4007B277C /* Air StrikeTests */,
+				76E991B11C197EA4007B277C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		76E991B11C197EA4007B277C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				76E991B01C197EA4007B277C /* Air Strike.app */,
+				76E991CE1C197EA4007B277C /* Air StrikeTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		76E991B21C197EA4007B277C /* Air Strike */ = {
+			isa = PBXGroup;
+			children = (
+				76E991B61C197EA4007B277C /* AppDelegate.h */,
+				76E991B71C197EA4007B277C /* AppDelegate.m */,
+				76E991B91C197EA4007B277C /* GameScene.h */,
+				76E991BA1C197EA4007B277C /* GameScene.m */,
+				76E991BC1C197EA4007B277C /* GameScene.sks */,
+				76E991BE1C197EA4007B277C /* GameViewController.h */,
+				76E991BF1C197EA4007B277C /* GameViewController.m */,
+				76E991C11C197EA4007B277C /* Main.storyboard */,
+				76E991C41C197EA4007B277C /* Assets.xcassets */,
+				76E991C61C197EA4007B277C /* LaunchScreen.storyboard */,
+				76E991C91C197EA4007B277C /* Info.plist */,
+				76E991B31C197EA4007B277C /* Supporting Files */,
+			);
+			path = "Air Strike";
+			sourceTree = "<group>";
+		};
+		76E991B31C197EA4007B277C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				76E991B41C197EA4007B277C /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		76E991D11C197EA4007B277C /* Air StrikeTests */ = {
+			isa = PBXGroup;
+			children = (
+				76E991D21C197EA4007B277C /* Air_StrikeTests.m */,
+				76E991D41C197EA4007B277C /* Info.plist */,
+			);
+			path = "Air StrikeTests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		76E991AF1C197EA4007B277C /* Air Strike */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 76E991D71C197EA4007B277C /* Build configuration list for PBXNativeTarget "Air Strike" */;
+			buildPhases = (
+				76E991AC1C197EA4007B277C /* Sources */,
+				76E991AD1C197EA4007B277C /* Frameworks */,
+				76E991AE1C197EA4007B277C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Air Strike";
+			productName = "Air Strike";
+			productReference = 76E991B01C197EA4007B277C /* Air Strike.app */;
+			productType = "com.apple.product-type.application";
+		};
+		76E991CD1C197EA4007B277C /* Air StrikeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 76E991DA1C197EA4007B277C /* Build configuration list for PBXNativeTarget "Air StrikeTests" */;
+			buildPhases = (
+				76E991CA1C197EA4007B277C /* Sources */,
+				76E991CB1C197EA4007B277C /* Frameworks */,
+				76E991CC1C197EA4007B277C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				76E991D01C197EA4007B277C /* PBXTargetDependency */,
+			);
+			name = "Air StrikeTests";
+			productName = "Air StrikeTests";
+			productReference = 76E991CE1C197EA4007B277C /* Air StrikeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		76E991A81C197EA4007B277C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = DX;
+				TargetAttributes = {
+					76E991AF1C197EA4007B277C = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = MY2MNC4AMN;
+					};
+					76E991CD1C197EA4007B277C = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = MY2MNC4AMN;
+						TestTargetID = 76E991AF1C197EA4007B277C;
+					};
+				};
+			};
+			buildConfigurationList = 76E991AB1C197EA4007B277C /* Build configuration list for PBXProject "Air Strike" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 76E991A71C197EA4007B277C;
+			productRefGroup = 76E991B11C197EA4007B277C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				76E991AF1C197EA4007B277C /* Air Strike */,
+				76E991CD1C197EA4007B277C /* Air StrikeTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		76E991AE1C197EA4007B277C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76E991BD1C197EA4007B277C /* GameScene.sks in Resources */,
+				76E991C81C197EA4007B277C /* LaunchScreen.storyboard in Resources */,
+				76E991C51C197EA4007B277C /* Assets.xcassets in Resources */,
+				76E991C31C197EA4007B277C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		76E991CC1C197EA4007B277C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		76E991AC1C197EA4007B277C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76E991C01C197EA4007B277C /* GameViewController.m in Sources */,
+				76E991B81C197EA4007B277C /* AppDelegate.m in Sources */,
+				76E991BB1C197EA4007B277C /* GameScene.m in Sources */,
+				76E991B51C197EA4007B277C /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		76E991CA1C197EA4007B277C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76E991D31C197EA4007B277C /* Air_StrikeTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		76E991D01C197EA4007B277C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 76E991AF1C197EA4007B277C /* Air Strike */;
+			targetProxy = 76E991CF1C197EA4007B277C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		76E991C11C197EA4007B277C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				76E991C21C197EA4007B277C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		76E991C61C197EA4007B277C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				76E991C71C197EA4007B277C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		76E991D51C197EA4007B277C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		76E991D61C197EA4007B277C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		76E991D81C197EA4007B277C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Air Strike/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dyl.herokuapp.Air-Strike";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		76E991D91C197EA4007B277C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Air Strike/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dyl.herokuapp.Air-Strike";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		76E991DB1C197EA4007B277C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				INFOPLIST_FILE = "Air StrikeTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dyl.herokuapp.Air-StrikeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Air Strike.app/Air Strike";
+			};
+			name = Debug;
+		};
+		76E991DC1C197EA4007B277C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Air StrikeTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dyl.herokuapp.Air-StrikeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Air Strike.app/Air Strike";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		76E991AB1C197EA4007B277C /* Build configuration list for PBXProject "Air Strike" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				76E991D51C197EA4007B277C /* Debug */,
+				76E991D61C197EA4007B277C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		76E991D71C197EA4007B277C /* Build configuration list for PBXNativeTarget "Air Strike" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				76E991D81C197EA4007B277C /* Debug */,
+				76E991D91C197EA4007B277C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		76E991DA1C197EA4007B277C /* Build configuration list for PBXNativeTarget "Air StrikeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				76E991DB1C197EA4007B277C /* Debug */,
+				76E991DC1C197EA4007B277C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 76E991A81C197EA4007B277C /* Project object */;
+}
