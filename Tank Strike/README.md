@@ -1,10 +1,8 @@
 ## iOS SpriteKit: Tank Strike
 <p align="center">
-<b> <-- Game Play --> </b> <br>
-<img src="./images/GamePlay.gif"> <br>
+<b> <-- Game Play --> </b> <br> <br>
+<img src="./images/GamePlay1.gif"> <br> <br>
 <img src="./images/GamePlay2.gif"> <br> <br>
-<b> <-- Game End --> </b> <br>
-<img src="./images/GameEnd.gif"> 
 </p>
 
 ---
