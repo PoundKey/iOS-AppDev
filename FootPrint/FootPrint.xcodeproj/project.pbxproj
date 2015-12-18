@@ -1,0 +1,507 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		765CE4C11C24290500ABB433 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765CE4C01C24290500ABB433 /* AppDelegate.swift */; };
+		765CE4C31C24290500ABB433 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765CE4C21C24290500ABB433 /* ViewController.swift */; };
+		765CE4C61C24290500ABB433 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 765CE4C41C24290500ABB433 /* Main.storyboard */; };
+		765CE4C81C24290500ABB433 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 765CE4C71C24290500ABB433 /* Assets.xcassets */; };
+		765CE4CB1C24290500ABB433 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 765CE4C91C24290500ABB433 /* LaunchScreen.storyboard */; };
+		765CE4D61C24290500ABB433 /* FootPrintTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765CE4D51C24290500ABB433 /* FootPrintTests.swift */; };
+		765CE4F91C24291800ABB433 /* airport.png in Resources */ = {isa = PBXBuildFile; fileRef = 765CE4E11C24291800ABB433 /* airport.png */; };
+		765CE4FA1C24291800ABB433 /* bank.png in Resources */ = {isa = PBXBuildFile; fileRef = 765CE4E21C24291800ABB433 /* bank.png */; };
+		765CE4FB1C24291800ABB433 /* bar.png in Resources */ = {isa = PBXBuildFile; fileRef = 765CE4E31C24291800ABB433 /* bar.png */; };
+		765CE4FC1C24291800ABB433 /* beach.png in Resources */ = {isa = PBXBuildFile; fileRef = 765CE4E41C24291800ABB433 /* beach.png */; };
+		765CE4FD1C24291800ABB433 /* bus.png in Resources */ = {isa = PBXBuildFile; fileRef = 765CE4E51C24291800ABB433 /* bus.png */; };
+		765CE4FE1C24291800ABB433 /* camp.png in Resources */ = {isa = PBXBuildFile; fileRef = 765CE4E61C24291800ABB433 /* camp.png */; };
+		765CE4FF1C24291800ABB433 /* dock.png in Resources */ = {isa = PBXBuildFile; fileRef = 765CE4E71C24291800ABB433 /* dock.png */; };
+		765CE5001C24291800ABB433 /* drink.png in Resources */ = {isa = PBXBuildFile; fileRef = 765CE4E81C24291800ABB433 /* drink.png */; };
+		765CE5011C24291800ABB433 /* favorite.png in Resources */ = {isa = PBXBuildFile; fileRef = 765CE4E91C24291800ABB433 /* favorite.png */; };
+		765CE5021C24291800ABB433 /* hospital.png in Resources */ = {isa = PBXBuildFile; fileRef = 765CE4EA1C24291800ABB433 /* hospital.png */; };
+		765CE5031C24291800ABB433 /* library.png in Resources */ = {isa = PBXBuildFile; fileRef = 765CE4EB1C24291800ABB433 /* library.png */; };
+		765CE5041C24291800ABB433 /* mall.png in Resources */ = {isa = PBXBuildFile; fileRef = 765CE4EC1C24291800ABB433 /* mall.png */; };
+		765CE5051C24291800ABB433 /* market.png in Resources */ = {isa = PBXBuildFile; fileRef = 765CE4ED1C24291800ABB433 /* market.png */; };
+		765CE5061C24291800ABB433 /* mountain.png in Resources */ = {isa = PBXBuildFile; fileRef = 765CE4EE1C24291800ABB433 /* mountain.png */; };
+		765CE5071C24291800ABB433 /* museum.png in Resources */ = {isa = PBXBuildFile; fileRef = 765CE4EF1C24291800ABB433 /* museum.png */; };
+		765CE5081C24291800ABB433 /* pin.png in Resources */ = {isa = PBXBuildFile; fileRef = 765CE4F01C24291800ABB433 /* pin.png */; };
+		765CE5091C24291800ABB433 /* restaurant.png in Resources */ = {isa = PBXBuildFile; fileRef = 765CE4F11C24291800ABB433 /* restaurant.png */; };
+		765CE50A1C24291800ABB433 /* school.png in Resources */ = {isa = PBXBuildFile; fileRef = 765CE4F21C24291800ABB433 /* school.png */; };
+		765CE50B1C24291800ABB433 /* shop.png in Resources */ = {isa = PBXBuildFile; fileRef = 765CE4F31C24291800ABB433 /* shop.png */; };
+		765CE50C1C24291800ABB433 /* skytrain.png in Resources */ = {isa = PBXBuildFile; fileRef = 765CE4F41C24291800ABB433 /* skytrain.png */; };
+		765CE50D1C24291800ABB433 /* uncat.png in Resources */ = {isa = PBXBuildFile; fileRef = 765CE4F51C24291800ABB433 /* uncat.png */; };
+		765CE50E1C24291800ABB433 /* visit.png in Resources */ = {isa = PBXBuildFile; fileRef = 765CE4F61C24291800ABB433 /* visit.png */; };
+		765CE50F1C24291800ABB433 /* wifi.png in Resources */ = {isa = PBXBuildFile; fileRef = 765CE4F71C24291800ABB433 /* wifi.png */; };
+		765CE5101C24291800ABB433 /* wonderland.png in Resources */ = {isa = PBXBuildFile; fileRef = 765CE4F81C24291800ABB433 /* wonderland.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		765CE4D21C24290500ABB433 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 765CE4B51C24290500ABB433 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 765CE4BC1C24290500ABB433;
+			remoteInfo = FootPrint;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		765CE4BD1C24290500ABB433 /* FootPrint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FootPrint.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		765CE4C01C24290500ABB433 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		765CE4C21C24290500ABB433 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		765CE4C51C24290500ABB433 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		765CE4C71C24290500ABB433 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		765CE4CA1C24290500ABB433 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		765CE4CC1C24290500ABB433 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		765CE4D11C24290500ABB433 /* FootPrintTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FootPrintTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		765CE4D51C24290500ABB433 /* FootPrintTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootPrintTests.swift; sourceTree = "<group>"; };
+		765CE4D71C24290500ABB433 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		765CE4E11C24291800ABB433 /* airport.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = airport.png; sourceTree = "<group>"; };
+		765CE4E21C24291800ABB433 /* bank.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bank.png; sourceTree = "<group>"; };
+		765CE4E31C24291800ABB433 /* bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bar.png; sourceTree = "<group>"; };
+		765CE4E41C24291800ABB433 /* beach.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beach.png; sourceTree = "<group>"; };
+		765CE4E51C24291800ABB433 /* bus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bus.png; sourceTree = "<group>"; };
+		765CE4E61C24291800ABB433 /* camp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camp.png; sourceTree = "<group>"; };
+		765CE4E71C24291800ABB433 /* dock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dock.png; sourceTree = "<group>"; };
+		765CE4E81C24291800ABB433 /* drink.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = drink.png; sourceTree = "<group>"; };
+		765CE4E91C24291800ABB433 /* favorite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = favorite.png; sourceTree = "<group>"; };
+		765CE4EA1C24291800ABB433 /* hospital.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hospital.png; sourceTree = "<group>"; };
+		765CE4EB1C24291800ABB433 /* library.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = library.png; sourceTree = "<group>"; };
+		765CE4EC1C24291800ABB433 /* mall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mall.png; sourceTree = "<group>"; };
+		765CE4ED1C24291800ABB433 /* market.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = market.png; sourceTree = "<group>"; };
+		765CE4EE1C24291800ABB433 /* mountain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mountain.png; sourceTree = "<group>"; };
+		765CE4EF1C24291800ABB433 /* museum.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = museum.png; sourceTree = "<group>"; };
+		765CE4F01C24291800ABB433 /* pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pin.png; sourceTree = "<group>"; };
+		765CE4F11C24291800ABB433 /* restaurant.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = restaurant.png; sourceTree = "<group>"; };
+		765CE4F21C24291800ABB433 /* school.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = school.png; sourceTree = "<group>"; };
+		765CE4F31C24291800ABB433 /* shop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shop.png; sourceTree = "<group>"; };
+		765CE4F41C24291800ABB433 /* skytrain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = skytrain.png; sourceTree = "<group>"; };
+		765CE4F51C24291800ABB433 /* uncat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = uncat.png; sourceTree = "<group>"; };
+		765CE4F61C24291800ABB433 /* visit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = visit.png; sourceTree = "<group>"; };
+		765CE4F71C24291800ABB433 /* wifi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wifi.png; sourceTree = "<group>"; };
+		765CE4F81C24291800ABB433 /* wonderland.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wonderland.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		765CE4BA1C24290500ABB433 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		765CE4CE1C24290500ABB433 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		765CE4B41C24290500ABB433 = {
+			isa = PBXGroup;
+			children = (
+				765CE4BF1C24290500ABB433 /* FootPrint */,
+				765CE4D41C24290500ABB433 /* FootPrintTests */,
+				765CE4BE1C24290500ABB433 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		765CE4BE1C24290500ABB433 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				765CE4BD1C24290500ABB433 /* FootPrint.app */,
+				765CE4D11C24290500ABB433 /* FootPrintTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		765CE4BF1C24290500ABB433 /* FootPrint */ = {
+			isa = PBXGroup;
+			children = (
+				765CE4E01C24291800ABB433 /* Pins */,
+				765CE4C01C24290500ABB433 /* AppDelegate.swift */,
+				765CE4C21C24290500ABB433 /* ViewController.swift */,
+				765CE4C41C24290500ABB433 /* Main.storyboard */,
+				765CE4C71C24290500ABB433 /* Assets.xcassets */,
+				765CE4C91C24290500ABB433 /* LaunchScreen.storyboard */,
+				765CE4CC1C24290500ABB433 /* Info.plist */,
+			);
+			path = FootPrint;
+			sourceTree = "<group>";
+		};
+		765CE4D41C24290500ABB433 /* FootPrintTests */ = {
+			isa = PBXGroup;
+			children = (
+				765CE4D51C24290500ABB433 /* FootPrintTests.swift */,
+				765CE4D71C24290500ABB433 /* Info.plist */,
+			);
+			path = FootPrintTests;
+			sourceTree = "<group>";
+		};
+		765CE4E01C24291800ABB433 /* Pins */ = {
+			isa = PBXGroup;
+			children = (
+				765CE4E11C24291800ABB433 /* airport.png */,
+				765CE4E21C24291800ABB433 /* bank.png */,
+				765CE4E31C24291800ABB433 /* bar.png */,
+				765CE4E41C24291800ABB433 /* beach.png */,
+				765CE4E51C24291800ABB433 /* bus.png */,
+				765CE4E61C24291800ABB433 /* camp.png */,
+				765CE4E71C24291800ABB433 /* dock.png */,
+				765CE4E81C24291800ABB433 /* drink.png */,
+				765CE4E91C24291800ABB433 /* favorite.png */,
+				765CE4EA1C24291800ABB433 /* hospital.png */,
+				765CE4EB1C24291800ABB433 /* library.png */,
+				765CE4EC1C24291800ABB433 /* mall.png */,
+				765CE4ED1C24291800ABB433 /* market.png */,
+				765CE4EE1C24291800ABB433 /* mountain.png */,
+				765CE4EF1C24291800ABB433 /* museum.png */,
+				765CE4F01C24291800ABB433 /* pin.png */,
+				765CE4F11C24291800ABB433 /* restaurant.png */,
+				765CE4F21C24291800ABB433 /* school.png */,
+				765CE4F31C24291800ABB433 /* shop.png */,
+				765CE4F41C24291800ABB433 /* skytrain.png */,
+				765CE4F51C24291800ABB433 /* uncat.png */,
+				765CE4F61C24291800ABB433 /* visit.png */,
+				765CE4F71C24291800ABB433 /* wifi.png */,
+				765CE4F81C24291800ABB433 /* wonderland.png */,
+			);
+			path = Pins;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		765CE4BC1C24290500ABB433 /* FootPrint */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 765CE4DA1C24290500ABB433 /* Build configuration list for PBXNativeTarget "FootPrint" */;
+			buildPhases = (
+				765CE4B91C24290500ABB433 /* Sources */,
+				765CE4BA1C24290500ABB433 /* Frameworks */,
+				765CE4BB1C24290500ABB433 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FootPrint;
+			productName = FootPrint;
+			productReference = 765CE4BD1C24290500ABB433 /* FootPrint.app */;
+			productType = "com.apple.product-type.application";
+		};
+		765CE4D01C24290500ABB433 /* FootPrintTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 765CE4DD1C24290500ABB433 /* Build configuration list for PBXNativeTarget "FootPrintTests" */;
+			buildPhases = (
+				765CE4CD1C24290500ABB433 /* Sources */,
+				765CE4CE1C24290500ABB433 /* Frameworks */,
+				765CE4CF1C24290500ABB433 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				765CE4D31C24290500ABB433 /* PBXTargetDependency */,
+			);
+			name = FootPrintTests;
+			productName = FootPrintTests;
+			productReference = 765CE4D11C24290500ABB433 /* FootPrintTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		765CE4B51C24290500ABB433 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = DX;
+				TargetAttributes = {
+					765CE4BC1C24290500ABB433 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = MY2MNC4AMN;
+					};
+					765CE4D01C24290500ABB433 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = MY2MNC4AMN;
+						TestTargetID = 765CE4BC1C24290500ABB433;
+					};
+				};
+			};
+			buildConfigurationList = 765CE4B81C24290500ABB433 /* Build configuration list for PBXProject "FootPrint" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 765CE4B41C24290500ABB433;
+			productRefGroup = 765CE4BE1C24290500ABB433 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				765CE4BC1C24290500ABB433 /* FootPrint */,
+				765CE4D01C24290500ABB433 /* FootPrintTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		765CE4BB1C24290500ABB433 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				765CE5081C24291800ABB433 /* pin.png in Resources */,
+				765CE5021C24291800ABB433 /* hospital.png in Resources */,
+				765CE5051C24291800ABB433 /* market.png in Resources */,
+				765CE4CB1C24290500ABB433 /* LaunchScreen.storyboard in Resources */,
+				765CE5061C24291800ABB433 /* mountain.png in Resources */,
+				765CE5101C24291800ABB433 /* wonderland.png in Resources */,
+				765CE4FA1C24291800ABB433 /* bank.png in Resources */,
+				765CE5031C24291800ABB433 /* library.png in Resources */,
+				765CE4FE1C24291800ABB433 /* camp.png in Resources */,
+				765CE50A1C24291800ABB433 /* school.png in Resources */,
+				765CE50C1C24291800ABB433 /* skytrain.png in Resources */,
+				765CE4C81C24290500ABB433 /* Assets.xcassets in Resources */,
+				765CE4FB1C24291800ABB433 /* bar.png in Resources */,
+				765CE50B1C24291800ABB433 /* shop.png in Resources */,
+				765CE5091C24291800ABB433 /* restaurant.png in Resources */,
+				765CE4FD1C24291800ABB433 /* bus.png in Resources */,
+				765CE50D1C24291800ABB433 /* uncat.png in Resources */,
+				765CE4FF1C24291800ABB433 /* dock.png in Resources */,
+				765CE5011C24291800ABB433 /* favorite.png in Resources */,
+				765CE50E1C24291800ABB433 /* visit.png in Resources */,
+				765CE4C61C24290500ABB433 /* Main.storyboard in Resources */,
+				765CE5071C24291800ABB433 /* museum.png in Resources */,
+				765CE5041C24291800ABB433 /* mall.png in Resources */,
+				765CE4FC1C24291800ABB433 /* beach.png in Resources */,
+				765CE5001C24291800ABB433 /* drink.png in Resources */,
+				765CE50F1C24291800ABB433 /* wifi.png in Resources */,
+				765CE4F91C24291800ABB433 /* airport.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		765CE4CF1C24290500ABB433 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		765CE4B91C24290500ABB433 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				765CE4C31C24290500ABB433 /* ViewController.swift in Sources */,
+				765CE4C11C24290500ABB433 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		765CE4CD1C24290500ABB433 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				765CE4D61C24290500ABB433 /* FootPrintTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		765CE4D31C24290500ABB433 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 765CE4BC1C24290500ABB433 /* FootPrint */;
+			targetProxy = 765CE4D21C24290500ABB433 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		765CE4C41C24290500ABB433 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				765CE4C51C24290500ABB433 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		765CE4C91C24290500ABB433 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				765CE4CA1C24290500ABB433 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		765CE4D81C24290500ABB433 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		765CE4D91C24290500ABB433 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		765CE4DB1C24290500ABB433 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = FootPrint/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dyl.herokuapp.FootPrint;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		765CE4DC1C24290500ABB433 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = FootPrint/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dyl.herokuapp.FootPrint;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		765CE4DE1C24290500ABB433 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = FootPrintTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dyl.herokuapp.FootPrintTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FootPrint.app/FootPrint";
+			};
+			name = Debug;
+		};
+		765CE4DF1C24290500ABB433 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = FootPrintTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dyl.herokuapp.FootPrintTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FootPrint.app/FootPrint";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		765CE4B81C24290500ABB433 /* Build configuration list for PBXProject "FootPrint" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				765CE4D81C24290500ABB433 /* Debug */,
+				765CE4D91C24290500ABB433 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		765CE4DA1C24290500ABB433 /* Build configuration list for PBXNativeTarget "FootPrint" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				765CE4DB1C24290500ABB433 /* Debug */,
+				765CE4DC1C24290500ABB433 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		765CE4DD1C24290500ABB433 /* Build configuration list for PBXNativeTarget "FootPrintTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				765CE4DE1C24290500ABB433 /* Debug */,
+				765CE4DF1C24290500ABB433 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 765CE4B51C24290500ABB433 /* Project object */;
+}

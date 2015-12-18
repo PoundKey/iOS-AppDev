@@ -7,10 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		76823FF91C23DCC00083891A /* bullet.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 76823FEE1C23DCC00083891A /* bullet.mp3 */; };
+		76823FFA1C23DCC00083891A /* BurstAircraftPause.png in Resources */ = {isa = PBXBuildFile; fileRef = 76823FEF1C23DCC00083891A /* BurstAircraftPause.png */; };
+		76823FFB1C23DCC00083891A /* BurstAircraftPause@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 76823FF01C23DCC00083891A /* BurstAircraftPause@2x.png */; };
+		76823FFC1C23DCC00083891A /* enemy1_down.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 76823FF11C23DCC00083891A /* enemy1_down.mp3 */; };
+		76823FFD1C23DCC00083891A /* enemy2_down.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 76823FF21C23DCC00083891A /* enemy2_down.mp3 */; };
+		76823FFE1C23DCC00083891A /* enemy2_out.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 76823FF31C23DCC00083891A /* enemy2_out.mp3 */; };
+		76823FFF1C23DCC00083891A /* enemy3_down.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 76823FF41C23DCC00083891A /* enemy3_down.mp3 */; };
+		768240001C23DCC00083891A /* game_music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 76823FF51C23DCC00083891A /* game_music.mp3 */; };
+		768240011C23DCC00083891A /* game_over.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 76823FF61C23DCC00083891A /* game_over.mp3 */; };
+		768240021C23DCC00083891A /* gameArts-hd.plist in Resources */ = {isa = PBXBuildFile; fileRef = 76823FF71C23DCC00083891A /* gameArts-hd.plist */; };
+		768240031C23DCC00083891A /* gameArts-hd@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 76823FF81C23DCC00083891A /* gameArts-hd@2x.png */; };
+		768240061C23DF620083891A /* FoePlane.m in Sources */ = {isa = PBXBuildFile; fileRef = 768240051C23DF620083891A /* FoePlane.m */; };
+		768240091C23E0300083891A /* SharedTexture.m in Sources */ = {isa = PBXBuildFile; fileRef = 768240081C23E0300083891A /* SharedTexture.m */; };
 		76E991B51C197EA4007B277C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E991B41C197EA4007B277C /* main.m */; };
 		76E991B81C197EA4007B277C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E991B71C197EA4007B277C /* AppDelegate.m */; };
-		76E991BB1C197EA4007B277C /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E991BA1C197EA4007B277C /* GameScene.m */; };
-		76E991BD1C197EA4007B277C /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 76E991BC1C197EA4007B277C /* GameScene.sks */; };
+		76E991BB1C197EA4007B277C /* MainScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E991BA1C197EA4007B277C /* MainScene.m */; };
+		76E991BD1C197EA4007B277C /* MainScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 76E991BC1C197EA4007B277C /* MainScene.sks */; };
 		76E991C01C197EA4007B277C /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E991BF1C197EA4007B277C /* GameViewController.m */; };
 		76E991C31C197EA4007B277C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76E991C11C197EA4007B277C /* Main.storyboard */; };
 		76E991C51C197EA4007B277C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76E991C41C197EA4007B277C /* Assets.xcassets */; };
@@ -29,13 +42,28 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		76823FEE1C23DCC00083891A /* bullet.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bullet.mp3; sourceTree = "<group>"; };
+		76823FEF1C23DCC00083891A /* BurstAircraftPause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BurstAircraftPause.png; sourceTree = "<group>"; };
+		76823FF01C23DCC00083891A /* BurstAircraftPause@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BurstAircraftPause@2x.png"; sourceTree = "<group>"; };
+		76823FF11C23DCC00083891A /* enemy1_down.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = enemy1_down.mp3; sourceTree = "<group>"; };
+		76823FF21C23DCC00083891A /* enemy2_down.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = enemy2_down.mp3; sourceTree = "<group>"; };
+		76823FF31C23DCC00083891A /* enemy2_out.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = enemy2_out.mp3; sourceTree = "<group>"; };
+		76823FF41C23DCC00083891A /* enemy3_down.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = enemy3_down.mp3; sourceTree = "<group>"; };
+		76823FF51C23DCC00083891A /* game_music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = game_music.mp3; sourceTree = "<group>"; };
+		76823FF61C23DCC00083891A /* game_over.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = game_over.mp3; sourceTree = "<group>"; };
+		76823FF71C23DCC00083891A /* gameArts-hd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "gameArts-hd.plist"; sourceTree = "<group>"; };
+		76823FF81C23DCC00083891A /* gameArts-hd@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gameArts-hd@2x.png"; sourceTree = "<group>"; };
+		768240041C23DF620083891A /* FoePlane.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoePlane.h; sourceTree = "<group>"; };
+		768240051C23DF620083891A /* FoePlane.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoePlane.m; sourceTree = "<group>"; };
+		768240071C23E0300083891A /* SharedTexture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SharedTexture.h; sourceTree = "<group>"; };
+		768240081C23E0300083891A /* SharedTexture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SharedTexture.m; sourceTree = "<group>"; };
 		76E991B01C197EA4007B277C /* Air Strike.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Air Strike.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		76E991B41C197EA4007B277C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		76E991B61C197EA4007B277C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		76E991B71C197EA4007B277C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		76E991B91C197EA4007B277C /* GameScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
-		76E991BA1C197EA4007B277C /* GameScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameScene.m; sourceTree = "<group>"; };
-		76E991BC1C197EA4007B277C /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		76E991B91C197EA4007B277C /* MainScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainScene.h; sourceTree = "<group>"; };
+		76E991BA1C197EA4007B277C /* MainScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainScene.m; sourceTree = "<group>"; };
+		76E991BC1C197EA4007B277C /* MainScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MainScene.sks; sourceTree = "<group>"; };
 		76E991BE1C197EA4007B277C /* GameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
 		76E991BF1C197EA4007B277C /* GameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
 		76E991C21C197EA4007B277C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -65,6 +93,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		76823FED1C23DCC00083891A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				76823FEE1C23DCC00083891A /* bullet.mp3 */,
+				76823FEF1C23DCC00083891A /* BurstAircraftPause.png */,
+				76823FF01C23DCC00083891A /* BurstAircraftPause@2x.png */,
+				76823FF11C23DCC00083891A /* enemy1_down.mp3 */,
+				76823FF21C23DCC00083891A /* enemy2_down.mp3 */,
+				76823FF31C23DCC00083891A /* enemy2_out.mp3 */,
+				76823FF41C23DCC00083891A /* enemy3_down.mp3 */,
+				76823FF51C23DCC00083891A /* game_music.mp3 */,
+				76823FF61C23DCC00083891A /* game_over.mp3 */,
+				76823FF71C23DCC00083891A /* gameArts-hd.plist */,
+				76823FF81C23DCC00083891A /* gameArts-hd@2x.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		76E991A71C197EA4007B277C = {
 			isa = PBXGroup;
 			children = (
@@ -88,15 +134,20 @@
 			children = (
 				76E991B61C197EA4007B277C /* AppDelegate.h */,
 				76E991B71C197EA4007B277C /* AppDelegate.m */,
-				76E991B91C197EA4007B277C /* GameScene.h */,
-				76E991BA1C197EA4007B277C /* GameScene.m */,
-				76E991BC1C197EA4007B277C /* GameScene.sks */,
+				768240041C23DF620083891A /* FoePlane.h */,
+				768240051C23DF620083891A /* FoePlane.m */,
+				768240071C23E0300083891A /* SharedTexture.h */,
+				768240081C23E0300083891A /* SharedTexture.m */,
+				76E991B91C197EA4007B277C /* MainScene.h */,
+				76E991BA1C197EA4007B277C /* MainScene.m */,
+				76E991BC1C197EA4007B277C /* MainScene.sks */,
 				76E991BE1C197EA4007B277C /* GameViewController.h */,
 				76E991BF1C197EA4007B277C /* GameViewController.m */,
 				76E991C11C197EA4007B277C /* Main.storyboard */,
 				76E991C41C197EA4007B277C /* Assets.xcassets */,
 				76E991C61C197EA4007B277C /* LaunchScreen.storyboard */,
 				76E991C91C197EA4007B277C /* Info.plist */,
+				76823FED1C23DCC00083891A /* Resources */,
 				76E991B31C197EA4007B277C /* Supporting Files */,
 			);
 			path = "Air Strike";
@@ -201,10 +252,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76E991BD1C197EA4007B277C /* GameScene.sks in Resources */,
+				76823FFB1C23DCC00083891A /* BurstAircraftPause@2x.png in Resources */,
+				76E991BD1C197EA4007B277C /* MainScene.sks in Resources */,
+				76823FFD1C23DCC00083891A /* enemy2_down.mp3 in Resources */,
 				76E991C81C197EA4007B277C /* LaunchScreen.storyboard in Resources */,
+				76823FFC1C23DCC00083891A /* enemy1_down.mp3 in Resources */,
+				76823FF91C23DCC00083891A /* bullet.mp3 in Resources */,
+				768240011C23DCC00083891A /* game_over.mp3 in Resources */,
+				768240001C23DCC00083891A /* game_music.mp3 in Resources */,
+				76823FFA1C23DCC00083891A /* BurstAircraftPause.png in Resources */,
+				768240031C23DCC00083891A /* gameArts-hd@2x.png in Resources */,
+				76823FFF1C23DCC00083891A /* enemy3_down.mp3 in Resources */,
+				768240021C23DCC00083891A /* gameArts-hd.plist in Resources */,
 				76E991C51C197EA4007B277C /* Assets.xcassets in Resources */,
 				76E991C31C197EA4007B277C /* Main.storyboard in Resources */,
+				76823FFE1C23DCC00083891A /* enemy2_out.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,7 +286,9 @@
 			files = (
 				76E991C01C197EA4007B277C /* GameViewController.m in Sources */,
 				76E991B81C197EA4007B277C /* AppDelegate.m in Sources */,
-				76E991BB1C197EA4007B277C /* GameScene.m in Sources */,
+				768240091C23E0300083891A /* SharedTexture.m in Sources */,
+				76E991BB1C197EA4007B277C /* MainScene.m in Sources */,
+				768240061C23DF620083891A /* FoePlane.m in Sources */,
 				76E991B51C197EA4007B277C /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -352,6 +416,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Air Strike/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dyl.herokuapp.Air-Strike";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -363,6 +428,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Air Strike/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dyl.herokuapp.Air-Strike";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -413,6 +479,7 @@
 				76E991D91C197EA4007B277C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		76E991DA1C197EA4007B277C /* Build configuration list for PBXNativeTarget "Air StrikeTests" */ = {
 			isa = XCConfigurationList;
@@ -421,6 +488,7 @@
 				76E991DC1C197EA4007B277C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

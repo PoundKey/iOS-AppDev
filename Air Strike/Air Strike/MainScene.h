@@ -8,6 +8,6 @@
 
 #import <SpriteKit/SpriteKit.h>
 
-@interface GameScene : SKScene
+@interface MainScene : SKScene
 
 @end
