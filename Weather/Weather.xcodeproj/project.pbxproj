@@ -33,6 +33,10 @@
 		764C63F51C238FAC006C3707 /* weather-snow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 764C63DB1C238FAC006C3707 /* weather-snow@2x.png */; };
 		764C63F61C238FAC006C3707 /* weather-tstorm.png in Resources */ = {isa = PBXBuildFile; fileRef = 764C63DC1C238FAC006C3707 /* weather-tstorm.png */; };
 		764C63F71C238FAC006C3707 /* weather-tstorm@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 764C63DD1C238FAC006C3707 /* weather-tstorm@2x.png */; };
+		764C63FA1C23AF2D006C3707 /* WeatherClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 764C63F91C23AF2D006C3707 /* WeatherClient.m */; };
+		764C63FD1C23AF53006C3707 /* WeatherManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 764C63FC1C23AF53006C3707 /* WeatherManager.m */; };
+		764C64001C23AF7F006C3707 /* WeatherCondition.m in Sources */ = {isa = PBXBuildFile; fileRef = 764C63FF1C23AF7F006C3707 /* WeatherCondition.m */; };
+		764C64031C23AFB5006C3707 /* DailyForecast.m in Sources */ = {isa = PBXBuildFile; fileRef = 764C64021C23AFB5006C3707 /* DailyForecast.m */; };
 		76F89C3C1C2382DF006486CC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 76F89C3B1C2382DF006486CC /* main.m */; };
 		76F89C3F1C2382DF006486CC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 76F89C3E1C2382DF006486CC /* AppDelegate.m */; };
 		76F89C421C2382DF006486CC /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76F89C411C2382DF006486CC /* MainViewController.m */; };
@@ -82,6 +86,14 @@
 		764C63DB1C238FAC006C3707 /* weather-snow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "weather-snow@2x.png"; sourceTree = "<group>"; };
 		764C63DC1C238FAC006C3707 /* weather-tstorm.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "weather-tstorm.png"; sourceTree = "<group>"; };
 		764C63DD1C238FAC006C3707 /* weather-tstorm@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "weather-tstorm@2x.png"; sourceTree = "<group>"; };
+		764C63F81C23AF2D006C3707 /* WeatherClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherClient.h; sourceTree = "<group>"; };
+		764C63F91C23AF2D006C3707 /* WeatherClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherClient.m; sourceTree = "<group>"; };
+		764C63FB1C23AF53006C3707 /* WeatherManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherManager.h; sourceTree = "<group>"; };
+		764C63FC1C23AF53006C3707 /* WeatherManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherManager.m; sourceTree = "<group>"; };
+		764C63FE1C23AF7F006C3707 /* WeatherCondition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherCondition.h; sourceTree = "<group>"; };
+		764C63FF1C23AF7F006C3707 /* WeatherCondition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherCondition.m; sourceTree = "<group>"; };
+		764C64011C23AFB5006C3707 /* DailyForecast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DailyForecast.h; sourceTree = "<group>"; };
+		764C64021C23AFB5006C3707 /* DailyForecast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DailyForecast.m; sourceTree = "<group>"; };
 		76F89C371C2382DF006486CC /* Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76F89C3B1C2382DF006486CC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		76F89C3D1C2382DF006486CC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -181,6 +193,14 @@
 		76F89C391C2382DF006486CC /* Weather */ = {
 			isa = PBXGroup;
 			children = (
+				764C63F81C23AF2D006C3707 /* WeatherClient.h */,
+				764C63F91C23AF2D006C3707 /* WeatherClient.m */,
+				764C63FB1C23AF53006C3707 /* WeatherManager.h */,
+				764C63FC1C23AF53006C3707 /* WeatherManager.m */,
+				764C63FE1C23AF7F006C3707 /* WeatherCondition.h */,
+				764C63FF1C23AF7F006C3707 /* WeatherCondition.m */,
+				764C64011C23AFB5006C3707 /* DailyForecast.h */,
+				764C64021C23AFB5006C3707 /* DailyForecast.m */,
 				76F89C3D1C2382DF006486CC /* AppDelegate.h */,
 				76F89C3E1C2382DF006486CC /* AppDelegate.m */,
 				76F89C401C2382DF006486CC /* MainViewController.h */,
@@ -408,9 +428,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				764C64001C23AF7F006C3707 /* WeatherCondition.m in Sources */,
 				76F89C421C2382DF006486CC /* MainViewController.m in Sources */,
+				764C63FA1C23AF2D006C3707 /* WeatherClient.m in Sources */,
+				764C64031C23AFB5006C3707 /* DailyForecast.m in Sources */,
 				76F89C3F1C2382DF006486CC /* AppDelegate.m in Sources */,
 				76F89C3C1C2382DF006486CC /* main.m in Sources */,
+				764C63FD1C23AF53006C3707 /* WeatherManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
