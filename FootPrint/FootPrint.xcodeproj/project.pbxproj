@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		765CE4C11C24290500ABB433 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765CE4C01C24290500ABB433 /* AppDelegate.swift */; };
-		765CE4C31C24290500ABB433 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765CE4C21C24290500ABB433 /* ViewController.swift */; };
+		765CE4C31C24290500ABB433 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765CE4C21C24290500ABB433 /* MainViewController.swift */; };
 		765CE4C61C24290500ABB433 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 765CE4C41C24290500ABB433 /* Main.storyboard */; };
 		765CE4C81C24290500ABB433 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 765CE4C71C24290500ABB433 /* Assets.xcassets */; };
 		765CE4CB1C24290500ABB433 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 765CE4C91C24290500ABB433 /* LaunchScreen.storyboard */; };
@@ -37,6 +37,12 @@
 		765CE50E1C24291800ABB433 /* visit.png in Resources */ = {isa = PBXBuildFile; fileRef = 765CE4F61C24291800ABB433 /* visit.png */; };
 		765CE50F1C24291800ABB433 /* wifi.png in Resources */ = {isa = PBXBuildFile; fileRef = 765CE4F71C24291800ABB433 /* wifi.png */; };
 		765CE5101C24291800ABB433 /* wonderland.png in Resources */ = {isa = PBXBuildFile; fileRef = 765CE4F81C24291800ABB433 /* wonderland.png */; };
+		765FA5581C2505CF00A5740A /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 765FA5561C2505CF00A5740A /* Realm.framework */; };
+		765FA5591C2505CF00A5740A /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 765FA5561C2505CF00A5740A /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		765FA55A1C2505CF00A5740A /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 765FA5571C2505CF00A5740A /* RealmSwift.framework */; };
+		765FA55B1C2505CF00A5740A /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 765FA5571C2505CF00A5740A /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		76E865C31C260B8F00F6E1B7 /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E865C21C260B8F00F6E1B7 /* EntryViewController.swift */; };
+		76E865C51C260BC000F6E1B7 /* LogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E865C41C260BC000F6E1B7 /* LogViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,10 +55,25 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		765FA55C1C2505CF00A5740A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				765FA55B1C2505CF00A5740A /* RealmSwift.framework in Embed Frameworks */,
+				765FA5591C2505CF00A5740A /* Realm.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		765CE4BD1C24290500ABB433 /* FootPrint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FootPrint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		765CE4C01C24290500ABB433 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		765CE4C21C24290500ABB433 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		765CE4C21C24290500ABB433 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		765CE4C51C24290500ABB433 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		765CE4C71C24290500ABB433 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		765CE4CA1C24290500ABB433 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -84,6 +105,10 @@
 		765CE4F61C24291800ABB433 /* visit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = visit.png; sourceTree = "<group>"; };
 		765CE4F71C24291800ABB433 /* wifi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wifi.png; sourceTree = "<group>"; };
 		765CE4F81C24291800ABB433 /* wonderland.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wonderland.png; sourceTree = "<group>"; };
+		765FA5561C2505CF00A5740A /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
+		765FA5571C2505CF00A5740A /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
+		76E865C21C260B8F00F6E1B7 /* EntryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryViewController.swift; sourceTree = "<group>"; };
+		76E865C41C260BC000F6E1B7 /* LogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +116,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				765FA55A1C2505CF00A5740A /* RealmSwift.framework in Frameworks */,
+				765FA5581C2505CF00A5740A /* Realm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,11 +154,14 @@
 			children = (
 				765CE4E01C24291800ABB433 /* Pins */,
 				765CE4C01C24290500ABB433 /* AppDelegate.swift */,
-				765CE4C21C24290500ABB433 /* ViewController.swift */,
+				76E865C21C260B8F00F6E1B7 /* EntryViewController.swift */,
+				76E865C41C260BC000F6E1B7 /* LogViewController.swift */,
+				765CE4C21C24290500ABB433 /* MainViewController.swift */,
 				765CE4C41C24290500ABB433 /* Main.storyboard */,
 				765CE4C71C24290500ABB433 /* Assets.xcassets */,
 				765CE4C91C24290500ABB433 /* LaunchScreen.storyboard */,
 				765CE4CC1C24290500ABB433 /* Info.plist */,
+				765FA55D1C2505DA00A5740A /* Resource */,
 			);
 			path = FootPrint;
 			sourceTree = "<group>";
@@ -176,6 +206,16 @@
 			path = Pins;
 			sourceTree = "<group>";
 		};
+		765FA55D1C2505DA00A5740A /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				765FA5561C2505CF00A5740A /* Realm.framework */,
+				765FA5571C2505CF00A5740A /* RealmSwift.framework */,
+			);
+			name = Resource;
+			path = ..;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -186,6 +226,7 @@
 				765CE4B91C24290500ABB433 /* Sources */,
 				765CE4BA1C24290500ABB433 /* Frameworks */,
 				765CE4BB1C24290500ABB433 /* Resources */,
+				765FA55C1C2505CF00A5740A /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -303,8 +344,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				765CE4C31C24290500ABB433 /* ViewController.swift in Sources */,
+				765CE4C31C24290500ABB433 /* MainViewController.swift in Sources */,
 				765CE4C11C24290500ABB433 /* AppDelegate.swift in Sources */,
+				76E865C31C260B8F00F6E1B7 /* EntryViewController.swift in Sources */,
+				76E865C51C260BC000F6E1B7 /* LogViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,6 +474,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = FootPrint/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dyl.herokuapp.FootPrint;
@@ -442,6 +489,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = FootPrint/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dyl.herokuapp.FootPrint;
@@ -492,6 +543,7 @@
 				765CE4DC1C24290500ABB433 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		765CE4DD1C24290500ABB433 /* Build configuration list for PBXNativeTarget "FootPrintTests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +552,7 @@
 				765CE4DF1C24290500ABB433 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

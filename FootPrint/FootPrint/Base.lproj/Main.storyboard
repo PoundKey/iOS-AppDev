@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Iqg-dN-tkX">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Tracking-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FootPrint" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="FootPrint" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +17,125 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="uNT-ud-SIX">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
+                            </mapView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eQI-oH-WDV">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="rgd-MB-LSp"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="ceO-Yi-fgd"/>
+                                    <barButtonItem image="gps@2x.png" id="gya-Or-Vyc">
+                                        <color key="tintColor" red="0.0" green="0.36470588240000001" blue="0.66666666669999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="E6Y-hv-Hy9"/>
+                                </items>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </toolbar>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="eQI-oH-WDV" secondAttribute="trailing" id="42J-6y-ZY3"/>
+                            <constraint firstItem="eQI-oH-WDV" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="Cd2-UD-nFw"/>
+                            <constraint firstItem="eQI-oH-WDV" firstAttribute="top" secondItem="uNT-ud-SIX" secondAttribute="bottom" id="Gpa-Lo-O4A"/>
+                            <constraint firstItem="eQI-oH-WDV" firstAttribute="leading" secondItem="uNT-ud-SIX" secondAttribute="leading" id="PHg-HZ-t99"/>
+                            <constraint firstItem="eQI-oH-WDV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="TV2-S5-Ihb"/>
+                            <constraint firstItem="eQI-oH-WDV" firstAttribute="trailing" secondItem="uNT-ud-SIX" secondAttribute="trailing" id="cEm-NQ-xip"/>
+                            <constraint firstItem="uNT-ud-SIX" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="uP7-q3-7dK"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Tracking" id="yG1-3b-SlF">
+                        <barButtonItem key="leftBarButtonItem" title="FootPrint" id="VYi-yq-jtp"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Aqb-Vm-qNX"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="mapView" destination="uNT-ud-SIX" id="w5t-nr-G3G"/>
+                        <segue destination="U5Z-Ce-o9T" kind="show" identifier="entry" id="PTx-bb-Z7f"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1203" y="387"/>
+        </scene>
+        <!--New-->
+        <scene sceneID="vLo-j7-cGZ">
+            <objects>
+                <viewController id="U5Z-Ce-o9T" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="i8s-G2-7Zu"/>
+                        <viewControllerLayoutGuide type="bottom" id="iU3-Jd-CHc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4bU-f0-A7L">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Location Name..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SOC-07-e7A">
+                                <rect key="frame" x="20" y="85" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Location Category..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X25-7u-wMU">
+                                <rect key="frame" x="20" y="133" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DLf-Ny-bsR">
+                                <rect key="frame" x="20" y="184" width="560" height="311"/>
+                                <color key="backgroundColor" red="0.96194994450000004" green="0.96192115550000001" blue="0.9619374275" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="SOC-07-e7A" firstAttribute="trailing" secondItem="4bU-f0-A7L" secondAttribute="trailingMargin" id="5PR-ye-kbq"/>
+                            <constraint firstItem="X25-7u-wMU" firstAttribute="leading" secondItem="DLf-Ny-bsR" secondAttribute="leading" id="BlD-Fx-7yl"/>
+                            <constraint firstItem="X25-7u-wMU" firstAttribute="leading" secondItem="SOC-07-e7A" secondAttribute="leading" id="Ocv-yi-tN2"/>
+                            <constraint firstItem="SOC-07-e7A" firstAttribute="trailing" secondItem="X25-7u-wMU" secondAttribute="trailing" id="X9B-6j-bv8"/>
+                            <constraint firstItem="SOC-07-e7A" firstAttribute="top" secondItem="i8s-G2-7Zu" secondAttribute="bottom" constant="21" id="Y2z-3c-ijb"/>
+                            <constraint firstItem="X25-7u-wMU" firstAttribute="top" secondItem="SOC-07-e7A" secondAttribute="bottom" constant="18" id="g1T-2z-sPi"/>
+                            <constraint firstItem="X25-7u-wMU" firstAttribute="leading" secondItem="4bU-f0-A7L" secondAttribute="leadingMargin" id="uca-Wr-TAA"/>
+                            <constraint firstItem="DLf-Ny-bsR" firstAttribute="trailing" secondItem="X25-7u-wMU" secondAttribute="trailing" id="ybH-x0-Iqx"/>
+                            <constraint firstItem="iU3-Jd-CHc" firstAttribute="top" secondItem="DLf-Ny-bsR" secondAttribute="bottom" constant="105" id="yeI-xd-FNj"/>
+                            <constraint firstItem="DLf-Ny-bsR" firstAttribute="top" secondItem="X25-7u-wMU" secondAttribute="bottom" constant="21" id="zFX-3d-t4a"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="New" id="gIK-Te-tyV">
+                        <barButtonItem key="rightBarButtonItem" title="Confirm" id="q6S-uh-ktM"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oeb-7r-fvu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2045" y="396"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="gaJ-h7-mFF">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Iqg-dN-tkX" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="9fE-ho-XFC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.0" green="0.36470588235294116" blue="0.66666666666666663" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="l5y-zE-x9l"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RkG-oD-tjp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="435" y="387"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="gps@2x.png" width="21" height="30"/>
+    </resources>
 </document>
