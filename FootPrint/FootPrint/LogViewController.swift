@@ -7,7 +7,17 @@
 //
 
 import UIKit
+import MapKit
 
-class LogViewController: UIViewController {
+class LogViewController: UITableViewController {
 
+    @IBOutlet weak var segmentedBar: UISegmentedControl!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+    @IBAction func scopeChanged(sender: AnyObject) {
+        
+    }
 }

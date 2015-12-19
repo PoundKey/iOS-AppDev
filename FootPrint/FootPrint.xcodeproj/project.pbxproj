@@ -43,6 +43,7 @@
 		765FA55B1C2505CF00A5740A /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 765FA5571C2505CF00A5740A /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		76E865C31C260B8F00F6E1B7 /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E865C21C260B8F00F6E1B7 /* EntryViewController.swift */; };
 		76E865C51C260BC000F6E1B7 /* LogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E865C41C260BC000F6E1B7 /* LogViewController.swift */; };
+		76E865C71C26138900F6E1B7 /* CategoryTVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E865C61C26138900F6E1B7 /* CategoryTVController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +110,7 @@
 		765FA5571C2505CF00A5740A /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
 		76E865C21C260B8F00F6E1B7 /* EntryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryViewController.swift; sourceTree = "<group>"; };
 		76E865C41C260BC000F6E1B7 /* LogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogViewController.swift; sourceTree = "<group>"; };
+		76E865C61C26138900F6E1B7 /* CategoryTVController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryTVController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +160,7 @@
 				76E865C41C260BC000F6E1B7 /* LogViewController.swift */,
 				765CE4C21C24290500ABB433 /* MainViewController.swift */,
 				765CE4C41C24290500ABB433 /* Main.storyboard */,
+				76E865C61C26138900F6E1B7 /* CategoryTVController.swift */,
 				765CE4C71C24290500ABB433 /* Assets.xcassets */,
 				765CE4C91C24290500ABB433 /* LaunchScreen.storyboard */,
 				765CE4CC1C24290500ABB433 /* Info.plist */,
@@ -348,6 +351,7 @@
 				765CE4C11C24290500ABB433 /* AppDelegate.swift in Sources */,
 				76E865C31C260B8F00F6E1B7 /* EntryViewController.swift in Sources */,
 				76E865C51C260BC000F6E1B7 /* LogViewController.swift in Sources */,
+				76E865C71C26138900F6E1B7 /* CategoryTVController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
