@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "765FA4DB1C242B0F00A5740A"
-               BuildableName = "EatUp!.app"
-               BlueprintName = "EatUp!"
-               ReferencedContainer = "container:EatUp!.xcodeproj">
+               BlueprintIdentifier = "765FA51B1C24B45800A5740A"
+               BuildableName = "Just Eat.app"
+               BlueprintName = "Just Eat"
+               ReferencedContainer = "container:Just Eat.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,10 +32,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "765FA4DB1C242B0F00A5740A"
-            BuildableName = "EatUp!.app"
-            BlueprintName = "EatUp!"
-            ReferencedContainer = "container:EatUp!.xcodeproj">
+            BlueprintIdentifier = "765FA51B1C24B45800A5740A"
+            BuildableName = "Just Eat.app"
+            BlueprintName = "Just Eat"
+            ReferencedContainer = "container:Just Eat.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -55,10 +55,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "765FA4DB1C242B0F00A5740A"
-            BuildableName = "EatUp!.app"
-            BlueprintName = "EatUp!"
-            ReferencedContainer = "container:EatUp!.xcodeproj">
+            BlueprintIdentifier = "765FA51B1C24B45800A5740A"
+            BuildableName = "Just Eat.app"
+            BlueprintName = "Just Eat"
+            ReferencedContainer = "container:Just Eat.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -74,10 +74,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "765FA4DB1C242B0F00A5740A"
-            BuildableName = "EatUp!.app"
-            BlueprintName = "EatUp!"
-            ReferencedContainer = "container:EatUp!.xcodeproj">
+            BlueprintIdentifier = "765FA51B1C24B45800A5740A"
+            BuildableName = "Just Eat.app"
+            BlueprintName = "Just Eat"
+            ReferencedContainer = "container:Just Eat.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

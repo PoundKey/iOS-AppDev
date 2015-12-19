@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  EatUp!
+//  Just Eat
 //
 //  Created by Chang Tong Xue on 2015-12-18.
 //  Copyright © 2015 DX. All rights reserved.

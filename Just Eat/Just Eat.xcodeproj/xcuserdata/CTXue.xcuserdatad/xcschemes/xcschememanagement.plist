@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>EatUp!.xcscheme</key>
+		<key>Just Eat.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,7 +12,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>765FA4DB1C242B0F00A5740A</key>
+		<key>765FA51B1C24B45800A5740A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
