@@ -16,6 +16,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        let blueColor = UIColor(red:0, green:0.36, blue:0.66, alpha:1)
+        UITextField.appearance().tintColor = blueColor
+        UITextView.appearance().tintColor = blueColor
         return true
     }
 

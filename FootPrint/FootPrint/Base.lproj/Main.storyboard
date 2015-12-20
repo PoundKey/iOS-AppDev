@@ -20,6 +20,9 @@
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="uNT-ud-SIX">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="qcd-e1-kUO"/>
+                                </connections>
                             </mapView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eQI-oH-WDV">
                                 <rect key="frame" x="0.0" y="556" width="600" height="44"/>
@@ -30,10 +33,13 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="ceO-Yi-fgd"/>
                                     <barButtonItem image="gps@2x.png" id="gya-Or-Vyc">
                                         <color key="tintColor" red="0.0" green="0.36470588240000001" blue="0.66666666669999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="zoomLoc:" destination="BYZ-38-t0r" id="NdM-Y2-6iL"/>
+                                        </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="E6Y-hv-Hy9"/>
                                 </items>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="0.0" green="0.36470588240000001" blue="0.66666666669999997" alpha="1" colorSpace="calibratedRGB"/>
                             </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -55,7 +61,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Aqb-Vm-qNX">
                             <connections>
-                                <segue destination="U5Z-Ce-o9T" kind="show" id="Aeq-zE-JU5"/>
+                                <action selector="dropPin:" destination="BYZ-38-t0r" id="N5g-Hr-siK"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -112,13 +118,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="New" id="gIK-Te-tyV">
-                        <barButtonItem key="rightBarButtonItem" title="Confirm" id="q6S-uh-ktM">
-                            <connections>
-                                <segue destination="cyr-XQ-M85" kind="show" id="VNg-db-pRe"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Confirm" id="q6S-uh-ktM"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="entryCategory" destination="X25-7u-wMU" id="xJp-Ad-OUP"/>
+                        <outlet property="entryDetail" destination="DLf-Ny-bsR" id="EQh-g9-Ytf"/>
+                        <outlet property="entryName" destination="SOC-07-e7A" id="e6L-6C-JLd"/>
                         <segue destination="cyr-XQ-M85" kind="show" identifier="category" id="eRo-h8-yY4"/>
                     </connections>
                 </viewController>
@@ -139,7 +144,7 @@
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="p9a-nf-H0a" id="BGN-0a-dhC">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -194,15 +199,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <inset key="scrollIndicatorInsets" minX="0.0" minY="100" maxX="0.0" maxY="0.0"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="R7S-HQ-ev1">
-                            <rect key="frame" x="0.0" y="64" width="600" height="64"/>
+                            <rect key="frame" x="0.0" y="64" width="600" height="89"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="u42-T4-btx">
-                                    <rect key="frame" x="164" y="18" width="260" height="29"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" constant="260" id="sLe-Fg-VBL"/>
-                                        <constraint firstAttribute="height" constant="28" id="yAY-UJ-MQQ"/>
-                                    </constraints>
+                                    <rect key="frame" x="170" y="51" width="260" height="29"/>
                                     <segments>
                                         <segment title="A-Z"/>
                                         <segment title="Distance"/>
@@ -215,16 +216,16 @@
                             </subviews>
                             <color key="backgroundColor" red="0.0" green="0.36470588240000001" blue="0.66666666669999997" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
-                                <constraint firstAttribute="bottom" secondItem="u42-T4-btx" secondAttribute="bottom" constant="18" id="Xa2-Ji-pux"/>
-                                <constraint firstAttribute="centerX" secondItem="u42-T4-btx" secondAttribute="centerX" constant="6" id="YZF-Lz-RRz"/>
+                                <constraint firstItem="u42-T4-btx" firstAttribute="top" secondItem="R7S-HQ-ev1" secondAttribute="top" constant="51" id="4Lw-Gh-Vnd"/>
+                                <constraint firstItem="u42-T4-btx" firstAttribute="centerX" secondItem="R7S-HQ-ev1" secondAttribute="centerX" id="nPb-Ma-GXd"/>
                             </constraints>
                         </view>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="LogCell" rowHeight="63" id="SSt-bx-jfJ" customClass="LogCell" customModule="FootPrint" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="150" width="600" height="63"/>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="LogCell" rowHeight="63" id="SSt-bx-jfJ" userLabel="FootPrintCell" customClass="FootPrintCell" customModule="FootPrint" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="175" width="600" height="63"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SSt-bx-jfJ" id="wJi-HH-TLG">
-                                    <rect key="frame" x="0.0" y="0.0" width="567" height="62"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="567" height="63"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="library.png" translatesAutoresizingMaskIntoConstraints="NO" id="ldz-Gd-YUR">
@@ -293,9 +294,5 @@
         <image name="gps@2x.png" width="21" height="30"/>
         <image name="library.png" width="128" height="128"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="VNg-db-pRe"/>
-        <segue reference="PTx-bb-Z7f"/>
-    </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>
