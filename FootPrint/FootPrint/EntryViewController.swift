@@ -20,6 +20,14 @@ class EntryViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    override func viewWillAppear(animated: Bool) {
+        if entryName.text! == "" {
+            entryName.becomeFirstResponder()
+        } else {
+            entryDetail.becomeFirstResponder()
+        }
+    }
+    
     func validateFields() -> Bool {
         
         if entryName.text!.isEmpty || entryCategory.text!.isEmpty {
