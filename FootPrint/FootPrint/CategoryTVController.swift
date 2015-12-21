@@ -22,10 +22,6 @@ class CategoryTVController: UITableViewController {
         // print(Realm.Configuration.defaultConfiguration.path!) // DataStore Physical Location
     }
     
-    @IBAction func dismiss(sender: AnyObject) {
-        navigationController?.popViewControllerAnimated(true)
-    }
-    
     func populateDefaultCategories() {
         
         if categories.count == 0 {

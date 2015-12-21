@@ -65,6 +65,7 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="mapView" destination="uNT-ud-SIX" id="w5t-nr-G3G"/>
                         <segue destination="U5Z-Ce-o9T" kind="show" identifier="entry" id="PTx-bb-Z7f"/>
@@ -160,12 +161,13 @@
                     <navigationItem key="navigationItem" title="Select Category" id="05Z-Rw-83v">
                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="W1V-TP-HNp">
                             <connections>
-                                <action selector="dismiss:" destination="cyr-XQ-M85" id="Lng-Kl-FXq"/>
+                                <segue destination="EBc-XK-xw5" kind="unwind" unwindAction="cancelFromCategories:" id="vPq-TS-DJo"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rom-0A-eqQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="EBc-XK-xw5" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2924" y="396"/>
         </scene>

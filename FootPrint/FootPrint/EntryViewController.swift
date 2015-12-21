@@ -44,7 +44,11 @@ class EntryViewController: UIViewController {
         }
     }
     
-    @IBAction func unwindFromCategories(segue: UIStoryboardSegue) {
+    @IBAction func cancelFromCategories(segue: UIStoryboardSegue) {
+        //print("This is a unwind going back")
+    }
+    
+    @IBAction func confirmFromCategories(segue: UIStoryboardSegue) {
         print("Hello Unwind Action")
         if segue.identifier == "category" {
             /**
