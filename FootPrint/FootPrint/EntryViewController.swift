@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class EntryViewController: UIViewController {
 
@@ -15,7 +16,7 @@ class EntryViewController: UIViewController {
     @IBOutlet weak var entryDetail: UITextView!
     
     var selectedAnnotation: FootPrintAnnotation!
-    
+    var selectedCategory: Category?
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -40,6 +41,17 @@ class EntryViewController: UIViewController {
             return false
         } else {
             return true
+        }
+    }
+    
+    @IBAction func unwindFromCategories(segue: UIStoryboardSegue) {
+        print("Hello Unwind Action")
+        if segue.identifier == "category" {
+            /**
+            let categoriesController = segue.sourceViewController as! CategoryTVController
+            selectedCategory = categoriesController.selectedCategory
+            entryCategory.text = selectedCategory!.name
+*/
         }
     }
 }

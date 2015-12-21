@@ -7,18 +7,49 @@
 //
 
 import UIKit
+import RealmSwift
 
 class CategoryTVController: UITableViewController {
     
-    var categories = []
+    let realm = try! Realm()
+    lazy var categories: Results<Category> = { self.realm.objects(Category).sorted("name") }()
+    
+    var selectedCategory: Category!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        populateDefaultCategories()
+        // print(Realm.Configuration.defaultConfiguration.path!) // DataStore Physical Location
     }
     
     @IBAction func dismiss(sender: AnyObject) {
         navigationController?.popViewControllerAnimated(true)
     }
+    
+    func populateDefaultCategories() {
+        
+        if categories.count == 0 {
+            
+            try! realm.write() {
+                
+                let defaultCategories = ["Favorite", "Restaurant", "Public library", "Bus Stop", "School", "Airport", "Bank", "Bar", "Beach", "Camping", "Drink Place", "Hospital", "Shopping Mall",
+                    "Market", "Museum", "Shop", "Skytrain", "Uncategorized", "Visited Place", "WiFi HotSpot",
+                    "Wonderland"
+                ]
+                
+                for category in defaultCategories {
+                    let newCategory = Category()
+                    newCategory.name = category
+                    realm.add(newCategory)
+                }
+            }
+            
+            categories = realm.objects(Category)
+        }
+    }
+    
+    
+    
 
 }
 
@@ -35,11 +66,13 @@ extension CategoryTVController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCellWithIdentifier("CategoryCell", forIndexPath: indexPath)
+        let category = categories[indexPath.row]
+        cell.textLabel?.text = category.name
         return cell
     }
     
     override func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath {
-        
+        selectedCategory = categories[indexPath.row]
         return indexPath
     }
 }

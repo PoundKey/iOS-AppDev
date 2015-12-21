@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		76319E751C27B21E001EF1D9 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76319E741C27B21E001EF1D9 /* Category.swift */; };
 		765CE4C11C24290500ABB433 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765CE4C01C24290500ABB433 /* AppDelegate.swift */; };
 		765CE4C31C24290500ABB433 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765CE4C21C24290500ABB433 /* MainViewController.swift */; };
 		765CE4C61C24290500ABB433 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 765CE4C41C24290500ABB433 /* Main.storyboard */; };
 		765CE4C81C24290500ABB433 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 765CE4C71C24290500ABB433 /* Assets.xcassets */; };
-		765CE4CB1C24290500ABB433 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 765CE4C91C24290500ABB433 /* LaunchScreen.storyboard */; };
 		765CE4D61C24290500ABB433 /* FootPrintTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765CE4D51C24290500ABB433 /* FootPrintTests.swift */; };
 		765FA5581C2505CF00A5740A /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 765FA5561C2505CF00A5740A /* Realm.framework */; };
 		765FA5591C2505CF00A5740A /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 765FA5561C2505CF00A5740A /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -51,12 +51,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		76319E741C27B21E001EF1D9 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		765CE4BD1C24290500ABB433 /* FootPrint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FootPrint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		765CE4C01C24290500ABB433 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		765CE4C21C24290500ABB433 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		765CE4C51C24290500ABB433 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		765CE4C71C24290500ABB433 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		765CE4CA1C24290500ABB433 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		765CE4CC1C24290500ABB433 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		765CE4D11C24290500ABB433 /* FootPrintTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FootPrintTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		765CE4D51C24290500ABB433 /* FootPrintTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootPrintTests.swift; sourceTree = "<group>"; };
@@ -122,7 +122,6 @@
 				76CD417D1C2630F5009227A7 /* FootPrintCell.swift */,
 				76E865C81C262B2400F6E1B7 /* FootPrintAnnotation.swift */,
 				765CE4C71C24290500ABB433 /* Assets.xcassets */,
-				765CE4C91C24290500ABB433 /* LaunchScreen.storyboard */,
 				765CE4CC1C24290500ABB433 /* Info.plist */,
 				765FA55D1C2505DA00A5740A /* Resource */,
 			);
@@ -152,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				76E865CA1C262B8500F6E1B7 /* FootPrint.swift */,
+				76319E741C27B21E001EF1D9 /* Category.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -240,7 +240,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				765CE4CB1C24290500ABB433 /* LaunchScreen.storyboard in Resources */,
 				765CE4C81C24290500ABB433 /* Assets.xcassets in Resources */,
 				765CE4C61C24290500ABB433 /* Main.storyboard in Resources */,
 			);
@@ -265,6 +264,7 @@
 				76E865C31C260B8F00F6E1B7 /* EntryViewController.swift in Sources */,
 				76CD417E1C2630F5009227A7 /* FootPrintCell.swift in Sources */,
 				76E865C51C260BC000F6E1B7 /* LogViewController.swift in Sources */,
+				76319E751C27B21E001EF1D9 /* Category.swift in Sources */,
 				76E865C71C26138900F6E1B7 /* CategoryTVController.swift in Sources */,
 				76E865C91C262B2400F6E1B7 /* FootPrintAnnotation.swift in Sources */,
 				76E865CB1C262B8500F6E1B7 /* FootPrint.swift in Sources */,
@@ -296,14 +296,6 @@
 				765CE4C51C24290500ABB433 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		765CE4C91C24290500ABB433 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				765CE4CA1C24290500ABB433 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
