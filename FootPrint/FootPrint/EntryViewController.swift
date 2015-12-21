@@ -17,6 +17,8 @@ class EntryViewController: UIViewController {
     
     var selectedAnnotation: FootPrintAnnotation!
     var selectedCategory: Category?
+    var footPrint: FootPrint?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -31,7 +33,7 @@ class EntryViewController: UIViewController {
     
     func validateFields() -> Bool {
         
-        if entryName.text!.isEmpty || entryCategory.text!.isEmpty {
+        if entryName.text!.isEmpty || selectedCategory == nil {
             let alertController = UIAlertController(title: "Oops...", message: "Please fill all required fields.", preferredStyle: .Alert)
             let alertAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Destructive) { action in
                 alertController.dismissViewControllerAnimated(true, completion: nil)
@@ -44,19 +46,34 @@ class EntryViewController: UIViewController {
         }
     }
     
+    func addFootPrint() {
+        let realm = try! Realm()
+        
+        try! realm.write {
+            let newFootPrint = FootPrint()
+            
+            newFootPrint.name = self.entryName.text!
+            newFootPrint.category = self.selectedCategory
+            newFootPrint.detail = self.entryDetail.text
+            newFootPrint.latitude = self.selectedAnnotation.coordinate.latitude
+            newFootPrint.longitude = self.selectedAnnotation.coordinate.longitude
+            
+            realm.add(newFootPrint)
+            self.footPrint = newFootPrint
+        }
+    }
+    
     @IBAction func cancelFromCategories(segue: UIStoryboardSegue) {
         //print("This is a unwind going back")
+        //print("segue.identifier: \(segue.identifier)")
     }
     
     @IBAction func confirmFromCategories(segue: UIStoryboardSegue) {
-        print("Hello Unwind Action")
-        if segue.identifier == "category" {
-            /**
-            let categoriesController = segue.sourceViewController as! CategoryTVController
-            selectedCategory = categoriesController.selectedCategory
-            entryCategory.text = selectedCategory!.name
-*/
-        }
+        // check segue.identifier
+        let categoriesController = segue.sourceViewController as! CategoryTVController
+        selectedCategory = categoriesController.selectedCategory
+        entryCategory.text = selectedCategory!.name
+        
     }
 }
 
