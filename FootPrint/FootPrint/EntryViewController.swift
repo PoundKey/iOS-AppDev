@@ -63,8 +63,16 @@ class EntryViewController: UIViewController {
         }
     }
     
+    override func shouldPerformSegueWithIdentifier(identifier: String?, sender: AnyObject?) -> Bool {
+        if validateFields() {
+            addFootPrint()
+            return true
+        } else {
+            return false
+        }
+    }
+    
     @IBAction func cancelFromCategories(segue: UIStoryboardSegue) {
-        //print("This is a unwind going back")
         //print("segue.identifier: \(segue.identifier)")
     }
     

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		76319E751C27B21E001EF1D9 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76319E741C27B21E001EF1D9 /* Category.swift */; };
+		76319E771C280650001EF1D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76319E761C280650001EF1D9 /* LaunchScreen.storyboard */; };
 		765CE4C11C24290500ABB433 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765CE4C01C24290500ABB433 /* AppDelegate.swift */; };
 		765CE4C31C24290500ABB433 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765CE4C21C24290500ABB433 /* MainViewController.swift */; };
 		765CE4C61C24290500ABB433 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 765CE4C41C24290500ABB433 /* Main.storyboard */; };
@@ -52,6 +53,7 @@
 
 /* Begin PBXFileReference section */
 		76319E741C27B21E001EF1D9 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		76319E761C280650001EF1D9 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		765CE4BD1C24290500ABB433 /* FootPrint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FootPrint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		765CE4C01C24290500ABB433 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		765CE4C21C24290500ABB433 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				76E865C41C260BC000F6E1B7 /* LogViewController.swift */,
 				765CE4C21C24290500ABB433 /* MainViewController.swift */,
 				765CE4C41C24290500ABB433 /* Main.storyboard */,
+				76319E761C280650001EF1D9 /* LaunchScreen.storyboard */,
 				76E865C61C26138900F6E1B7 /* CategoryTVController.swift */,
 				76CD417D1C2630F5009227A7 /* FootPrintCell.swift */,
 				76E865C81C262B2400F6E1B7 /* FootPrintAnnotation.swift */,
@@ -240,6 +243,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76319E771C280650001EF1D9 /* LaunchScreen.storyboard in Resources */,
 				765CE4C81C24290500ABB433 /* Assets.xcassets in Resources */,
 				765CE4C61C24290500ABB433 /* Main.storyboard in Resources */,
 			);

@@ -122,7 +122,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="New" id="gIK-Te-tyV">
-                        <barButtonItem key="rightBarButtonItem" title="Confirm" id="q6S-uh-ktM"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="q6S-uh-ktM">
+                            <connections>
+                                <segue destination="Cvi-cb-TDk" kind="unwind" unwindAction="unwindFromEntryView:" id="DQD-8H-ctE"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="entryCategory" destination="X25-7u-wMU" id="xJp-Ad-OUP"/>
@@ -132,6 +136,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oeb-7r-fvu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Cvi-cb-TDk" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2045" y="396"/>
         </scene>
@@ -159,12 +164,12 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Select Category" id="05Z-Rw-83v">
-                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="W1V-TP-HNp">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="W1V-TP-HNp">
                             <connections>
-                                <segue destination="EBc-XK-xw5" kind="unwind" unwindAction="cancelFromCategories:" id="vPq-TS-DJo"/>
+                                <segue destination="EBc-XK-xw5" kind="unwind" identifier="cancelSelect" unwindAction="cancelFromCategories:" id="vPq-TS-DJo"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="xoy-Xw-mkQ">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="xoy-Xw-mkQ">
                             <connections>
                                 <segue destination="EBc-XK-xw5" kind="unwind" unwindAction="confirmFromCategories:" id="3M6-io-dz4"/>
                             </connections>
@@ -304,7 +309,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="gps@2x.png" width="516" height="632"/>
+        <image name="gps@2x.png" width="21" height="30"/>
         <image name="library" width="32" height="32"/>
     </resources>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

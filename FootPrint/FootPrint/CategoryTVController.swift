@@ -22,6 +22,12 @@ class CategoryTVController: UITableViewController {
         // print(Realm.Configuration.defaultConfiguration.path!) // DataStore Physical Location
     }
     
+    override func shouldPerformSegueWithIdentifier(identifier: String?, sender: AnyObject?) -> Bool {
+        // Calls when decide if the unwind should happen
+        //print("CategoryTVController: undwind \(identifier)")
+        return true
+    }
+    
     func populateDefaultCategories() {
         
         if categories.count == 0 {

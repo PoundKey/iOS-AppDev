@@ -41,6 +41,7 @@ class LogViewController: UITableViewController {
 
     }
     
+
     
     
     @IBAction func scopeChanged(sender: AnyObject) {
