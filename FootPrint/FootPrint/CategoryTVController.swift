@@ -34,11 +34,6 @@ class CategoryTVController: UITableViewController {
             
             try! realm.write() {
                 
-                let defaultCategories = ["Favorite", "Restaurant", "Public library", "Bus Stop", "School", "Airport", "Bank", "Bar", "Beach", "Camping", "Drink Place", "Hospital", "Shopping Mall",
-                    "Market", "Museum", "Shop", "Skytrain", "Uncategorized", "Visited Place", "WiFi HotSpot",
-                    "Wonderland"
-                ]
-                
                 for category in defaultCategories {
                     let newCategory = Category()
                     newCategory.name = category

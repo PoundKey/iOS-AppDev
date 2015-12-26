@@ -50,6 +50,7 @@ class MainViewController: UIViewController {
         }
         
         populateMap()
+
     }
     
 

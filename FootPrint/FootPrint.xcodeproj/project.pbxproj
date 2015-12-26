@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		76319E751C27B21E001EF1D9 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76319E741C27B21E001EF1D9 /* Category.swift */; };
 		76319E771C280650001EF1D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76319E761C280650001EF1D9 /* LaunchScreen.storyboard */; };
+		764E46D31C2E6E15000A82DE /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764E46D21C2E6E15000A82DE /* Helpers.swift */; };
 		765CE4C11C24290500ABB433 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765CE4C01C24290500ABB433 /* AppDelegate.swift */; };
 		765CE4C31C24290500ABB433 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765CE4C21C24290500ABB433 /* MainViewController.swift */; };
 		765CE4C61C24290500ABB433 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 765CE4C41C24290500ABB433 /* Main.storyboard */; };
@@ -54,6 +55,7 @@
 /* Begin PBXFileReference section */
 		76319E741C27B21E001EF1D9 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		76319E761C280650001EF1D9 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		764E46D21C2E6E15000A82DE /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		765CE4BD1C24290500ABB433 /* FootPrint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FootPrint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		765CE4C01C24290500ABB433 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		765CE4C21C24290500ABB433 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -93,6 +95,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		764E46D41C2E6E1A000A82DE /* Functions */ = {
+			isa = PBXGroup;
+			children = (
+				764E46D21C2E6E15000A82DE /* Helpers.swift */,
+			);
+			name = Functions;
+			sourceTree = "<group>";
+		};
 		765CE4B41C24290500ABB433 = {
 			isa = PBXGroup;
 			children = (
@@ -114,6 +124,7 @@
 		765CE4BF1C24290500ABB433 /* FootPrint */ = {
 			isa = PBXGroup;
 			children = (
+				764E46D41C2E6E1A000A82DE /* Functions */,
 				76E865CC1C262B8D00F6E1B7 /* Models */,
 				765CE4C01C24290500ABB433 /* AppDelegate.swift */,
 				76E865C21C260B8F00F6E1B7 /* EntryViewController.swift */,
@@ -266,6 +277,7 @@
 				765CE4C31C24290500ABB433 /* MainViewController.swift in Sources */,
 				765CE4C11C24290500ABB433 /* AppDelegate.swift in Sources */,
 				76E865C31C260B8F00F6E1B7 /* EntryViewController.swift in Sources */,
+				764E46D31C2E6E15000A82DE /* Helpers.swift in Sources */,
 				76CD417E1C2630F5009227A7 /* FootPrintCell.swift in Sources */,
 				76E865C51C260BC000F6E1B7 /* LogViewController.swift in Sources */,
 				76319E751C27B21E001EF1D9 /* Category.swift in Sources */,

@@ -8,12 +8,13 @@
 
 import UIKit
 import MapKit
+import RealmSwift
 
 class LogViewController: UITableViewController {
 
     @IBOutlet weak var segmentedBar: UISegmentedControl!
     
-    var footprints = []
+    var footprints = try! Realm().objects(FootPrint).sorted("name", ascending: true)
     var searchResults = []
     
     var searchController: UISearchController!
@@ -57,8 +58,18 @@ class LogViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = self.tableView.dequeueReusableCellWithIdentifier("LogCell") as! FootPrintCell
+        let cell = self.tableView.dequeueReusableCellWithIdentifier("cell") as! FootPrintCell
+        let footprint = footprints[indexPath.row]
+        cell.titleLabel.text = footprint.name
+        cell.subtitleLabel.text = footprint.category.name
         
+        let imageName: String!
+        switch footprint.category.name {
+            default:
+                imageName = "uncat"
+        }
+        
+        cell.iconImageView.image = UIImage(named: imageName)
         return cell
     }
     
