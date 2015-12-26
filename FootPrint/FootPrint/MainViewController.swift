@@ -8,15 +8,18 @@
 
 import UIKit
 import MapKit
+import RealmSwift
 
 class MainViewController: UIViewController {
 
     @IBOutlet weak var mapView: MKMapView!
     
+    var footPrint: FootPrint?
+    
     let kDistanceMeters: CLLocationDistance = 500
     var locationManager = CLLocationManager()
     var userLocated = false
-    var lastAnnotation: MKAnnotation!
+    var lastAnnotation: MKAnnotation?
     
     func centerToUsersLocation() {
         let center = mapView.userLocation.coordinate
@@ -27,14 +30,17 @@ class MainViewController: UIViewController {
     }
     
     func addNewPin() {
-        if lastAnnotation != nil { mapView.removeAnnotation(lastAnnotation) }
-        let footprint = FootPrintAnnotation(coordinate: mapView.centerCoordinate, title: "Untitled", subtitle: "Uncategorized")
-        mapView.addAnnotation(footprint)
-        lastAnnotation = footprint
+        if let last = lastAnnotation {
+            mapView.removeAnnotation(last)
+        }
+        let annotation = FootPrintAnnotation(coordinate: mapView.centerCoordinate, title: "Untitled", subtitle: "Uncategorized")
+        mapView.addAnnotation(annotation)
+        lastAnnotation = annotation
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         mapView.delegate = self;
         locationManager.delegate = self
         if CLLocationManager.authorizationStatus() == .NotDetermined {
@@ -42,6 +48,8 @@ class MainViewController: UIViewController {
         } else {
             locationManager.startUpdatingLocation()
         }
+        
+        populateMap()
     }
     
 
@@ -55,6 +63,19 @@ class MainViewController: UIViewController {
         centerToUsersLocation()
     }
     
+    func populateMap() {
+        mapView.removeAnnotations(mapView.annotations)
+        let res = try! Realm().objects(FootPrint)
+        
+        for footprint in res {
+            let coord = CLLocationCoordinate2D(latitude: footprint.latitude, longitude: footprint.longitude)
+            let annotation = FootPrintAnnotation(coordinate: coord, title: footprint.name,
+                                                 subtitle: footprint.category.name, footPrint: footprint)
+            mapView.addAnnotation(annotation)
+        }
+        
+    }
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         if (segue.identifier == "entry") {
             let controller = segue.destinationViewController as! EntryViewController
@@ -64,11 +85,30 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func unwindFromEntryView(segue: UIStoryboardSegue) {
-        if let lastAnnotation = lastAnnotation {
-            mapView.removeAnnotation(lastAnnotation)
+        if let last = lastAnnotation {
+            mapView.removeAnnotation(last)
+            lastAnnotation = nil
         }
         
-        lastAnnotation = nil
+        let entryController = segue.sourceViewController as! EntryViewController
+        
+        if segue.identifier! == "cancelEntry" {
+            if let footprint = entryController.footPrint {
+                let annotation = entryController.selectedAnnotation
+                mapView.removeAnnotation(annotation)
+                
+                //TODO: Delete footPrint from the database with REALM
+            }
+        } else {
+            if let footprint = entryController.footPrint {
+                let coord = CLLocationCoordinate2D(latitude: footprint.latitude, longitude: footprint.longitude)
+                let annotation = FootPrintAnnotation(coordinate: coord, title: footprint.name,
+                    subtitle: footprint.category.name, footPrint: footprint)
+                mapView.addAnnotation(annotation)
+            }
+        }
+
+        
     }
     
     override func didReceiveMemoryWarning() {

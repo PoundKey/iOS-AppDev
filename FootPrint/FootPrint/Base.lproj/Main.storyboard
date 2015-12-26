@@ -100,35 +100,66 @@
                                     <outlet property="delegate" destination="U5Z-Ce-o9T" id="57B-cg-QqR"/>
                                 </connections>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DLf-Ny-bsR">
-                                <rect key="frame" x="16" y="184" width="343" height="378"/>
-                                <color key="backgroundColor" red="0.96194994450000004" green="0.96192115550000001" blue="0.9619374275" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="JOf-Uu-vnp">
+                                <rect key="frame" x="16" y="184" width="343" height="300"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Qjo-WK-y1J">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="300"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ddr-YC-YJv">
+                                                <rect key="frame" x="0.0" y="0.0" width="343" height="300"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="fGS-Os-UDg">
+                                                        <rect key="frame" x="0.0" y="0.0" width="343" height="300"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="XEI-ff-riQ">
+                                                                <rect key="frame" x="0.0" y="0.0" width="343" height="300"/>
+                                                                <subviews>
+                                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DLf-Ny-bsR">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="343" height="300"/>
+                                                                        <color key="backgroundColor" red="0.96194994450000004" green="0.96192115550000001" blue="0.9619374275" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                                    </textView>
+                                                                </subviews>
+                                                            </stackView>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="JOf-Uu-vnp" firstAttribute="trailing" secondItem="X25-7u-wMU" secondAttribute="trailing" id="1jo-c1-WcI"/>
                             <constraint firstItem="SOC-07-e7A" firstAttribute="trailing" secondItem="4bU-f0-A7L" secondAttribute="trailingMargin" id="5PR-ye-kbq"/>
-                            <constraint firstItem="X25-7u-wMU" firstAttribute="leading" secondItem="DLf-Ny-bsR" secondAttribute="leading" id="BlD-Fx-7yl"/>
+                            <constraint firstItem="JOf-Uu-vnp" firstAttribute="top" secondItem="X25-7u-wMU" secondAttribute="bottom" constant="21" id="EeW-pL-6A7"/>
                             <constraint firstItem="X25-7u-wMU" firstAttribute="leading" secondItem="SOC-07-e7A" secondAttribute="leading" id="Ocv-yi-tN2"/>
                             <constraint firstItem="SOC-07-e7A" firstAttribute="trailing" secondItem="X25-7u-wMU" secondAttribute="trailing" id="X9B-6j-bv8"/>
                             <constraint firstItem="SOC-07-e7A" firstAttribute="top" secondItem="i8s-G2-7Zu" secondAttribute="bottom" constant="21" id="Y2z-3c-ijb"/>
+                            <constraint firstItem="JOf-Uu-vnp" firstAttribute="leading" secondItem="X25-7u-wMU" secondAttribute="leading" id="adG-f3-vgb"/>
                             <constraint firstItem="X25-7u-wMU" firstAttribute="top" secondItem="SOC-07-e7A" secondAttribute="bottom" constant="18" id="g1T-2z-sPi"/>
                             <constraint firstItem="X25-7u-wMU" firstAttribute="leading" secondItem="4bU-f0-A7L" secondAttribute="leadingMargin" id="uca-Wr-TAA"/>
-                            <constraint firstItem="DLf-Ny-bsR" firstAttribute="trailing" secondItem="X25-7u-wMU" secondAttribute="trailing" id="ybH-x0-Iqx"/>
-                            <constraint firstItem="iU3-Jd-CHc" firstAttribute="top" secondItem="DLf-Ny-bsR" secondAttribute="bottom" constant="105" id="yeI-xd-FNj"/>
-                            <constraint firstItem="DLf-Ny-bsR" firstAttribute="top" secondItem="X25-7u-wMU" secondAttribute="bottom" constant="21" id="zFX-3d-t4a"/>
+                            <constraint firstItem="JOf-Uu-vnp" firstAttribute="centerY" secondItem="4bU-f0-A7L" secondAttribute="centerY" id="vVB-qg-eCq"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="New" id="gIK-Te-tyV">
+                        <barButtonItem key="leftBarButtonItem" systemItem="trash" id="Kg7-w2-k5X">
+                            <connections>
+                                <segue destination="Cvi-cb-TDk" kind="unwind" identifier="cancelEntry" unwindAction="unwindFromEntryView:" id="pgZ-qs-PxM"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="q6S-uh-ktM">
                             <connections>
-                                <segue destination="Cvi-cb-TDk" kind="unwind" unwindAction="unwindFromEntryView:" id="DQD-8H-ctE"/>
+                                <segue destination="Cvi-cb-TDk" kind="unwind" identifier="saveEntry" unwindAction="unwindFromEntryView:" id="DQD-8H-ctE"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="entryCancel" destination="Kg7-w2-k5X" id="sWs-6q-XUk"/>
                         <outlet property="entryCategory" destination="X25-7u-wMU" id="xJp-Ad-OUP"/>
                         <outlet property="entryDetail" destination="DLf-Ny-bsR" id="EQh-g9-Ytf"/>
                         <outlet property="entryName" destination="SOC-07-e7A" id="e6L-6C-JLd"/>
@@ -138,7 +169,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oeb-7r-fvu" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="Cvi-cb-TDk" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2045" y="396"/>
+            <point key="canvasLocation" x="2044.5" y="395.5"/>
         </scene>
         <!--Select Category-->
         <scene sceneID="K3L-6k-YML">

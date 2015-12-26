@@ -14,6 +14,7 @@ class EntryViewController: UIViewController {
     @IBOutlet weak var entryName: UITextField!
     @IBOutlet weak var entryCategory: UITextField!
     @IBOutlet weak var entryDetail: UITextView!
+    @IBOutlet weak var entryCancel: UIBarButtonItem!
     
     var selectedAnnotation: FootPrintAnnotation!
     var selectedCategory: Category?
@@ -21,9 +22,15 @@ class EntryViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if selectedAnnotation.title! != "Untitled" {
+            footPrint = selectedAnnotation.footPrint
+        }
+    
     }
     
     override func viewWillAppear(animated: Bool) {
+        // if footPrint != nil 
         if entryName.text! == "" {
             entryName.becomeFirstResponder()
         } else {
@@ -32,7 +39,6 @@ class EntryViewController: UIViewController {
     }
     
     func validateFields() -> Bool {
-        
         if entryName.text!.isEmpty || selectedCategory == nil {
             let alertController = UIAlertController(title: "Oops...", message: "Please fill all required fields.", preferredStyle: .Alert)
             let alertAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Destructive) { action in
@@ -59,11 +65,17 @@ class EntryViewController: UIViewController {
             newFootPrint.longitude = self.selectedAnnotation.coordinate.longitude
             
             realm.add(newFootPrint)
-            self.footPrint = newFootPrint
+            footPrint = newFootPrint
         }
     }
     
     override func shouldPerformSegueWithIdentifier(identifier: String?, sender: AnyObject?) -> Bool {
+        
+        if identifier == "cancelEntry" {
+            return true
+        }
+        
+        
         if validateFields() {
             addFootPrint()
             return true
