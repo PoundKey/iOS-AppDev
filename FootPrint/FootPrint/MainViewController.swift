@@ -141,23 +141,7 @@ extension MainViewController: MKMapViewDelegate {
                 let currentAnnotation = annotation as! FootPrintAnnotation
                 let annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: subtitle)
                 
-                let imageName: String!
-                switch subtitle {
-                case "Uncategorized":
-                    imageName = "uncat"
-                case "Visited":
-                    imageName = "visit"
-                case "Bus Stop":
-                    imageName = "bus"
-                case "Restaurant":
-                    imageName = "restaurant"
-                case "Public Library":
-                    imageName = "library"
-                case "Mall":
-                    imageName = "mall"
-                default:
-                    imageName = "uncat"
-                }
+                let imageName = getIconImage(subtitle)
                 
                 annotationView.image = UIImage(named: imageName)
                 annotationView.enabled = true

@@ -15,20 +15,36 @@ class LogViewController: UITableViewController {
     @IBOutlet weak var segmentedBar: UISegmentedControl!
     
     var footprints = try! Realm().objects(FootPrint).sorted("name", ascending: true)
-    var searchResults = []
+    var searchResults = try! Realm().objects(FootPrint)
     
     var searchController: UISearchController!
+    
+    
+    func filterResultsWithSearchString(searchString: String) {
+        let predicate = NSPredicate(format: "name CONTAINS[c] %@", searchString)
+        let scopeIndex = searchController.searchBar.selectedScopeButtonIndex
+        let realm = try! Realm()
+        switch scopeIndex {
+        case 0:
+            searchResults = realm.objects(FootPrint).filter(predicate).sorted("name", ascending: true)
+        case 1:
+            searchResults = realm.objects(FootPrint).filter(predicate).sorted("created", ascending: true)
+        default:
+            searchResults = realm.objects(FootPrint).filter(predicate)
+        }
+    }
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-  
+        
         let searchResultsController = UITableViewController(style: .Plain)
+        //print("searchResultsController loaded: \(unsafeAddressOf(searchResultsController.tableView))")
         searchResultsController.tableView.delegate = self
         searchResultsController.tableView.dataSource = self
         searchResultsController.tableView.rowHeight = 63
-        searchResultsController.tableView.registerClass(FootPrintCell.self, forCellReuseIdentifier: "LogCell")
+        searchResultsController.tableView.registerClass(FootPrintCell.self, forCellReuseIdentifier: "cell")
         
         searchController = UISearchController(searchResultsController: searchResultsController)
         searchController.searchResultsUpdater = self
@@ -46,10 +62,24 @@ class LogViewController: UITableViewController {
     
     
     @IBAction func scopeChanged(sender: AnyObject) {
+        searchController.searchBar.selectedScopeButtonIndex = sender.selectedSegmentIndex
         
+        let scopeBar = sender as! UISegmentedControl
+        let realm = try! Realm()
+        switch scopeBar.selectedSegmentIndex {
+        case 0:
+            footprints = realm.objects(FootPrint).sorted("name", ascending: true)
+            break
+        case 1:
+            footprints = realm.objects(FootPrint).sorted("created", ascending: true)
+        default:
+            footprints = realm.objects(FootPrint).sorted("name", ascending: true)
+        }
+        tableView.reloadData()
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        //print("tableView loaded: \(unsafeAddressOf(tableView))")
         return 1
     }
     
@@ -59,20 +89,24 @@ class LogViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCellWithIdentifier("cell") as! FootPrintCell
-        let footprint = footprints[indexPath.row]
+        let footprint = searchController.active ? searchResults[indexPath.row] : footprints[indexPath.row]
         cell.titleLabel.text = footprint.name
         cell.subtitleLabel.text = footprint.category.name
         
-        let imageName: String!
-        switch footprint.category.name {
-            default:
-                imageName = "uncat"
-        }
-        
+        let imageName = getIconImage(footprint.category.name)
         cell.iconImageView.image = UIImage(named: imageName)
         return cell
     }
     
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let footprint = searchController.active ? searchResults[indexPath.row] : footprints[indexPath.row]
+        print(footprint)
+        performSegueWithIdentifier("pinLocation", sender: footprint)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        print("Prepare for segue")
+    }
 
 }
 
@@ -80,6 +114,8 @@ class LogViewController: UITableViewController {
 extension LogViewController: UISearchResultsUpdating {
     
     func updateSearchResultsForSearchController(searchController: UISearchController) {
+        let searchString = searchController.searchBar.text!
+        filterResultsWithSearchString(searchString)
         
         let searchResultsController = searchController.searchResultsController as! UITableViewController
         searchResultsController.tableView.reloadData()

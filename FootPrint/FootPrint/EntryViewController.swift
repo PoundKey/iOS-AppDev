@@ -70,11 +70,24 @@ class EntryViewController: UIViewController {
     }
     
     override func shouldPerformSegueWithIdentifier(identifier: String?, sender: AnyObject?) -> Bool {
-        
-        if identifier == "cancelEntry" {
+        if identifier! == "cancelEntry" {
+            
+            let alert = UIAlertController(title: "Delete FootPrint", message: "Are you sure to you want to delete?", preferredStyle: .Alert)
+            // add the actions (buttons)
+            let alertActionDelete = UIAlertAction(title: "Delete", style: .Destructive) { action in
+                alert.dismissViewControllerAnimated(true, completion: nil)
+            }
+            
+            let alertActionCancel = UIAlertAction(title: "Cancel", style: .Cancel) {
+                action in
+                alert.dismissViewControllerAnimated(true, completion: nil)
+            }
+            
+            alert.addAction(alertActionDelete)
+            alert.addAction(alertActionCancel)
+            //self.presentViewController(alert, animated: true, completion: nil)
             return true
         }
-        
         
         if validateFields() {
             addFootPrint()
