@@ -28,7 +28,7 @@ class LogViewController: UITableViewController {
         case 0:
             searchResults = realm.objects(FootPrint).filter(predicate).sorted("name", ascending: true)
         case 1:
-            searchResults = realm.objects(FootPrint).filter(predicate).sorted("created", ascending: true)
+            searchResults = realm.objects(FootPrint).filter(predicate).sorted("created", ascending: false)
         default:
             searchResults = realm.objects(FootPrint).filter(predicate)
         }
@@ -73,7 +73,7 @@ class LogViewController: UITableViewController {
             footprints = realm.objects(FootPrint).sorted("name", ascending: true)
             break
         case 1:
-            footprints = realm.objects(FootPrint).sorted("created", ascending: true)
+            footprints = realm.objects(FootPrint).sorted("created", ascending: false)
         default:
             footprints = realm.objects(FootPrint).sorted("name", ascending: true)
         }
