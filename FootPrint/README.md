@@ -1,6 +1,6 @@
 ## iOS MapKit: FootPrint
 
->> FootPrint keeps track of the places that you have visited and marked, categorizes and presents them for future reference in a neat fashion.
+> FootPrint keeps track of the places that you have visited and marked, categorizes and presents them for future reference in a neat fashion.
 
 <p align="center">
 <img src="./images/1.0.png" height="568" width="320"> &nbsp; &nbsp; &nbsp;
@@ -15,6 +15,8 @@
 <img src="./images/2.1.gif" height="568" width="320"> <br> <br>
 
 </p>
+
+---
 
 ### Goals / API Used 
  - [Realm](https://realm.io/): Persistent Database API.
