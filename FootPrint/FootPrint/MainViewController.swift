@@ -42,13 +42,14 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         locationManager.delegate = self
         if CLLocationManager.authorizationStatus() == .NotDetermined {
             locationManager.requestWhenInUseAuthorization()
         } else {
             locationManager.startUpdatingLocation()
         }
+        
         populateMap()
     }
     
@@ -125,7 +126,15 @@ class MainViewController: UIViewController {
 extension MainViewController: CLLocationManagerDelegate {
     
     func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
-        status != .NotDetermined ? mapView.showsUserLocation = true : print("Authorization to use location data denied")
+        if status != .NotDetermined {
+            mapView.showsUserLocation = true
+        } else {
+            print("Authorization to use location data denied: error code: \(status.rawValue)")
+        }
+    }
+    
+    func locationManager(manager: CLLocationManager, didUpdateToLocation newLocation: CLLocation, fromLocation oldLocation: CLLocation) {
+        mapView.showsUserLocation = true
     }
 }
 

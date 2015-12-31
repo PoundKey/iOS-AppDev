@@ -104,7 +104,15 @@ class LogViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let footprint = searchController.active ? searchResults[indexPath.row] : footprints[indexPath.row]
-        performSegueWithIdentifier("pinLocation", sender: footprint)
+
+        if searchController.active {
+            searchController.dismissViewControllerAnimated(false, completion: {
+                self.performSegueWithIdentifier("pinLocation", sender: footprint)
+            })
+        } else {
+            self.performSegueWithIdentifier("pinLocation", sender: footprint)
+        }
+
     }
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
