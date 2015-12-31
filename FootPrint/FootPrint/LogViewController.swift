@@ -49,11 +49,13 @@ class LogViewController: UITableViewController {
         searchController = UISearchController(searchResultsController: searchResultsController)
         searchController.searchResultsUpdater = self
         searchController.searchBar.sizeToFit()
+        searchController.loadViewIfNeeded()
         searchController.searchBar.tintColor = UIColor.whiteColor()
         searchController.searchBar.delegate = self
         searchController.searchBar.barTintColor = UIColor(red: 0, green: 0.36, blue: 0.66, alpha: 1.0)
         tableView.tableHeaderView?.addSubview(searchController.searchBar)
         
+        //searchController.definesPresentationContext = true
         definesPresentationContext = true
 
     }
@@ -95,17 +97,20 @@ class LogViewController: UITableViewController {
         
         let imageName = getIconImage(footprint.category.name)
         cell.iconImageView.image = UIImage(named: imageName)
+        
+        cell.distanceLabel.text = ""
         return cell
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let footprint = searchController.active ? searchResults[indexPath.row] : footprints[indexPath.row]
-        print(footprint)
         performSegueWithIdentifier("pinLocation", sender: footprint)
     }
-    
+
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        print("Prepare for segue")
+        let controller = segue.destinationViewController as! MainViewController
+        let footprint  = sender as! FootPrint
+        controller.selectedFootPrint = footprint
     }
 
 }

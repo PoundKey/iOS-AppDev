@@ -10,7 +10,7 @@ import Foundation
 
 let defaultCategories = ["Favorite", "Restaurant", "Public library", "Bus Stop", "School", "Airport", "Bank", "Bar", "Beach", "Camping", "Drink Place", "Hospital", "Shopping Mall",
     "Market", "Museum", "Shop", "Skytrain", "Uncategorized", "Visited Place", "WiFi HotSpot",
-    "Wonderland"
+    "Wonderland", "Place Marker"
 ]
 
 func getIconImage(category: String) -> String {
@@ -19,7 +19,7 @@ func getIconImage(category: String) -> String {
     case defaultCategories[0]:
         return  "favorite"
     case defaultCategories[1]:
-        return "retaurant"
+        return "restaurant"
     case defaultCategories[2]:
         return "library"
     case defaultCategories[3]:
@@ -58,6 +58,8 @@ func getIconImage(category: String) -> String {
         return "wifi"
     case defaultCategories[20]:
         return "wonderland"
+    case defaultCategories[21]:
+        return "marker"
     default:
         return "uncat"
     }

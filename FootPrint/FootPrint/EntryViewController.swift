@@ -14,20 +14,24 @@ class EntryViewController: UIViewController {
     @IBOutlet weak var entryName: UITextField!
     @IBOutlet weak var entryCategory: UITextField!
     @IBOutlet weak var entryDetail: UITextView!
-    @IBOutlet weak var entryCancel: UIBarButtonItem!
     
     var selectedAnnotation: FootPrintAnnotation!
     var selectedCategory: Category?
-    var footPrint: FootPrint?
+    var selectedFootPrint: FootPrint?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         if selectedAnnotation.title! != "Untitled" {
-            footPrint = selectedAnnotation.footPrint
+            selectedFootPrint = selectedAnnotation.footPrint
+            fillTextFields(selectedFootPrint!)
+            title = "Edit \(selectedFootPrint!.name)"
+        } else {
+            title = "New FootPrint"
         }
     
     }
+    
     
     override func viewWillAppear(animated: Bool) {
         // if footPrint != nil 
@@ -36,6 +40,13 @@ class EntryViewController: UIViewController {
         } else {
             entryDetail.becomeFirstResponder()
         }
+    }
+    
+    func fillTextFields(footprint: FootPrint) {
+        entryName.text     = footprint.name
+        entryCategory.text = footprint.category.name
+        entryDetail.text   = footprint.detail
+        selectedCategory   = footprint.category
     }
     
     func validateFields() -> Bool {
@@ -52,30 +63,16 @@ class EntryViewController: UIViewController {
         }
     }
     
-    func addFootPrint() {
-        let realm = try! Realm()
-        
-        try! realm.write {
-            let newFootPrint = FootPrint()
-            
-            newFootPrint.name = self.entryName.text!
-            newFootPrint.category = self.selectedCategory
-            newFootPrint.detail = self.entryDetail.text
-            newFootPrint.latitude = self.selectedAnnotation.coordinate.latitude
-            newFootPrint.longitude = self.selectedAnnotation.coordinate.longitude
-            
-            realm.add(newFootPrint)
-            footPrint = newFootPrint
-        }
-    }
-    
-    override func shouldPerformSegueWithIdentifier(identifier: String?, sender: AnyObject?) -> Bool {
-        if identifier! == "cancelEntry" {
-            
-            let alert = UIAlertController(title: "Delete FootPrint", message: "Are you sure to you want to delete?", preferredStyle: .Alert)
-            // add the actions (buttons)
+    @IBAction func removeFootPrint(sender: AnyObject) {
+        if let footprint = selectedFootPrint {
+            let alert = UIAlertController(title: "Delete FootPrint?", message: "Are you sure to you want to delete?", preferredStyle: .Alert)
             let alertActionDelete = UIAlertAction(title: "Delete", style: .Destructive) { action in
+                let realm = try! Realm()
+                try! realm.write {
+                    realm.delete(footprint)
+                }
                 alert.dismissViewControllerAnimated(true, completion: nil)
+                self.performSegueWithIdentifier("cancelEntry", sender: self)
             }
             
             let alertActionCancel = UIAlertAction(title: "Cancel", style: .Cancel) {
@@ -85,12 +82,52 @@ class EntryViewController: UIViewController {
             
             alert.addAction(alertActionDelete)
             alert.addAction(alertActionCancel)
-            //self.presentViewController(alert, animated: true, completion: nil)
-            return true
+            self.presentViewController(alert, animated: true, completion: nil)
+        } else {
+            performSegueWithIdentifier("cancelEntry", sender: self)
         }
+
+    }
+    
+    func addFootPrint() {
+        let realm = try! Realm()
         
+        try! realm.write {
+            let newFootPrint = FootPrint()
+            
+            newFootPrint.name      = self.entryName.text!
+            newFootPrint.category  = self.selectedCategory
+            newFootPrint.detail    = self.entryDetail.text
+            newFootPrint.latitude  = self.selectedAnnotation.coordinate.latitude
+            newFootPrint.longitude = self.selectedAnnotation.coordinate.longitude
+            
+            realm.add(newFootPrint)
+            selectedFootPrint = newFootPrint
+        }
+    }
+    
+    func updateFootPrint() {
+        let realm = try! Realm()
+        try! realm.write {
+            if let footprint = selectedFootPrint {
+                footprint.name      = self.entryName.text!
+                footprint.category  = self.selectedCategory
+                footprint.detail    = self.entryDetail.text
+                /**
+                footprint.latitude  = self.selectedAnnotation.coordinate.latitude
+                footprint.longitude = self.selectedAnnotation.coordinate.longitude
+                */
+            }
+        }
+    }
+    
+    override func shouldPerformSegueWithIdentifier(identifier: String?, sender: AnyObject?) -> Bool {
         if validateFields() {
-            addFootPrint()
+            if selectedFootPrint == nil {
+                addFootPrint()
+            } else {
+                updateFootPrint()
+            }
             return true
         } else {
             return false

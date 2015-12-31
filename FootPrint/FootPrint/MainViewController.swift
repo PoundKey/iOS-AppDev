@@ -14,19 +14,21 @@ class MainViewController: UIViewController {
 
     @IBOutlet weak var mapView: MKMapView!
     
-    var footPrint: FootPrint?
+    var selectedFootPrint: FootPrint?
     
-    let kDistanceMeters: CLLocationDistance = 500
+    let kDistanceMeters: CLLocationDistance = 640
     var locationManager = CLLocationManager()
     var userLocated = false
     var lastAnnotation: MKAnnotation?
     
     func centerToUsersLocation() {
         let center = mapView.userLocation.coordinate
-        let zoomRegion: MKCoordinateRegion = MKCoordinateRegionMakeWithDistance(center, kDistanceMeters, kDistanceMeters)
-
+        zoomIn(center, distance: kDistanceMeters)
+    }
+    
+    func zoomIn(center: CLLocationCoordinate2D, distance: CLLocationDistance) {
+        let zoomRegion: MKCoordinateRegion = MKCoordinateRegionMakeWithDistance(center, distance, distance)
         mapView.setRegion(zoomRegion, animated: true)
-   
     }
     
     func addNewPin() {
@@ -40,17 +42,14 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        mapView.delegate = self;
+
         locationManager.delegate = self
         if CLLocationManager.authorizationStatus() == .NotDetermined {
             locationManager.requestWhenInUseAuthorization()
         } else {
             locationManager.startUpdatingLocation()
         }
-        
         populateMap()
-
     }
     
 
@@ -91,25 +90,28 @@ class MainViewController: UIViewController {
             lastAnnotation = nil
         }
         
-        let entryController = segue.sourceViewController as! EntryViewController
-        
-        if segue.identifier! == "cancelEntry" {
-            if let footprint = entryController.footPrint {
-                let annotation = entryController.selectedAnnotation
-                mapView.removeAnnotation(annotation)
-                
-                //TODO: Delete footPrint from the database with REALM
-            }
-        } else {
-            if let footprint = entryController.footPrint {
+        if segue.identifier! == "saveEntry" {
+            let entryController = segue.sourceViewController as! EntryViewController
+            if let footprint = entryController.selectedFootPrint {
                 let coord = CLLocationCoordinate2D(latitude: footprint.latitude, longitude: footprint.longitude)
                 let annotation = FootPrintAnnotation(coordinate: coord, title: footprint.name,
                     subtitle: footprint.category.name, footPrint: footprint)
                 mapView.addAnnotation(annotation)
+                selectedFootPrint = footprint
             }
         }
-
+    }
+    
+    @IBAction func unwindFromLogView(segue: UIStoryboardSegue) {
+        if let last = lastAnnotation {
+            mapView.removeAnnotation(last)
+            lastAnnotation = nil
+        }
         
+        if let footprint = selectedFootPrint {
+            let center = CLLocationCoordinate2D(latitude: footprint.latitude, longitude: footprint.longitude)
+            zoomIn(center, distance: 120)
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -153,7 +155,7 @@ extension MainViewController: MKMapViewDelegate {
                 if currentAnnotation.title == "Untitled" {
                     annotationView.draggable = true
                 }
-                
+                //annotationView.draggable = true
                 return annotationView
             }
         }
@@ -175,6 +177,7 @@ extension MainViewController: MKMapViewDelegate {
     
     func mapView(mapView: MKMapView, annotationView: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         if let annotation =  annotationView.annotation as? FootPrintAnnotation {
+            lastAnnotation = annotation
             performSegueWithIdentifier("entry", sender: annotation)
         }
     }

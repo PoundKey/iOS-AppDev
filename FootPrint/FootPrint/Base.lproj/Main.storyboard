@@ -134,22 +134,22 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="JOf-Uu-vnp" firstAttribute="trailing" secondItem="X25-7u-wMU" secondAttribute="trailing" id="1jo-c1-WcI"/>
-                            <constraint firstItem="SOC-07-e7A" firstAttribute="trailing" secondItem="4bU-f0-A7L" secondAttribute="trailingMargin" id="5PR-ye-kbq"/>
-                            <constraint firstItem="JOf-Uu-vnp" firstAttribute="top" secondItem="X25-7u-wMU" secondAttribute="bottom" constant="21" id="EeW-pL-6A7"/>
-                            <constraint firstItem="X25-7u-wMU" firstAttribute="leading" secondItem="SOC-07-e7A" secondAttribute="leading" id="Ocv-yi-tN2"/>
-                            <constraint firstItem="SOC-07-e7A" firstAttribute="trailing" secondItem="X25-7u-wMU" secondAttribute="trailing" id="X9B-6j-bv8"/>
-                            <constraint firstItem="SOC-07-e7A" firstAttribute="top" secondItem="i8s-G2-7Zu" secondAttribute="bottom" constant="21" id="Y2z-3c-ijb"/>
-                            <constraint firstItem="JOf-Uu-vnp" firstAttribute="leading" secondItem="X25-7u-wMU" secondAttribute="leading" id="adG-f3-vgb"/>
-                            <constraint firstItem="X25-7u-wMU" firstAttribute="top" secondItem="SOC-07-e7A" secondAttribute="bottom" constant="18" id="g1T-2z-sPi"/>
-                            <constraint firstItem="X25-7u-wMU" firstAttribute="leading" secondItem="4bU-f0-A7L" secondAttribute="leadingMargin" id="uca-Wr-TAA"/>
-                            <constraint firstItem="JOf-Uu-vnp" firstAttribute="centerY" secondItem="4bU-f0-A7L" secondAttribute="centerY" id="vVB-qg-eCq"/>
+                            <constraint firstItem="SOC-07-e7A" firstAttribute="top" secondItem="i8s-G2-7Zu" secondAttribute="bottom" constant="21" id="6H3-vf-Nd1"/>
+                            <constraint firstItem="SOC-07-e7A" firstAttribute="trailing" secondItem="4bU-f0-A7L" secondAttribute="trailingMargin" id="FdZ-vD-Fjm"/>
+                            <constraint firstItem="JOf-Uu-vnp" firstAttribute="top" secondItem="X25-7u-wMU" secondAttribute="bottom" constant="21" id="Ogj-Bn-bbO"/>
+                            <constraint firstItem="X25-7u-wMU" firstAttribute="leading" secondItem="SOC-07-e7A" secondAttribute="leading" id="Ure-7n-pNf"/>
+                            <constraint firstItem="X25-7u-wMU" firstAttribute="leading" secondItem="JOf-Uu-vnp" secondAttribute="leading" id="ZTM-k0-fUu"/>
+                            <constraint firstItem="JOf-Uu-vnp" firstAttribute="leading" secondItem="4bU-f0-A7L" secondAttribute="leadingMargin" id="aMH-ig-5eG"/>
+                            <constraint firstItem="X25-7u-wMU" firstAttribute="trailing" secondItem="SOC-07-e7A" secondAttribute="trailing" id="dRs-mb-vPd"/>
+                            <constraint firstItem="X25-7u-wMU" firstAttribute="top" secondItem="SOC-07-e7A" secondAttribute="bottom" constant="18" id="iRn-8P-0BQ"/>
+                            <constraint firstItem="JOf-Uu-vnp" firstAttribute="trailing" secondItem="X25-7u-wMU" secondAttribute="trailing" id="jpg-zS-YGk"/>
+                            <constraint firstItem="JOf-Uu-vnp" firstAttribute="centerY" secondItem="4bU-f0-A7L" secondAttribute="centerY" id="xRg-nL-asE"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="New" id="gIK-Te-tyV">
                         <barButtonItem key="leftBarButtonItem" systemItem="trash" id="Kg7-w2-k5X">
                             <connections>
-                                <segue destination="Cvi-cb-TDk" kind="unwind" identifier="cancelEntry" unwindAction="unwindFromEntryView:" id="pgZ-qs-PxM"/>
+                                <action selector="removeFootPrint:" destination="U5Z-Ce-o9T" id="ggj-LE-QAv"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="q6S-uh-ktM">
@@ -159,11 +159,11 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="entryCancel" destination="Kg7-w2-k5X" id="sWs-6q-XUk"/>
                         <outlet property="entryCategory" destination="X25-7u-wMU" id="xJp-Ad-OUP"/>
                         <outlet property="entryDetail" destination="DLf-Ny-bsR" id="EQh-g9-Ytf"/>
                         <outlet property="entryName" destination="SOC-07-e7A" id="e6L-6C-JLd"/>
                         <segue destination="cyr-XQ-M85" kind="show" identifier="category" id="eRo-h8-yY4"/>
+                        <segue destination="Cvi-cb-TDk" kind="unwind" identifier="cancelEntry" unwindAction="unwindFromEntryView:" id="DdM-E2-zK4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oeb-7r-fvu" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -175,13 +175,13 @@
         <scene sceneID="K3L-6k-YML">
             <objects>
                 <tableViewController id="cyr-XQ-M85" customClass="CategoryTVController" customModule="FootPrint" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="gCw-ak-pYJ">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="gCw-ak-pYJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoryCell" id="p9a-nf-H0a">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="p9a-nf-H0a" id="BGN-0a-dhC">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
@@ -246,7 +246,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <inset key="scrollIndicatorInsets" minX="0.0" minY="100" maxX="0.0" maxY="0.0"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="R7S-HQ-ev1">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="92"/>
+                            <rect key="frame" x="0.0" y="64" width="375" height="92"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="u42-T4-btx">
@@ -269,7 +269,7 @@
                         </view>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" rowHeight="63" id="SSt-bx-jfJ" userLabel="FootPrintCell" customClass="FootPrintCell" customModule="FootPrint" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="114" width="375" height="63"/>
+                                <rect key="frame" x="0.0" y="178" width="375" height="63"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SSt-bx-jfJ" id="wJi-HH-TLG">
                                     <rect key="frame" x="0.0" y="0.0" width="342" height="62"/>
@@ -333,10 +333,11 @@
                     </tableView>
                     <connections>
                         <outlet property="segmentedBar" destination="u42-T4-btx" id="TZH-fw-aAY"/>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="pinLocation" id="7a1-SX-di8"/>
+                        <segue destination="DI5-Qq-R0r" kind="unwind" identifier="pinLocation" unwindAction="unwindFromLogView:" id="79b-Lc-64P"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CeG-IK-NY4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="DI5-Qq-R0r" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1202.5" y="-350.5"/>
         </scene>
@@ -345,8 +346,5 @@
         <image name="gps@2x.png" width="300" height="100"/>
         <image name="library" width="32" height="32"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="7a1-SX-di8"/>
-    </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>

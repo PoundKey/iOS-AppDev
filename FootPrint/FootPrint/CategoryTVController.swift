@@ -41,7 +41,7 @@ class CategoryTVController: UITableViewController {
                 }
             }
             
-            categories = realm.objects(Category)
+            categories = realm.objects(Category).sorted("name")
         }
     }
     
@@ -65,6 +65,8 @@ extension CategoryTVController {
         let cell = tableView.dequeueReusableCellWithIdentifier("CategoryCell", forIndexPath: indexPath)
         let category = categories[indexPath.row]
         cell.textLabel?.text = category.name
+        let imageName = getIconImage(category.name)
+        cell.imageView!.image = UIImage(named: imageName)
         return cell
     }
     
