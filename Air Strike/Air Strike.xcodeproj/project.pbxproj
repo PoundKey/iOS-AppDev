@@ -7,83 +7,50 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		76823FF91C23DCC00083891A /* bullet.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 76823FEE1C23DCC00083891A /* bullet.mp3 */; };
-		76823FFA1C23DCC00083891A /* BurstAircraftPause.png in Resources */ = {isa = PBXBuildFile; fileRef = 76823FEF1C23DCC00083891A /* BurstAircraftPause.png */; };
-		76823FFB1C23DCC00083891A /* BurstAircraftPause@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 76823FF01C23DCC00083891A /* BurstAircraftPause@2x.png */; };
-		76823FFC1C23DCC00083891A /* enemy1_down.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 76823FF11C23DCC00083891A /* enemy1_down.mp3 */; };
-		76823FFD1C23DCC00083891A /* enemy2_down.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 76823FF21C23DCC00083891A /* enemy2_down.mp3 */; };
-		76823FFE1C23DCC00083891A /* enemy2_out.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 76823FF31C23DCC00083891A /* enemy2_out.mp3 */; };
-		76823FFF1C23DCC00083891A /* enemy3_down.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 76823FF41C23DCC00083891A /* enemy3_down.mp3 */; };
-		768240001C23DCC00083891A /* game_music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 76823FF51C23DCC00083891A /* game_music.mp3 */; };
-		768240011C23DCC00083891A /* game_over.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 76823FF61C23DCC00083891A /* game_over.mp3 */; };
-		768240021C23DCC00083891A /* gameArts-hd.plist in Resources */ = {isa = PBXBuildFile; fileRef = 76823FF71C23DCC00083891A /* gameArts-hd.plist */; };
-		768240031C23DCC00083891A /* gameArts-hd@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 76823FF81C23DCC00083891A /* gameArts-hd@2x.png */; };
-		768240061C23DF620083891A /* FoePlane.m in Sources */ = {isa = PBXBuildFile; fileRef = 768240051C23DF620083891A /* FoePlane.m */; };
-		768240091C23E0300083891A /* SharedTexture.m in Sources */ = {isa = PBXBuildFile; fileRef = 768240081C23E0300083891A /* SharedTexture.m */; };
-		76E991B51C197EA4007B277C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E991B41C197EA4007B277C /* main.m */; };
-		76E991B81C197EA4007B277C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E991B71C197EA4007B277C /* AppDelegate.m */; };
-		76E991BB1C197EA4007B277C /* MainScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E991BA1C197EA4007B277C /* MainScene.m */; };
-		76E991BD1C197EA4007B277C /* MainScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 76E991BC1C197EA4007B277C /* MainScene.sks */; };
-		76E991C01C197EA4007B277C /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E991BF1C197EA4007B277C /* GameViewController.m */; };
-		76E991C31C197EA4007B277C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76E991C11C197EA4007B277C /* Main.storyboard */; };
-		76E991C51C197EA4007B277C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76E991C41C197EA4007B277C /* Assets.xcassets */; };
-		76E991C81C197EA4007B277C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76E991C61C197EA4007B277C /* LaunchScreen.storyboard */; };
-		76E991D31C197EA4007B277C /* Air_StrikeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E991D21C197EA4007B277C /* Air_StrikeTests.m */; };
+		766B8DAE1C35460800ACF5BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766B8DAD1C35460800ACF5BB /* AppDelegate.swift */; };
+		766B8DB01C35460800ACF5BB /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 766B8DAF1C35460800ACF5BB /* GameScene.sks */; };
+		766B8DB21C35460800ACF5BB /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766B8DB11C35460800ACF5BB /* GameScene.swift */; };
+		766B8DB41C35460800ACF5BB /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766B8DB31C35460800ACF5BB /* GameViewController.swift */; };
+		766B8DB71C35460800ACF5BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 766B8DB51C35460800ACF5BB /* Main.storyboard */; };
+		766B8DB91C35460800ACF5BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 766B8DB81C35460800ACF5BB /* Assets.xcassets */; };
+		766B8DBC1C35460800ACF5BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 766B8DBA1C35460800ACF5BB /* LaunchScreen.storyboard */; };
+		766B8DC71C35460800ACF5BB /* Air_StrikeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766B8DC61C35460800ACF5BB /* Air_StrikeTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		76E991CF1C197EA4007B277C /* PBXContainerItemProxy */ = {
+		766B8DC31C35460800ACF5BB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 76E991A81C197EA4007B277C /* Project object */;
+			containerPortal = 766B8DA21C35460800ACF5BB /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 76E991AF1C197EA4007B277C;
+			remoteGlobalIDString = 766B8DA91C35460800ACF5BB;
 			remoteInfo = "Air Strike";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		76823FEE1C23DCC00083891A /* bullet.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bullet.mp3; sourceTree = "<group>"; };
-		76823FEF1C23DCC00083891A /* BurstAircraftPause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BurstAircraftPause.png; sourceTree = "<group>"; };
-		76823FF01C23DCC00083891A /* BurstAircraftPause@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BurstAircraftPause@2x.png"; sourceTree = "<group>"; };
-		76823FF11C23DCC00083891A /* enemy1_down.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = enemy1_down.mp3; sourceTree = "<group>"; };
-		76823FF21C23DCC00083891A /* enemy2_down.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = enemy2_down.mp3; sourceTree = "<group>"; };
-		76823FF31C23DCC00083891A /* enemy2_out.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = enemy2_out.mp3; sourceTree = "<group>"; };
-		76823FF41C23DCC00083891A /* enemy3_down.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = enemy3_down.mp3; sourceTree = "<group>"; };
-		76823FF51C23DCC00083891A /* game_music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = game_music.mp3; sourceTree = "<group>"; };
-		76823FF61C23DCC00083891A /* game_over.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = game_over.mp3; sourceTree = "<group>"; };
-		76823FF71C23DCC00083891A /* gameArts-hd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "gameArts-hd.plist"; sourceTree = "<group>"; };
-		76823FF81C23DCC00083891A /* gameArts-hd@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gameArts-hd@2x.png"; sourceTree = "<group>"; };
-		768240041C23DF620083891A /* FoePlane.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoePlane.h; sourceTree = "<group>"; };
-		768240051C23DF620083891A /* FoePlane.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoePlane.m; sourceTree = "<group>"; };
-		768240071C23E0300083891A /* SharedTexture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SharedTexture.h; sourceTree = "<group>"; };
-		768240081C23E0300083891A /* SharedTexture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SharedTexture.m; sourceTree = "<group>"; };
-		76E991B01C197EA4007B277C /* Air Strike.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Air Strike.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		76E991B41C197EA4007B277C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		76E991B61C197EA4007B277C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		76E991B71C197EA4007B277C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		76E991B91C197EA4007B277C /* MainScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainScene.h; sourceTree = "<group>"; };
-		76E991BA1C197EA4007B277C /* MainScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainScene.m; sourceTree = "<group>"; };
-		76E991BC1C197EA4007B277C /* MainScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MainScene.sks; sourceTree = "<group>"; };
-		76E991BE1C197EA4007B277C /* GameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
-		76E991BF1C197EA4007B277C /* GameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
-		76E991C21C197EA4007B277C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		76E991C41C197EA4007B277C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		76E991C71C197EA4007B277C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		76E991C91C197EA4007B277C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		76E991CE1C197EA4007B277C /* Air StrikeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Air StrikeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		76E991D21C197EA4007B277C /* Air_StrikeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Air_StrikeTests.m; sourceTree = "<group>"; };
-		76E991D41C197EA4007B277C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		766B8DAA1C35460800ACF5BB /* Air Strike.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Air Strike.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		766B8DAD1C35460800ACF5BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		766B8DAF1C35460800ACF5BB /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		766B8DB11C35460800ACF5BB /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		766B8DB31C35460800ACF5BB /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		766B8DB61C35460800ACF5BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		766B8DB81C35460800ACF5BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		766B8DBB1C35460800ACF5BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		766B8DBD1C35460800ACF5BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		766B8DC21C35460800ACF5BB /* Air StrikeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Air StrikeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		766B8DC61C35460800ACF5BB /* Air_StrikeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Air_StrikeTests.swift; sourceTree = "<group>"; };
+		766B8DC81C35460800ACF5BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		76E991AD1C197EA4007B277C /* Frameworks */ = {
+		766B8DA71C35460800ACF5BB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		76E991CB1C197EA4007B277C /* Frameworks */ = {
+		766B8DBF1C35460800ACF5BB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -93,79 +60,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		76823FED1C23DCC00083891A /* Resources */ = {
+		766B8DA11C35460800ACF5BB = {
 			isa = PBXGroup;
 			children = (
-				76823FEE1C23DCC00083891A /* bullet.mp3 */,
-				76823FEF1C23DCC00083891A /* BurstAircraftPause.png */,
-				76823FF01C23DCC00083891A /* BurstAircraftPause@2x.png */,
-				76823FF11C23DCC00083891A /* enemy1_down.mp3 */,
-				76823FF21C23DCC00083891A /* enemy2_down.mp3 */,
-				76823FF31C23DCC00083891A /* enemy2_out.mp3 */,
-				76823FF41C23DCC00083891A /* enemy3_down.mp3 */,
-				76823FF51C23DCC00083891A /* game_music.mp3 */,
-				76823FF61C23DCC00083891A /* game_over.mp3 */,
-				76823FF71C23DCC00083891A /* gameArts-hd.plist */,
-				76823FF81C23DCC00083891A /* gameArts-hd@2x.png */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		76E991A71C197EA4007B277C = {
-			isa = PBXGroup;
-			children = (
-				76E991B21C197EA4007B277C /* Air Strike */,
-				76E991D11C197EA4007B277C /* Air StrikeTests */,
-				76E991B11C197EA4007B277C /* Products */,
+				766B8DAC1C35460800ACF5BB /* Air Strike */,
+				766B8DC51C35460800ACF5BB /* Air StrikeTests */,
+				766B8DAB1C35460800ACF5BB /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		76E991B11C197EA4007B277C /* Products */ = {
+		766B8DAB1C35460800ACF5BB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				76E991B01C197EA4007B277C /* Air Strike.app */,
-				76E991CE1C197EA4007B277C /* Air StrikeTests.xctest */,
+				766B8DAA1C35460800ACF5BB /* Air Strike.app */,
+				766B8DC21C35460800ACF5BB /* Air StrikeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		76E991B21C197EA4007B277C /* Air Strike */ = {
+		766B8DAC1C35460800ACF5BB /* Air Strike */ = {
 			isa = PBXGroup;
 			children = (
-				76E991B61C197EA4007B277C /* AppDelegate.h */,
-				76E991B71C197EA4007B277C /* AppDelegate.m */,
-				768240041C23DF620083891A /* FoePlane.h */,
-				768240051C23DF620083891A /* FoePlane.m */,
-				768240071C23E0300083891A /* SharedTexture.h */,
-				768240081C23E0300083891A /* SharedTexture.m */,
-				76E991B91C197EA4007B277C /* MainScene.h */,
-				76E991BA1C197EA4007B277C /* MainScene.m */,
-				76E991BC1C197EA4007B277C /* MainScene.sks */,
-				76E991BE1C197EA4007B277C /* GameViewController.h */,
-				76E991BF1C197EA4007B277C /* GameViewController.m */,
-				76E991C11C197EA4007B277C /* Main.storyboard */,
-				76E991C41C197EA4007B277C /* Assets.xcassets */,
-				76E991C61C197EA4007B277C /* LaunchScreen.storyboard */,
-				76E991C91C197EA4007B277C /* Info.plist */,
-				76823FED1C23DCC00083891A /* Resources */,
-				76E991B31C197EA4007B277C /* Supporting Files */,
+				766B8DAD1C35460800ACF5BB /* AppDelegate.swift */,
+				766B8DAF1C35460800ACF5BB /* GameScene.sks */,
+				766B8DB11C35460800ACF5BB /* GameScene.swift */,
+				766B8DB31C35460800ACF5BB /* GameViewController.swift */,
+				766B8DB51C35460800ACF5BB /* Main.storyboard */,
+				766B8DB81C35460800ACF5BB /* Assets.xcassets */,
+				766B8DBA1C35460800ACF5BB /* LaunchScreen.storyboard */,
+				766B8DBD1C35460800ACF5BB /* Info.plist */,
 			);
 			path = "Air Strike";
 			sourceTree = "<group>";
 		};
-		76E991B31C197EA4007B277C /* Supporting Files */ = {
+		766B8DC51C35460800ACF5BB /* Air StrikeTests */ = {
 			isa = PBXGroup;
 			children = (
-				76E991B41C197EA4007B277C /* main.m */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		76E991D11C197EA4007B277C /* Air StrikeTests */ = {
-			isa = PBXGroup;
-			children = (
-				76E991D21C197EA4007B277C /* Air_StrikeTests.m */,
-				76E991D41C197EA4007B277C /* Info.plist */,
+				766B8DC61C35460800ACF5BB /* Air_StrikeTests.swift */,
+				766B8DC81C35460800ACF5BB /* Info.plist */,
 			);
 			path = "Air StrikeTests";
 			sourceTree = "<group>";
@@ -173,13 +105,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		76E991AF1C197EA4007B277C /* Air Strike */ = {
+		766B8DA91C35460800ACF5BB /* Air Strike */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 76E991D71C197EA4007B277C /* Build configuration list for PBXNativeTarget "Air Strike" */;
+			buildConfigurationList = 766B8DCB1C35460800ACF5BB /* Build configuration list for PBXNativeTarget "Air Strike" */;
 			buildPhases = (
-				76E991AC1C197EA4007B277C /* Sources */,
-				76E991AD1C197EA4007B277C /* Frameworks */,
-				76E991AE1C197EA4007B277C /* Resources */,
+				766B8DA61C35460800ACF5BB /* Sources */,
+				766B8DA71C35460800ACF5BB /* Frameworks */,
+				766B8DA81C35460800ACF5BB /* Resources */,
 			);
 			buildRules = (
 			);
@@ -187,48 +119,49 @@
 			);
 			name = "Air Strike";
 			productName = "Air Strike";
-			productReference = 76E991B01C197EA4007B277C /* Air Strike.app */;
+			productReference = 766B8DAA1C35460800ACF5BB /* Air Strike.app */;
 			productType = "com.apple.product-type.application";
 		};
-		76E991CD1C197EA4007B277C /* Air StrikeTests */ = {
+		766B8DC11C35460800ACF5BB /* Air StrikeTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 76E991DA1C197EA4007B277C /* Build configuration list for PBXNativeTarget "Air StrikeTests" */;
+			buildConfigurationList = 766B8DCE1C35460800ACF5BB /* Build configuration list for PBXNativeTarget "Air StrikeTests" */;
 			buildPhases = (
-				76E991CA1C197EA4007B277C /* Sources */,
-				76E991CB1C197EA4007B277C /* Frameworks */,
-				76E991CC1C197EA4007B277C /* Resources */,
+				766B8DBE1C35460800ACF5BB /* Sources */,
+				766B8DBF1C35460800ACF5BB /* Frameworks */,
+				766B8DC01C35460800ACF5BB /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				76E991D01C197EA4007B277C /* PBXTargetDependency */,
+				766B8DC41C35460800ACF5BB /* PBXTargetDependency */,
 			);
 			name = "Air StrikeTests";
 			productName = "Air StrikeTests";
-			productReference = 76E991CE1C197EA4007B277C /* Air StrikeTests.xctest */;
+			productReference = 766B8DC21C35460800ACF5BB /* Air StrikeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		76E991A81C197EA4007B277C /* Project object */ = {
+		766B8DA21C35460800ACF5BB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = DX;
 				TargetAttributes = {
-					76E991AF1C197EA4007B277C = {
+					766B8DA91C35460800ACF5BB = {
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = MY2MNC4AMN;
 					};
-					76E991CD1C197EA4007B277C = {
+					766B8DC11C35460800ACF5BB = {
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = MY2MNC4AMN;
-						TestTargetID = 76E991AF1C197EA4007B277C;
+						TestTargetID = 766B8DA91C35460800ACF5BB;
 					};
 				};
 			};
-			buildConfigurationList = 76E991AB1C197EA4007B277C /* Build configuration list for PBXProject "Air Strike" */;
+			buildConfigurationList = 766B8DA51C35460800ACF5BB /* Build configuration list for PBXProject "Air Strike" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -236,41 +169,30 @@
 				en,
 				Base,
 			);
-			mainGroup = 76E991A71C197EA4007B277C;
-			productRefGroup = 76E991B11C197EA4007B277C /* Products */;
+			mainGroup = 766B8DA11C35460800ACF5BB;
+			productRefGroup = 766B8DAB1C35460800ACF5BB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				76E991AF1C197EA4007B277C /* Air Strike */,
-				76E991CD1C197EA4007B277C /* Air StrikeTests */,
+				766B8DA91C35460800ACF5BB /* Air Strike */,
+				766B8DC11C35460800ACF5BB /* Air StrikeTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		76E991AE1C197EA4007B277C /* Resources */ = {
+		766B8DA81C35460800ACF5BB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76823FFB1C23DCC00083891A /* BurstAircraftPause@2x.png in Resources */,
-				76E991BD1C197EA4007B277C /* MainScene.sks in Resources */,
-				76823FFD1C23DCC00083891A /* enemy2_down.mp3 in Resources */,
-				76E991C81C197EA4007B277C /* LaunchScreen.storyboard in Resources */,
-				76823FFC1C23DCC00083891A /* enemy1_down.mp3 in Resources */,
-				76823FF91C23DCC00083891A /* bullet.mp3 in Resources */,
-				768240011C23DCC00083891A /* game_over.mp3 in Resources */,
-				768240001C23DCC00083891A /* game_music.mp3 in Resources */,
-				76823FFA1C23DCC00083891A /* BurstAircraftPause.png in Resources */,
-				768240031C23DCC00083891A /* gameArts-hd@2x.png in Resources */,
-				76823FFF1C23DCC00083891A /* enemy3_down.mp3 in Resources */,
-				768240021C23DCC00083891A /* gameArts-hd.plist in Resources */,
-				76E991C51C197EA4007B277C /* Assets.xcassets in Resources */,
-				76E991C31C197EA4007B277C /* Main.storyboard in Resources */,
-				76823FFE1C23DCC00083891A /* enemy2_out.mp3 in Resources */,
+				766B8DB01C35460800ACF5BB /* GameScene.sks in Resources */,
+				766B8DBC1C35460800ACF5BB /* LaunchScreen.storyboard in Resources */,
+				766B8DB91C35460800ACF5BB /* Assets.xcassets in Resources */,
+				766B8DB71C35460800ACF5BB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		76E991CC1C197EA4007B277C /* Resources */ = {
+		766B8DC01C35460800ACF5BB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -280,50 +202,47 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		76E991AC1C197EA4007B277C /* Sources */ = {
+		766B8DA61C35460800ACF5BB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76E991C01C197EA4007B277C /* GameViewController.m in Sources */,
-				76E991B81C197EA4007B277C /* AppDelegate.m in Sources */,
-				768240091C23E0300083891A /* SharedTexture.m in Sources */,
-				76E991BB1C197EA4007B277C /* MainScene.m in Sources */,
-				768240061C23DF620083891A /* FoePlane.m in Sources */,
-				76E991B51C197EA4007B277C /* main.m in Sources */,
+				766B8DB21C35460800ACF5BB /* GameScene.swift in Sources */,
+				766B8DB41C35460800ACF5BB /* GameViewController.swift in Sources */,
+				766B8DAE1C35460800ACF5BB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		76E991CA1C197EA4007B277C /* Sources */ = {
+		766B8DBE1C35460800ACF5BB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76E991D31C197EA4007B277C /* Air_StrikeTests.m in Sources */,
+				766B8DC71C35460800ACF5BB /* Air_StrikeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		76E991D01C197EA4007B277C /* PBXTargetDependency */ = {
+		766B8DC41C35460800ACF5BB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 76E991AF1C197EA4007B277C /* Air Strike */;
-			targetProxy = 76E991CF1C197EA4007B277C /* PBXContainerItemProxy */;
+			target = 766B8DA91C35460800ACF5BB /* Air Strike */;
+			targetProxy = 766B8DC31C35460800ACF5BB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		76E991C11C197EA4007B277C /* Main.storyboard */ = {
+		766B8DB51C35460800ACF5BB /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				76E991C21C197EA4007B277C /* Base */,
+				766B8DB61C35460800ACF5BB /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		76E991C61C197EA4007B277C /* LaunchScreen.storyboard */ = {
+		766B8DBA1C35460800ACF5BB /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				76E991C71C197EA4007B277C /* Base */,
+				766B8DBB1C35460800ACF5BB /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -331,7 +250,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		76E991D51C197EA4007B277C /* Debug */ = {
+		766B8DC91C35460800ACF5BB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -371,10 +290,12 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		76E991D61C197EA4007B277C /* Release */ = {
+		766B8DCA1C35460800ACF5BB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -407,35 +328,34 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		76E991D81C197EA4007B277C /* Debug */ = {
+		766B8DCC1C35460800ACF5BB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Air Strike/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dyl.herokuapp.Air-Strike";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		76E991D91C197EA4007B277C /* Release */ = {
+		766B8DCD1C35460800ACF5BB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Air Strike/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dyl.herokuapp.Air-Strike";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
-		76E991DB1C197EA4007B277C /* Debug */ = {
+		766B8DCF1C35460800ACF5BB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -448,7 +368,7 @@
 			};
 			name = Debug;
 		};
-		76E991DC1C197EA4007B277C /* Release */ = {
+		766B8DD01C35460800ACF5BB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -463,34 +383,32 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		76E991AB1C197EA4007B277C /* Build configuration list for PBXProject "Air Strike" */ = {
+		766B8DA51C35460800ACF5BB /* Build configuration list for PBXProject "Air Strike" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				76E991D51C197EA4007B277C /* Debug */,
-				76E991D61C197EA4007B277C /* Release */,
+				766B8DC91C35460800ACF5BB /* Debug */,
+				766B8DCA1C35460800ACF5BB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		76E991D71C197EA4007B277C /* Build configuration list for PBXNativeTarget "Air Strike" */ = {
+		766B8DCB1C35460800ACF5BB /* Build configuration list for PBXNativeTarget "Air Strike" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				76E991D81C197EA4007B277C /* Debug */,
-				76E991D91C197EA4007B277C /* Release */,
+				766B8DCC1C35460800ACF5BB /* Debug */,
+				766B8DCD1C35460800ACF5BB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
-		76E991DA1C197EA4007B277C /* Build configuration list for PBXNativeTarget "Air StrikeTests" */ = {
+		766B8DCE1C35460800ACF5BB /* Build configuration list for PBXNativeTarget "Air StrikeTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				76E991DB1C197EA4007B277C /* Debug */,
-				76E991DC1C197EA4007B277C /* Release */,
+				766B8DCF1C35460800ACF5BB /* Debug */,
+				766B8DD01C35460800ACF5BB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 76E991A81C197EA4007B277C /* Project object */;
+	rootObject = 766B8DA21C35460800ACF5BB /* Project object */;
 }

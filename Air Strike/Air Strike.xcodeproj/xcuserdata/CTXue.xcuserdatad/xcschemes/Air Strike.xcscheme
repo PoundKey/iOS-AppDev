@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "76E991AF1C197EA4007B277C"
+               BlueprintIdentifier = "766B8DA91C35460800ACF5BB"
                BuildableName = "Air Strike.app"
                BlueprintName = "Air Strike"
                ReferencedContainer = "container:Air Strike.xcodeproj">
@@ -32,7 +32,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "76E991CD1C197EA4007B277C"
+               BlueprintIdentifier = "766B8DC11C35460800ACF5BB"
                BuildableName = "Air StrikeTests.xctest"
                BlueprintName = "Air StrikeTests"
                ReferencedContainer = "container:Air Strike.xcodeproj">
@@ -42,7 +42,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "76E991AF1C197EA4007B277C"
+            BlueprintIdentifier = "766B8DA91C35460800ACF5BB"
             BuildableName = "Air Strike.app"
             BlueprintName = "Air Strike"
             ReferencedContainer = "container:Air Strike.xcodeproj">
@@ -65,7 +65,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "76E991AF1C197EA4007B277C"
+            BlueprintIdentifier = "766B8DA91C35460800ACF5BB"
             BuildableName = "Air Strike.app"
             BlueprintName = "Air Strike"
             ReferencedContainer = "container:Air Strike.xcodeproj">
@@ -84,7 +84,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "76E991AF1C197EA4007B277C"
+            BlueprintIdentifier = "766B8DA91C35460800ACF5BB"
             BuildableName = "Air Strike.app"
             BlueprintName = "Air Strike"
             ReferencedContainer = "container:Air Strike.xcodeproj">

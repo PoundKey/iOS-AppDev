@@ -90,7 +90,7 @@ class LogViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = self.tableView.dequeueReusableCellWithIdentifier("cell") as! FootPrintCell
+        let cell = self.tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! FootPrintCell
         let footprint = searchController.active ? searchResults[indexPath.row] : footprints[indexPath.row]
         cell.titleLabel.text = footprint.name
         cell.subtitleLabel.text = footprint.category.name
