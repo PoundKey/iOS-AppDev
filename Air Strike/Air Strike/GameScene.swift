@@ -9,37 +9,105 @@
 import SpriteKit
 
 class GameScene: SKScene {
+    
     override func didMoveToView(view: SKView) {
-        /* Setup your scene here */
-        let myLabel = SKLabelNode(fontNamed:"Chalkduster")
-        myLabel.text = "Hello, World!"
-        myLabel.fontSize = 45
-        myLabel.position = CGPoint(x:CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame))
         
-        self.addChild(myLabel)
+        initScene()
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "restart", name: "restartNotification", object: nil)
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-       /* Called when a touch begins */
         
-        for touch in touches {
-            let location = touch.locationInNode(self)
-            
-            let sprite = SKSpriteNode(imageNamed:"Spaceship")
-            
-            sprite.xScale = 0.5
-            sprite.yScale = 0.5
-            sprite.position = location
-            
-            let action = SKAction.rotateByAngle(CGFloat(M_PI), duration:1)
-            
-            sprite.runAction(SKAction.repeatActionForever(action))
-            
-            self.addChild(sprite)
-        }
+    }
+    
+    override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        
     }
    
     override func update(currentTime: CFTimeInterval) {
         /* Called before each frame is rendered */
+        createFoePlane()
+        scrollBackground()
+    }
+    
+    func initScene() {
+        initPhysicsWorld()
+        initAction()
+        initBackground()
+        initScore()
+        initPlayerPlane()
+        fireBullets()
+    }
+    
+    func initPhysicsWorld() {
+        
+    }
+    
+    func initAction() {
+        
+    }
+    
+    func initBackground() {
+        
+    }
+    
+    func initScore() {
+        
+    }
+    
+    func initPlayerPlane() {
+        
+    }
+    
+    
+    func createFoePlane() {
+        
+    }
+    
+    func createBullets() {
+        
+    }
+    
+    func fireBullets() {
+        
+    }
+    
+    func scrollBackground() {
+        
+    }
+    
+    func changeScore(type: FoePlaneType) {
+        let score: Int
+        
+    }
+    
+    func foePlaneCollisionAnimation(plane: FoePlane) {
+        
+    }
+    
+    func playerPlaneCollisionAnimation(plane: SKSpriteNode) {
+        
+    }
+    
+    func restart() {
+        removeAllChildren()
+        removeAllActions()
+        initBackground()
+        initScore()
+        initPlayerPlane()
+        fireBullets()
+    }
+}
+
+
+extension GameScene: SKPhysicsContactDelegate {
+    
+    static let edgeCategory        = 0x1
+    static let bulletCategory      = 0x1 << 1
+    static let foePlaneCategory    = 0x1 << 2
+    static let playerPlaneCategory = 0x1 << 3
+    
+    func didBeginContact(contact: SKPhysicsContact) {
+        
     }
 }
