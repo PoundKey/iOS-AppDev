@@ -17,8 +17,8 @@
 </p>
 
 <p align="center">
-<img src="./images/1.6.png" height="480" width="270"> &nbsp; &nbsp; &nbsp;
 <img src="./images/1.7.png" height="480" width="270"> &nbsp; &nbsp; &nbsp;
+<img src="./images/1.6.png" height="480" width="270"> &nbsp; &nbsp; &nbsp;
 <img src="./images/1.8.png" height="480" width="270"> 
 <hr>
 </p>
