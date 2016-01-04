@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		762C2A5B1C3B35B60012ADD2 /* game_music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 762C2A5A1C3B35B60012ADD2 /* game_music.mp3 */; };
 		766B8DAE1C35460800ACF5BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766B8DAD1C35460800ACF5BB /* AppDelegate.swift */; };
 		766B8DB21C35460800ACF5BB /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766B8DB11C35460800ACF5BB /* GameScene.swift */; };
 		766B8DB41C35460800ACF5BB /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766B8DB31C35460800ACF5BB /* GameViewController.swift */; };
 		766B8DB71C35460800ACF5BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 766B8DB51C35460800ACF5BB /* Main.storyboard */; };
-		766B8DB91C35460800ACF5BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 766B8DB81C35460800ACF5BB /* Assets.xcassets */; };
 		766B8DBC1C35460800ACF5BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 766B8DBA1C35460800ACF5BB /* LaunchScreen.storyboard */; };
 		766B8DC71C35460800ACF5BB /* Air_StrikeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766B8DC61C35460800ACF5BB /* Air_StrikeTests.swift */; };
+		76BBB7951C3A544F00EFDECB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76BBB7941C3A544F00EFDECB /* Assets.xcassets */; };
 		76E4A6DE1C37A54400EC9755 /* SharedAtlas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E4A6DD1C37A54400EC9755 /* SharedAtlas.swift */; };
 		76E4A6E01C37A63500EC9755 /* FoePlane.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E4A6DF1C37A63500EC9755 /* FoePlane.swift */; };
 		76E4A6EE1C37A74100EC9755 /* bullet.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 76E4A6E31C37A74100EC9755 /* bullet.mp3 */; };
@@ -23,7 +24,6 @@
 		76E4A6F21C37A74200EC9755 /* enemy2_down.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 76E4A6E71C37A74100EC9755 /* enemy2_down.mp3 */; };
 		76E4A6F31C37A74200EC9755 /* enemy2_out.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 76E4A6E81C37A74100EC9755 /* enemy2_out.mp3 */; };
 		76E4A6F41C37A74200EC9755 /* enemy3_down.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 76E4A6E91C37A74100EC9755 /* enemy3_down.mp3 */; };
-		76E4A6F51C37A74200EC9755 /* game_music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 76E4A6EA1C37A74100EC9755 /* game_music.mp3 */; };
 		76E4A6F61C37A74200EC9755 /* game_over.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 76E4A6EB1C37A74100EC9755 /* game_over.mp3 */; };
 		76E4A6F71C37A74200EC9755 /* gameArts-hd.plist in Resources */ = {isa = PBXBuildFile; fileRef = 76E4A6EC1C37A74100EC9755 /* gameArts-hd.plist */; };
 		76E4A6F81C37A74200EC9755 /* gameArts-hd@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 76E4A6ED1C37A74100EC9755 /* gameArts-hd@2x.png */; };
@@ -40,17 +40,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		762C2A5A1C3B35B60012ADD2 /* game_music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = game_music.mp3; sourceTree = "<group>"; };
 		766B8DAA1C35460800ACF5BB /* Air Strike.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Air Strike.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		766B8DAD1C35460800ACF5BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		766B8DB11C35460800ACF5BB /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		766B8DB31C35460800ACF5BB /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		766B8DB61C35460800ACF5BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		766B8DB81C35460800ACF5BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		766B8DBB1C35460800ACF5BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		766B8DBD1C35460800ACF5BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		766B8DC21C35460800ACF5BB /* Air StrikeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Air StrikeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		766B8DC61C35460800ACF5BB /* Air_StrikeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Air_StrikeTests.swift; sourceTree = "<group>"; };
 		766B8DC81C35460800ACF5BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		76BBB7941C3A544F00EFDECB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		76E4A6DD1C37A54400EC9755 /* SharedAtlas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedAtlas.swift; sourceTree = "<group>"; };
 		76E4A6DF1C37A63500EC9755 /* FoePlane.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoePlane.swift; sourceTree = "<group>"; };
 		76E4A6E31C37A74100EC9755 /* bullet.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bullet.mp3; sourceTree = "<group>"; };
@@ -60,7 +61,6 @@
 		76E4A6E71C37A74100EC9755 /* enemy2_down.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = enemy2_down.mp3; sourceTree = "<group>"; };
 		76E4A6E81C37A74100EC9755 /* enemy2_out.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = enemy2_out.mp3; sourceTree = "<group>"; };
 		76E4A6E91C37A74100EC9755 /* enemy3_down.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = enemy3_down.mp3; sourceTree = "<group>"; };
-		76E4A6EA1C37A74100EC9755 /* game_music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = game_music.mp3; sourceTree = "<group>"; };
 		76E4A6EB1C37A74100EC9755 /* game_over.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = game_over.mp3; sourceTree = "<group>"; };
 		76E4A6EC1C37A74100EC9755 /* gameArts-hd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "gameArts-hd.plist"; sourceTree = "<group>"; };
 		76E4A6ED1C37A74100EC9755 /* gameArts-hd@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gameArts-hd@2x.png"; sourceTree = "<group>"; };
@@ -111,7 +111,7 @@
 				76E4A6DF1C37A63500EC9755 /* FoePlane.swift */,
 				76E4A6DD1C37A54400EC9755 /* SharedAtlas.swift */,
 				766B8DB51C35460800ACF5BB /* Main.storyboard */,
-				766B8DB81C35460800ACF5BB /* Assets.xcassets */,
+				76BBB7941C3A544F00EFDECB /* Assets.xcassets */,
 				76E4A6E21C37A74100EC9755 /* Resource */,
 				766B8DBA1C35460800ACF5BB /* LaunchScreen.storyboard */,
 				766B8DBD1C35460800ACF5BB /* Info.plist */,
@@ -134,11 +134,11 @@
 				76E4A6E31C37A74100EC9755 /* bullet.mp3 */,
 				76E4A6E41C37A74100EC9755 /* BurstAircraftPause.png */,
 				76E4A6E51C37A74100EC9755 /* BurstAircraftPause@2x.png */,
+				762C2A5A1C3B35B60012ADD2 /* game_music.mp3 */,
 				76E4A6E61C37A74100EC9755 /* enemy1_down.mp3 */,
 				76E4A6E71C37A74100EC9755 /* enemy2_down.mp3 */,
 				76E4A6E81C37A74100EC9755 /* enemy2_out.mp3 */,
 				76E4A6E91C37A74100EC9755 /* enemy3_down.mp3 */,
-				76E4A6EA1C37A74100EC9755 /* game_music.mp3 */,
 				76E4A6EB1C37A74100EC9755 /* game_over.mp3 */,
 				76E4A6EC1C37A74100EC9755 /* gameArts-hd.plist */,
 				76E4A6ED1C37A74100EC9755 /* gameArts-hd@2x.png */,
@@ -232,15 +232,15 @@
 				76E4A6F01C37A74200EC9755 /* BurstAircraftPause@2x.png in Resources */,
 				76E4A6F21C37A74200EC9755 /* enemy2_down.mp3 in Resources */,
 				766B8DBC1C35460800ACF5BB /* LaunchScreen.storyboard in Resources */,
+				762C2A5B1C3B35B60012ADD2 /* game_music.mp3 in Resources */,
 				76E4A6F11C37A74200EC9755 /* enemy1_down.mp3 in Resources */,
+				76BBB7951C3A544F00EFDECB /* Assets.xcassets in Resources */,
 				76E4A6EE1C37A74100EC9755 /* bullet.mp3 in Resources */,
 				76E4A6F61C37A74200EC9755 /* game_over.mp3 in Resources */,
-				76E4A6F51C37A74200EC9755 /* game_music.mp3 in Resources */,
 				76E4A6EF1C37A74100EC9755 /* BurstAircraftPause.png in Resources */,
 				76E4A6F81C37A74200EC9755 /* gameArts-hd@2x.png in Resources */,
 				76E4A6F41C37A74200EC9755 /* enemy3_down.mp3 in Resources */,
 				76E4A6F71C37A74200EC9755 /* gameArts-hd.plist in Resources */,
-				766B8DB91C35460800ACF5BB /* Assets.xcassets in Resources */,
 				766B8DB71C35460800ACF5BB /* Main.storyboard in Resources */,
 				76E4A6F31C37A74200EC9755 /* enemy2_out.mp3 in Resources */,
 			);

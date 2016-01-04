@@ -18,11 +18,12 @@ class GameViewController: UIViewController {
         let skView = self.view as! SKView
         skView.showsFPS = true
         skView.showsNodeCount = true
+        skView.showsPhysics = true
         
         /* Sprite Kit applies additional optimizations to improve rendering performance */
         skView.ignoresSiblingOrder = true
         
-        let scene = GameScene(size: skView.frame.size)
+        let scene = GameScene(size: skView.bounds.size)
         scene.scaleMode = .AspectFill
         
         skView.presentScene(scene)
@@ -69,6 +70,7 @@ extension GameViewController {
         button.center = backgroundView.center
         button.setTitle("Restart", forState: .Normal)
         button.setTitleColor(UIColor.blackColor(), forState: .Normal)
+        button.titleLabel?.font = UIFont(name: "Chalkduster", size: 18)
         button.layer.borderWidth = 2.0
         button.layer.cornerRadius = 15.0
         button.layer.borderColor = UIColor.grayColor().CGColor
@@ -86,6 +88,7 @@ extension GameViewController {
         button1.frame = CGRectMake(CGRectGetWidth(self.view.frame) / 2 - 100, 50, 200, 30)
         button1.setTitle("Continue", forState: .Normal)
         button1.setTitleColor(UIColor.blackColor(), forState: .Normal)
+        button1.titleLabel?.font = UIFont(name: "Chalkduster", size: 18)
         button1.layer.borderWidth = 2.0
         button1.layer.cornerRadius = 15.0
         button1.layer.borderColor = UIColor.grayColor().CGColor
@@ -96,6 +99,7 @@ extension GameViewController {
         button2.frame = CGRectMake(CGRectGetWidth(self.view.frame) / 2 - 100, 100, 200, 30)
         button2.setTitle("Restart", forState: .Normal)
         button2.setTitleColor(UIColor.blackColor(), forState: .Normal)
+        button2.titleLabel?.font = UIFont(name: "Chalkduster", size: 18)
         button2.layer.borderWidth = 2.0
         button2.layer.cornerRadius = 15.0
         button2.layer.borderColor = UIColor.grayColor().CGColor
