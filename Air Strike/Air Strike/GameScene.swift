@@ -10,6 +10,11 @@ import SpriteKit
 
 class GameScene: SKScene {
     
+    let edgeCategory        = 0x1
+    let bulletCategory      = 0x1 << 1
+    let foePlaneCategory    = 0x1 << 2
+    let playerPlaneCategory = 0x1 << 3
+    
     override func didMoveToView(view: SKView) {
         
         initScene()
@@ -102,10 +107,7 @@ class GameScene: SKScene {
 
 extension GameScene: SKPhysicsContactDelegate {
     
-    static let edgeCategory        = 0x1
-    static let bulletCategory      = 0x1 << 1
-    static let foePlaneCategory    = 0x1 << 2
-    static let playerPlaneCategory = 0x1 << 3
+
     
     func didBeginContact(contact: SKPhysicsContact) {
         
