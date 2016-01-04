@@ -63,19 +63,57 @@ class GameViewController: UIViewController {
 extension GameViewController {
     
     func gameOver() {
-        
+        let backgroundView = UIView(frame: self.view.bounds)
+        let button = UIButton()
+        button.bounds = CGRectMake(0, 0, 200, 30)
+        button.center = backgroundView.center
+        button.setTitle("Restart", forState: .Normal)
+        button.setTitleColor(UIColor.blackColor(), forState: .Normal)
+        button.layer.borderWidth = 2.0
+        button.layer.cornerRadius = 15.0
+        button.layer.borderColor = UIColor.grayColor().CGColor
+        button.addTarget(self, action: "restart", forControlEvents: .TouchUpInside)
+        backgroundView.addSubview(button)
+        backgroundView.center = self.view.center
+        self.view.addSubview(backgroundView)
     }
     
     func pause() {
+        (self.view as! SKView).paused = true
+        let pauseView = UIView(frame: CGRectMake(0, 0, CGRectGetWidth(self.view.frame), 200))
         
+        let button1 = UIButton()
+        button1.frame = CGRectMake(CGRectGetWidth(self.view.frame) / 2 - 100, 50, 200, 30)
+        button1.setTitle("Continue", forState: .Normal)
+        button1.setTitleColor(UIColor.blackColor(), forState: .Normal)
+        button1.layer.borderWidth = 2.0
+        button1.layer.cornerRadius = 15.0
+        button1.layer.borderColor = UIColor.grayColor().CGColor
+        button1.addTarget(self, action: "continueGame:", forControlEvents: .TouchUpInside)
+        pauseView.addSubview(button1)
+        
+        let button2 = UIButton()
+        button2.frame = CGRectMake(CGRectGetWidth(self.view.frame) / 2 - 100, 100, 200, 30)
+        button2.setTitle("Restart", forState: .Normal)
+        button2.setTitleColor(UIColor.blackColor(), forState: .Normal)
+        button2.layer.borderWidth = 2.0
+        button2.layer.cornerRadius = 15.0
+        button2.layer.borderColor = UIColor.grayColor().CGColor
+        button2.addTarget(self, action: "restart", forControlEvents: .TouchUpInside)
+        pauseView.addSubview(button2)
+        
+        pauseView.center = self.view.center
+        self.view.addSubview(pauseView)
     }
     
     func restart(button: UIButton) {
-        
+        button.superview!.removeFromSuperview()
+        (self.view as! SKView).paused = false
+        NSNotificationCenter.defaultCenter().postNotificationName("restartNotification", object: nil)
     }
     
     func continueGame(button: UIButton) {
-        
-        
+        button.superview!.removeFromSuperview()
+        (self.view as! SKView).paused = false
     }
 }

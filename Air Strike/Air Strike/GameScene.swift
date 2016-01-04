@@ -107,8 +107,6 @@ class GameScene: SKScene {
 
 extension GameScene: SKPhysicsContactDelegate {
     
-
-    
     func didBeginContact(contact: SKPhysicsContact) {
         
     }
