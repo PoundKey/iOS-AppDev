@@ -13,4 +13,5 @@
 ### TO-DOs List
  - Enhance view across bigger screen resolutions (iPhone 6 & iPad) with self.frame & self.bounds
  - Refactor codes for object creations. (e.g, buttons)
+ - Enhance Air Plane movement with relative distance and time
  - Fix runtime error warning caused by AVAudioPlayer? (Background Music)
