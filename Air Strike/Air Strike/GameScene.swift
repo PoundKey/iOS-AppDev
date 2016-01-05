@@ -7,6 +7,7 @@
 //
 
 import SpriteKit
+import AVFoundation.AVAudioPlayer
 
 class GameScene: SKScene {
     
@@ -28,6 +29,8 @@ class GameScene: SKScene {
     let _smallFoePlaneBlowupAction  = SharedAtlas.blowupActionWithFoePlaneType(.Small)
     let _mediumFoePlaneBlowupAction = SharedAtlas.blowupActionWithFoePlaneType(.Medium)
     let _bigFoePlaneBlowupAction    = SharedAtlas.blowupActionWithFoePlaneType(.Big)
+    
+    var _bgmSFX: AVAudioPlayer!
 
     override func didMoveToView(view: SKView) {
         self.size = view.bounds.size
@@ -49,10 +52,11 @@ class GameScene: SKScene {
         scrollBackground()
     }
     
+    
     func initScene() {
         initPhysicsWorld()
-        initBackground()
         initScore()
+        initBackground()
         initPlayerPlane()
         fireBullets()
     }
@@ -63,6 +67,16 @@ class GameScene: SKScene {
         self.physicsBody?.collisionBitMask = playerPlaneCategory
         self.physicsWorld.contactDelegate = self;
         self.physicsWorld.gravity = CGVectorMake(0,0);
+    }
+    
+    func initScore() {
+        _scoreLabel.text = "0000"
+        _scoreLabel.zPosition = 2
+        _scoreLabel.fontColor = SKColor.blackColor()
+        _scoreLabel.horizontalAlignmentMode = .Left
+        _scoreLabel.position = CGPointMake(50, self.size.height - 52)
+        
+        self.addChild(_scoreLabel)
     }
     
     
@@ -96,8 +110,12 @@ class GameScene: SKScene {
         self.addChild(_background2)
         
         // TODO: run background music here
-        let action = SKAction.playSoundFileNamed("game_music.mp3", waitForCompletion: true)
-        //self.runAction(SKAction.repeatActionForever(action))
+        let url = NSBundle.mainBundle().URLForResource("game_music", withExtension: "mp3")!
+        _bgmSFX = try! AVAudioPlayer(contentsOfURL: url, fileTypeHint: "mp3")
+        _bgmSFX.numberOfLoops = -1;
+        _bgmSFX.volume = 0.3;
+        _bgmSFX.prepareToPlay()
+        _bgmSFX.play()
     }
     
     func scrollBackground() {
@@ -108,16 +126,6 @@ class GameScene: SKScene {
         }
         _background1.position = CGPointMake(self.size.width / 2, CGFloat(_scrollBackgroundPosition! - Int(self.size.height)));
         _background2.position = CGPointMake(self.size.width / 2, CGFloat(_scrollBackgroundPosition! - 1))
-    }
-    
-    func initScore() {
-        _scoreLabel.text = "0000"
-        _scoreLabel.zPosition = 2
-        _scoreLabel.fontColor = SKColor.blackColor()
-        _scoreLabel.horizontalAlignmentMode = .Left
-        _scoreLabel.position = CGPointMake(50, self.size.height - 52)
-        
-        self.addChild(_scoreLabel)
     }
 
     
@@ -213,7 +221,7 @@ class GameScene: SKScene {
         let fire = SKAction.runBlock {
             self.createBullets()
         }
-        let interval = SKAction.waitForDuration(0.6)
+        let interval = SKAction.waitForDuration(0.3)
         let actions = SKAction.sequence([fire, interval])
         self.runAction(SKAction.repeatActionForever(actions))
     }
@@ -237,11 +245,57 @@ class GameScene: SKScene {
     }
     
     func foePlaneCollisionAnimation(plane: FoePlane) {
+        let hitAction: SKAction
+        let blowupAction: SKAction
+        let SFX: String
         
+        plane.hp -= 1
+        
+        switch plane.type {
+        case .Big:
+            hitAction = _bigFoePlaneHitAction
+            blowupAction = _bigFoePlaneBlowupAction
+            SFX = "enemy2_down.mp3"
+        case .Medium:
+            hitAction = _mediumFoePlaneHitAction
+            blowupAction = _mediumFoePlaneBlowupAction
+            SFX = "enemy3_down.mp3"
+        case .Small:
+            hitAction = _smallFoePlaneHitAction;
+            blowupAction = _smallFoePlaneBlowupAction;
+            SFX = "enemy1_down.mp3"
+        }
+
+        if plane.hp == 0 {
+            plane.removeAllActions()
+            plane.runAction(blowupAction)
+            self.changeScore(plane.type)
+            self.runAction(SKAction.playSoundFileNamed(SFX, waitForCompletion: false))
+        } else if plane.hp > 0 {
+            plane.runAction(hitAction)
+        }
     }
     
     func playerPlaneCollisionAnimation(plane: SKSpriteNode) {
+        self.removeAllActions()
         
+        let blowup = SharedAtlas.playerPlaneBlowupAction()
+        let gameOverMusic = SKAction.playSoundFileNamed("game_over.mp3", waitForCompletion: false)
+        let interval = SKAction.waitForDuration(1.0)
+        let gameOver = SKAction.runBlock {
+            let label = SKLabelNode(fontNamed: "MarkerFelt-Thin")
+            label.text = "Game Over"
+            label.fontColor = SKColor.blackColor()
+            label.position = CGPointMake(self.size.width / 2, self.size.height / 2 + 36)
+            self.addChild(label)
+        }
+        
+        plane.runAction(blowup) {
+            let actions = SKAction.sequence([gameOverMusic, interval, gameOver])
+            self.runAction(actions) {
+                NSNotificationCenter.defaultCenter().postNotificationName("gameOverNotification", object: nil)
+            }
+        }
     }
     
     func restart() {
@@ -252,17 +306,46 @@ class GameScene: SKScene {
         initPlayerPlane()
         fireBullets()
     }
+    
+    func setRecord(score: Int) {
+        let def: NSUserDefaults = NSUserDefaults.standardUserDefaults()
+        let record = def.integerForKey("record")
+        if score > record {
+            def.setInteger(score, forKey: "record")
+        }
+    }
 }
 
 
 extension GameScene: SKPhysicsContactDelegate {
     
     func didBeginContact(contact: SKPhysicsContact) {
+        // first return the SKNode with larger category
+        let first  = contact.bodyA.categoryBitMask > contact.bodyB.categoryBitMask ? contact.bodyA : contact.bodyB
         
+        // second return the SKnode with smaller category
+        let second = contact.bodyA.categoryBitMask > contact.bodyB.categoryBitMask ? contact.bodyB : contact.bodyA;
+        
+        if second.categoryBitMask == bulletCategory {
+            // Bullet hits a foe plane
+            let bullet = second.node
+            bullet?.removeFromParent()
+            
+            let foePlane = first.node as! FoePlane
+            foePlaneCollisionAnimation(foePlane)
+            
+        } else if second.categoryBitMask == playerPlaneCategory {
+            _bgmSFX.stop()
+            if let score = Int(_scoreLabel.text!) {
+                setRecord(score)
+            }
+            // Player plane hit by a foe plane
+            playerPlaneCollisionAnimation(_playerPlane)
+        }
     }
 }
 
 let edgeCategory: UInt32        = 0x1
 let bulletCategory: UInt32      = 0x1 << 1
-let foePlaneCategory: UInt32    = 0x1 << 2
-let playerPlaneCategory: UInt32 = 0x1 << 3
+let playerPlaneCategory: UInt32 = 0x1 << 2
+let foePlaneCategory: UInt32    = 0x1 << 3
