@@ -14,6 +14,7 @@ class FirstViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "News"
         items = [UIImage(named: "note")!, UIImage(named: "photo")!, UIImage(named: "favorite")!, UIImage(named: "info")!]
         
         carbonTabSwipeNavigation = CarbonTabSwipeNavigation(items: items as [AnyObject], delegate: self)

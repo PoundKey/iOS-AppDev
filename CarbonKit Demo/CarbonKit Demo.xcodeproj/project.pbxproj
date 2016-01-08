@@ -27,6 +27,9 @@
 		76B17C741C4062D9009E24D0 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76B17C721C4062D9009E24D0 /* Search.storyboard */; };
 		76B17C761C40632B009E24D0 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76B17C751C40632B009E24D0 /* Profile.storyboard */; };
 		76B17C7A1C4063B9009E24D0 /* News.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76B17C781C4063B9009E24D0 /* News.storyboard */; };
+		76B17C7D1C4065F9009E24D0 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B17C7C1C4065F9009E24D0 /* ThirdViewController.swift */; };
+		76B17C7F1C40662B009E24D0 /* ForthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B17C7E1C40662B009E24D0 /* ForthViewController.swift */; };
+		76B17C811C406641009E24D0 /* FifthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B17C801C406641009E24D0 /* FifthViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +71,9 @@
 		76B17C731C4062D9009E24D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Search.storyboard; sourceTree = "<group>"; };
 		76B17C751C40632B009E24D0 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		76B17C791C4063B9009E24D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/News.storyboard; sourceTree = "<group>"; };
+		76B17C7C1C4065F9009E24D0 /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		76B17C7E1C40662B009E24D0 /* ForthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForthViewController.swift; sourceTree = "<group>"; };
+		76B17C801C406641009E24D0 /* FifthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FifthViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,8 +119,7 @@
 				76B17C221C3F73FE009E24D0 /* AppDelegate.swift */,
 				76B17C591C403FB3009E24D0 /* NoteViewController.swift */,
 				76B17C5C1C4046AB009E24D0 /* PhotoViewController.swift */,
-				76B17C241C3F73FE009E24D0 /* FirstViewController.swift */,
-				76B17C261C3F73FE009E24D0 /* SecondViewController.swift */,
+				76B17C7B1C40657A009E24D0 /* TabControllers */,
 				76B17C771C406386009E24D0 /* Storyboards */,
 				76B17C541C3F7A07009E24D0 /* Assets.xcassets */,
 				76B17C301C3F73FE009E24D0 /* Info.plist */,
@@ -154,12 +159,24 @@
 				76B17C2D1C3F73FE009E24D0 /* LaunchScreen.storyboard */,
 				76B17C281C3F73FE009E24D0 /* Main.storyboard */,
 				76B17C781C4063B9009E24D0 /* News.storyboard */,
-				76B17C751C40632B009E24D0 /* Profile.storyboard */,
-				76B17C721C4062D9009E24D0 /* Search.storyboard */,
-				76B17C701C4062A0009E24D0 /* Discover.storyboard */,
 				76B17C6D1C4061A7009E24D0 /* Questions.storyboard */,
+				76B17C701C4062A0009E24D0 /* Discover.storyboard */,
+				76B17C721C4062D9009E24D0 /* Search.storyboard */,
+				76B17C751C40632B009E24D0 /* Profile.storyboard */,
 			);
 			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		76B17C7B1C40657A009E24D0 /* TabControllers */ = {
+			isa = PBXGroup;
+			children = (
+				76B17C241C3F73FE009E24D0 /* FirstViewController.swift */,
+				76B17C261C3F73FE009E24D0 /* SecondViewController.swift */,
+				76B17C7C1C4065F9009E24D0 /* ThirdViewController.swift */,
+				76B17C7E1C40662B009E24D0 /* ForthViewController.swift */,
+				76B17C801C406641009E24D0 /* FifthViewController.swift */,
+			);
+			name = TabControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,8 +287,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76B17C811C406641009E24D0 /* FifthViewController.swift in Sources */,
 				76B17C5A1C403FB3009E24D0 /* NoteViewController.swift in Sources */,
+				76B17C7F1C40662B009E24D0 /* ForthViewController.swift in Sources */,
 				76B17C501C3F7524009E24D0 /* CarbonTabSwipeNavigation.m in Sources */,
+				76B17C7D1C4065F9009E24D0 /* ThirdViewController.swift in Sources */,
 				76B17C511C3F7524009E24D0 /* CarbonTabSwipeScrollView.m in Sources */,
 				76B17C271C3F73FE009E24D0 /* SecondViewController.swift in Sources */,
 				76B17C231C3F73FE009E24D0 /* AppDelegate.swift in Sources */,

@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Forth View Controller-->
         <scene sceneID="uz2-O3-YaH">
             <objects>
-                <viewController id="mLO-Ed-THo" sceneMemberID="viewController">
+                <viewController id="mLO-Ed-THo" customClass="ForthViewController" customModule="CarbonKit_Demo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="B7D-d5-KX0"/>
                         <viewControllerLayoutGuide type="bottom" id="QtC-16-hxf"/>

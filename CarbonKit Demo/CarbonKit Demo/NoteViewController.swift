@@ -13,14 +13,12 @@ class NoteViewController: UITableViewController {
     var refresh: CarbonSwipeRefresh = CarbonSwipeRefresh()
     
     override func viewDidLoad() {
-        print(self.view.superview)
         refresh = CarbonSwipeRefresh(scrollView: self.tableView)
         
         refresh.setMarginTop(0)
         refresh.colors = [UIColor.blueColor(), UIColor.redColor(), UIColor.orangeColor(), UIColor.greenColor()]
         self.view.addSubview(refresh)
         refresh.addTarget(self, action: "refresh:", forControlEvents: .ValueChanged)
-        print("NoteViewController Loaded")
     }
     
     func refresh(sender: AnyObject) {

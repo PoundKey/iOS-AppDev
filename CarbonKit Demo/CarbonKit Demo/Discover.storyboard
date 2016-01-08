@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Third View Controller-->
         <scene sceneID="0Tj-Xj-loj">
             <objects>
-                <viewController id="7Xc-NA-Uc9" sceneMemberID="viewController">
+                <viewController id="7Xc-NA-Uc9" customClass="ThirdViewController" customModule="CarbonKit_Demo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="b1p-5m-gNO"/>
                         <viewControllerLayoutGuide type="bottom" id="rwb-1E-fNQ"/>
