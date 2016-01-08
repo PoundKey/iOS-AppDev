@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Weather.xcscheme</key>
+		<key>CarbonKit Demo.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,12 +12,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>767185A01C3B8A8500578845</key>
+		<key>76B17C1E1C3F73FE009E24D0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>767185B41C3B8A8600578845</key>
+		<key>76B17C341C3F73FE009E24D0</key>
 		<dict>
 			<key>primary</key>
 			<true/>

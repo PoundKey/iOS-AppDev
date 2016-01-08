@@ -1,0 +1,82 @@
+//
+//  FirstViewController.swift
+//  CarbonKit Demo
+//
+//  Created by Chang Tong Xue on 2016-01-07.
+//  Copyright © 2016 DX. All rights reserved.
+//
+
+import UIKit
+
+class FirstViewController: UIViewController {
+    var items = []
+    var carbonTabSwipeNavigation: CarbonTabSwipeNavigation = CarbonTabSwipeNavigation()
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        items = [UIImage(named: "note")!, UIImage(named: "photo")!, UIImage(named: "favorite")!, UIImage(named: "info")!]
+        
+        carbonTabSwipeNavigation = CarbonTabSwipeNavigation(items: items as [AnyObject], delegate: self)
+        carbonTabSwipeNavigation.insertIntoRootViewController(self)
+        self.style()
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    func style() {
+        let color: UIColor = UIColor(red: 24.0 / 255, green: 75.0 / 255, blue: 152.0 / 255, alpha: 1)
+        self.navigationController!.navigationBar.translucent = true
+        self.navigationController!.navigationBar.tintColor = UIColor.whiteColor()
+        self.navigationController!.navigationBar.barTintColor = color
+        self.navigationController!.navigationBar.barStyle = .BlackTranslucent
+        carbonTabSwipeNavigation.toolbar.translucent = false
+        carbonTabSwipeNavigation.setIndicatorColor(color)
+        carbonTabSwipeNavigation.setTabExtraWidth(30)
+        carbonTabSwipeNavigation.carbonSegmentedControl!.setWidth(80, forSegmentAtIndex: 0)
+        carbonTabSwipeNavigation.carbonSegmentedControl!.setWidth(80, forSegmentAtIndex: 1)
+        carbonTabSwipeNavigation.carbonSegmentedControl!.setWidth(80, forSegmentAtIndex: 2)
+        carbonTabSwipeNavigation.carbonSegmentedControl!.setWidth(80, forSegmentAtIndex: 3)
+        
+        carbonTabSwipeNavigation.setNormalColor(UIColor.blackColor().colorWithAlphaComponent(0.6))
+        carbonTabSwipeNavigation.setSelectedColor(color, font: UIFont.boldSystemFontOfSize(14))
+        
+    }
+    
+    
+
+
+}
+
+extension FirstViewController: CarbonTabSwipeNavigationDelegate {
+    func carbonTabSwipeNavigation(carbonTabSwipeNavigation: CarbonTabSwipeNavigation, viewControllerAtIndex index: UInt) -> UIViewController {
+        switch index {
+        case 0:
+            let controller = self.storyboard!.instantiateViewControllerWithIdentifier("NoteViewController") as! NoteViewController
+            return controller
+        case 1:
+            let controller = self.storyboard!.instantiateViewControllerWithIdentifier("PhotoViewController") as! PhotoViewController
+            return controller
+        default:
+            return UIViewController()
+        }
+        
+    }
+    
+    func carbonTabSwipeNavigation(carbonTabSwipeNavigation: CarbonTabSwipeNavigation, didMoveAtIndex index: UInt) {
+        switch index {
+        case 0:
+            self.title = "Notes"
+        case 1:
+            self.title = "PhotoViews"
+        case 2:
+            self.title = "Favorites"
+        case 3:
+            self.title = "Books"
+        default:
+            self.title = "CarbonKit"
+        }
+    }
+}

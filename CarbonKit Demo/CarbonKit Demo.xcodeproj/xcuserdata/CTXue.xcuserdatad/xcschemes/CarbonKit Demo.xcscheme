@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "767185A01C3B8A8500578845"
-               BuildableName = "Weather.app"
-               BlueprintName = "Weather"
-               ReferencedContainer = "container:Weather.xcodeproj">
+               BlueprintIdentifier = "76B17C1E1C3F73FE009E24D0"
+               BuildableName = "CarbonKit Demo.app"
+               BlueprintName = "CarbonKit Demo"
+               ReferencedContainer = "container:CarbonKit Demo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,20 +32,20 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "767185B41C3B8A8600578845"
-               BuildableName = "WeatherTests.xctest"
-               BlueprintName = "WeatherTests"
-               ReferencedContainer = "container:Weather.xcodeproj">
+               BlueprintIdentifier = "76B17C341C3F73FE009E24D0"
+               BuildableName = "CarbonKit DemoTests.xctest"
+               BlueprintName = "CarbonKit DemoTests"
+               ReferencedContainer = "container:CarbonKit Demo.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "767185A01C3B8A8500578845"
-            BuildableName = "Weather.app"
-            BlueprintName = "Weather"
-            ReferencedContainer = "container:Weather.xcodeproj">
+            BlueprintIdentifier = "76B17C1E1C3F73FE009E24D0"
+            BuildableName = "CarbonKit Demo.app"
+            BlueprintName = "CarbonKit Demo"
+            ReferencedContainer = "container:CarbonKit Demo.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -65,10 +65,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "767185A01C3B8A8500578845"
-            BuildableName = "Weather.app"
-            BlueprintName = "Weather"
-            ReferencedContainer = "container:Weather.xcodeproj">
+            BlueprintIdentifier = "76B17C1E1C3F73FE009E24D0"
+            BuildableName = "CarbonKit Demo.app"
+            BlueprintName = "CarbonKit Demo"
+            ReferencedContainer = "container:CarbonKit Demo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -84,10 +84,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "767185A01C3B8A8500578845"
-            BuildableName = "Weather.app"
-            BlueprintName = "Weather"
-            ReferencedContainer = "container:Weather.xcodeproj">
+            BlueprintIdentifier = "76B17C1E1C3F73FE009E24D0"
+            BuildableName = "CarbonKit Demo.app"
+            BlueprintName = "CarbonKit Demo"
+            ReferencedContainer = "container:CarbonKit Demo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
