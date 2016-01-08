@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="tn0-oi-sSY">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="uz2-O3-YaH">
+            <objects>
+                <viewController id="mLO-Ed-THo" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="B7D-d5-KX0"/>
+                        <viewControllerLayoutGuide type="bottom" id="QtC-16-hxf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GaL-QH-GYN">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="IKC-6Z-i4m"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eNF-WA-b7f" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1922" y="527"/>
+        </scene>
+        <!--Search-->
+        <scene sceneID="vV3-Ag-uDj">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tn0-oi-sSY" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Search" image="icon_tab_search" id="QUP-5G-eIi"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="c1M-SA-Fp1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="mLO-Ed-THo" kind="relationship" relationship="rootViewController" id="dnr-Lh-aiR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cta-LM-xma" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1110" y="527"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icon_tab_search" width="24" height="24"/>
+    </resources>
+</document>
