@@ -22,10 +22,6 @@
 		76B17C5B1C403FB3009E24D0 /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B17C591C403FB3009E24D0 /* NoteViewController.swift */; };
 		76B17C5D1C4046AB009E24D0 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B17C5C1C4046AB009E24D0 /* PhotoViewController.swift */; };
 		76B17C5E1C4046AB009E24D0 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B17C5C1C4046AB009E24D0 /* PhotoViewController.swift */; };
-		76B17C611C405CAB009E24D0 /* News.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76B17C5F1C405CAB009E24D0 /* News.storyboard */; };
-		76B17C621C405CAB009E24D0 /* News.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76B17C5F1C405CAB009E24D0 /* News.storyboard */; };
-		76B17C641C405CD4009E24D0 /* News.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76B17C631C405CD4009E24D0 /* News.storyboard */; };
-		76B17C651C405CD4009E24D0 /* News.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76B17C631C405CD4009E24D0 /* News.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,8 +58,6 @@
 		76B17C581C3F7F31009E24D0 /* CarbonKit-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CarbonKit-Bridging-Header.h"; sourceTree = "<group>"; };
 		76B17C591C403FB3009E24D0 /* NoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
 		76B17C5C1C4046AB009E24D0 /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
-		76B17C601C405CAB009E24D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/News.storyboard; sourceTree = "<group>"; };
-		76B17C631C405CD4009E24D0 /* News.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = News.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,8 +106,6 @@
 				76B17C241C3F73FE009E24D0 /* FirstViewController.swift */,
 				76B17C261C3F73FE009E24D0 /* SecondViewController.swift */,
 				76B17C281C3F73FE009E24D0 /* Main.storyboard */,
-				76B17C631C405CD4009E24D0 /* News.storyboard */,
-				76B17C5F1C405CAB009E24D0 /* News.storyboard */,
 				76B17C541C3F7A07009E24D0 /* Assets.xcassets */,
 				76B17C2D1C3F73FE009E24D0 /* LaunchScreen.storyboard */,
 				76B17C301C3F73FE009E24D0 /* Info.plist */,
@@ -232,9 +224,7 @@
 			files = (
 				76B17C2F1C3F73FE009E24D0 /* LaunchScreen.storyboard in Resources */,
 				76B17C551C3F7A07009E24D0 /* Assets.xcassets in Resources */,
-				76B17C641C405CD4009E24D0 /* News.storyboard in Resources */,
 				76B17C2A1C3F73FE009E24D0 /* Main.storyboard in Resources */,
-				76B17C611C405CAB009E24D0 /* News.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,8 +232,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76B17C621C405CAB009E24D0 /* News.storyboard in Resources */,
-				76B17C651C405CD4009E24D0 /* News.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,14 +289,6 @@
 				76B17C2E1C3F73FE009E24D0 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		76B17C5F1C405CAB009E24D0 /* News.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				76B17C601C405CAB009E24D0 /* Base */,
-			);
-			name = News.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -462,6 +442,7 @@
 				76B17C401C3F73FE009E24D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		76B17C411C3F73FE009E24D0 /* Build configuration list for PBXNativeTarget "CarbonKit DemoTests" */ = {
 			isa = XCConfigurationList;
@@ -470,6 +451,7 @@
 				76B17C431C3F73FE009E24D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -68,15 +68,15 @@ extension FirstViewController: CarbonTabSwipeNavigationDelegate {
     func carbonTabSwipeNavigation(carbonTabSwipeNavigation: CarbonTabSwipeNavigation, didMoveAtIndex index: UInt) {
         switch index {
         case 0:
-            self.title = "Notes"
+            self.navigationItem.title = "News"
         case 1:
-            self.title = "PhotoViews"
+            self.navigationItem.title = "PhotoViews"
         case 2:
-            self.title = "Favorites"
+            self.navigationItem.title = "Favorites"
         case 3:
-            self.title = "Books"
+            self.navigationItem.title = "Books"
         default:
-            self.title = "CarbonKit"
+            self.navigationItem.title = "CarbonKit"
         }
     }
 }
