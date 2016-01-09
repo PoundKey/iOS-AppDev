@@ -19,6 +19,7 @@ class FirstViewController: UIViewController {
         
         carbonTabSwipeNavigation = CarbonTabSwipeNavigation(items: items as [AnyObject], delegate: self)
         carbonTabSwipeNavigation.insertIntoRootViewController(self)
+        //carbonTabSwipeNavigation.insertIntoRootViewController(self, andTargetView: self.view)
         self.style()
     }
 

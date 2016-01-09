@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		76B17C831C40D120009E24D0 /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B17C821C40D120009E24D0 /* ArticleViewController.swift */; };
+		76B17C851C40D13F009E24D0 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B17C841C40D13F009E24D0 /* QuestionViewController.swift */; };
+		76B17C871C40D156009E24D0 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B17C861C40D156009E24D0 /* DiscoverViewController.swift */; };
+		76B17C891C40D16E009E24D0 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B17C881C40D16E009E24D0 /* SearchViewController.swift */; };
+		76B17C8B1C40D17E009E24D0 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B17C8A1C40D17E009E24D0 /* ProfileViewController.swift */; };
+		76B17C8F1C40E1CF009E24D0 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B17C8E1C40E1CF009E24D0 /* ProfileHeaderView.swift */; };
+		76B17C921C40E237009E24D0 /* ProfileHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76B17C911C40E237009E24D0 /* ProfileHeaderView.xib */; };
+		76B17C941C40E8C0009E24D0 /* UIBarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B17C931C40E8C0009E24D0 /* UIBarExtension.swift */; };
 		76E4A7291C38F0F200EC9755 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E4A7281C38F0F200EC9755 /* AppDelegate.swift */; };
 		76E4A72B1C38F0F200EC9755 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E4A72A1C38F0F200EC9755 /* ViewController.swift */; };
 		76E4A72E1C38F0F200EC9755 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76E4A72C1C38F0F200EC9755 /* Main.storyboard */; };
@@ -26,6 +34,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		76B17C821C40D120009E24D0 /* ArticleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
+		76B17C841C40D13F009E24D0 /* QuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
+		76B17C861C40D156009E24D0 /* DiscoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
+		76B17C881C40D16E009E24D0 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		76B17C8A1C40D17E009E24D0 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		76B17C8E1C40E1CF009E24D0 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
+		76B17C911C40E237009E24D0 /* ProfileHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileHeaderView.xib; sourceTree = "<group>"; };
+		76B17C931C40E8C0009E24D0 /* UIBarExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBarExtension.swift; sourceTree = "<group>"; };
 		76E4A7251C38F0F200EC9755 /* TabView Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TabView Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		76E4A7281C38F0F200EC9755 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		76E4A72A1C38F0F200EC9755 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +72,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		76B17C8C1C40D22D009E24D0 /* TabViewController */ = {
+			isa = PBXGroup;
+			children = (
+				76B17C901C40E1F2009E24D0 /* SubViews */,
+				76B17C821C40D120009E24D0 /* ArticleViewController.swift */,
+				76B17C841C40D13F009E24D0 /* QuestionViewController.swift */,
+				76B17C861C40D156009E24D0 /* DiscoverViewController.swift */,
+				76B17C881C40D16E009E24D0 /* SearchViewController.swift */,
+				76B17C8A1C40D17E009E24D0 /* ProfileViewController.swift */,
+			);
+			name = TabViewController;
+			sourceTree = "<group>";
+		};
+		76B17C8D1C40DFD2009E24D0 /* InitialSetup */ = {
+			isa = PBXGroup;
+			children = (
+				76E4A72A1C38F0F200EC9755 /* ViewController.swift */,
+				76E4A72C1C38F0F200EC9755 /* Main.storyboard */,
+				76E4A7311C38F0F200EC9755 /* LaunchScreen.storyboard */,
+			);
+			name = InitialSetup;
+			sourceTree = "<group>";
+		};
+		76B17C901C40E1F2009E24D0 /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				76B17C8E1C40E1CF009E24D0 /* ProfileHeaderView.swift */,
+				76B17C911C40E237009E24D0 /* ProfileHeaderView.xib */,
+			);
+			name = SubViews;
+			sourceTree = "<group>";
+		};
 		76E4A71C1C38F0F200EC9755 = {
 			isa = PBXGroup;
 			children = (
@@ -78,10 +126,10 @@
 			isa = PBXGroup;
 			children = (
 				76E4A7281C38F0F200EC9755 /* AppDelegate.swift */,
-				76E4A72A1C38F0F200EC9755 /* ViewController.swift */,
-				76E4A72C1C38F0F200EC9755 /* Main.storyboard */,
+				76B17C931C40E8C0009E24D0 /* UIBarExtension.swift */,
+				76B17C8C1C40D22D009E24D0 /* TabViewController */,
+				76B17C8D1C40DFD2009E24D0 /* InitialSetup */,
 				76E4A72F1C38F0F200EC9755 /* Assets.xcassets */,
-				76E4A7311C38F0F200EC9755 /* LaunchScreen.storyboard */,
 				76E4A7341C38F0F200EC9755 /* Info.plist */,
 			);
 			path = "TabView Demo";
@@ -182,6 +230,7 @@
 				76E4A7331C38F0F200EC9755 /* LaunchScreen.storyboard in Resources */,
 				76E4A7301C38F0F200EC9755 /* Assets.xcassets in Resources */,
 				76E4A72E1C38F0F200EC9755 /* Main.storyboard in Resources */,
+				76B17C921C40E237009E24D0 /* ProfileHeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,8 +248,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76B17C891C40D16E009E24D0 /* SearchViewController.swift in Sources */,
 				76E4A72B1C38F0F200EC9755 /* ViewController.swift in Sources */,
+				76B17C831C40D120009E24D0 /* ArticleViewController.swift in Sources */,
+				76B17C851C40D13F009E24D0 /* QuestionViewController.swift in Sources */,
+				76B17C941C40E8C0009E24D0 /* UIBarExtension.swift in Sources */,
+				76B17C8B1C40D17E009E24D0 /* ProfileViewController.swift in Sources */,
 				76E4A7291C38F0F200EC9755 /* AppDelegate.swift in Sources */,
+				76B17C871C40D156009E24D0 /* DiscoverViewController.swift in Sources */,
+				76B17C8F1C40E1CF009E24D0 /* ProfileHeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,6 +444,7 @@
 				76E4A7441C38F0F200EC9755 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		76E4A7451C38F0F200EC9755 /* Build configuration list for PBXNativeTarget "TabView DemoTests" */ = {
 			isa = XCConfigurationList;
@@ -396,6 +453,7 @@
 				76E4A7471C38F0F200EC9755 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

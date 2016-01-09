@@ -16,7 +16,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-    
+        loadViewControllers()
+        UINavigationBar.appearance().translucent = false
+        UINavigationBar.appearance().barStyle = .Black
         return true
     }
 
@@ -41,7 +43,59 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
+}
 
+extension AppDelegate {
+    func loadViewControllers() {
+        
+        let articles = ArticleViewController()
+        let articlesNav = UINavigationController(rootViewController:articles)
+        
+        let questions = QuestionViewController()
+        let questionsNav = UINavigationController(rootViewController:questions)
+        
+        let discover = DiscoverViewController()
+        let discoverNav = UINavigationController(rootViewController:discover)
+        
+        let search = SearchViewController()
+        let searchNav = UINavigationController(rootViewController:search)
+        
+        let profile = ProfileViewController()
+        let profileNav = UINavigationController(rootViewController:profile)
+        
+        // Create tabbarViewController without storyboard
+        let tabBarController = UITabBarController()
+        let tabBarItems = [articlesNav, questionsNav, discoverNav, searchNav, profileNav]
+        tabBarController.viewControllers = tabBarItems
+        
+        let color = UIColor(red: 55.0/255.0, green: 168.0/255.0, blue: 122.0/255.0, alpha: 1.0)
+        UINavigationBar.appearance().barTintColor = color
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName:UIColor.whiteColor()]
+        
+        let itemImages = ["icon_tab_article","icon_tab_qa","icon_tab_discover","icon_tab_search","icon_tab_user"]
+        let selectedItemImages = ["icon_tab_article_active","icon_tab_qa_active",
+                                  "icon_tab_discover_active","icon_tab_search_active","icon_tab_user_active"]
+        let itemTitles = ["Articles", "Questions", "Discover", "Search", "Profile"]
+        let attribute =  [NSForegroundColorAttributeName: UIColor(red: 0.0/255.0, green: 154.0/255.0, blue: 97.0/255.0, alpha: 1.0)];
+        let tabItems = tabBarController.tabBar.items!
+        for (index, item) in tabItems.enumerate() {
+            var image = UIImage(named: itemImages[index])
+            var selectedImage = UIImage(named: selectedItemImages[index])
+            image = image?.imageWithRenderingMode(.AlwaysOriginal)
+            selectedImage = selectedImage?.imageWithRenderingMode(.AlwaysOriginal)
+            
+            item.image = image
+            item.selectedImage = selectedImage
+            item.title = itemTitles[index]
+            item.setTitleTextAttributes(attribute, forState: .Selected)
+            
+            tabBarItems[index].tabBarItem = item // Add tabBarItem to ViewController
+        }
+        
+        window?.rootViewController = tabBarController // *Important: Add tabBarViewController to the window
+        window?.backgroundColor = UIColor.whiteColor()
+        window?.makeKeyAndVisible()
+    }
 }
 
 
