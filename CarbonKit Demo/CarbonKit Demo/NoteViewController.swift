@@ -43,7 +43,7 @@ class NoteViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier("noteCell", forIndexPath: indexPath)
-        cell.textLabel!.text = "Cell \(Int(indexPath.row))"
+        cell.textLabel!.text = "News Cell:  \(Int(indexPath.row))"
         return cell
     }
     

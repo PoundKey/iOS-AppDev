@@ -15,7 +15,7 @@ class FirstViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "News"
-        items = [UIImage(named: "note")!, UIImage(named: "photo")!, UIImage(named: "favorite")!, UIImage(named: "info")!]
+        items = [UIImage(named: "note")!, UIImage(named: "photo")!, UIImage(named: "favorite")!, UIImage(named: "info")!, "SpaceX", "Geography", "Science","More..."]
         
         carbonTabSwipeNavigation = CarbonTabSwipeNavigation(items: items as [AnyObject], delegate: self)
         carbonTabSwipeNavigation.insertIntoRootViewController(self)
@@ -35,11 +35,11 @@ class FirstViewController: UIViewController {
         self.navigationController!.navigationBar.barStyle = .BlackTranslucent
         carbonTabSwipeNavigation.toolbar.translucent = false
         carbonTabSwipeNavigation.setIndicatorColor(color)
+        
         carbonTabSwipeNavigation.setTabExtraWidth(30)
-        carbonTabSwipeNavigation.carbonSegmentedControl!.setWidth(80, forSegmentAtIndex: 0)
-        carbonTabSwipeNavigation.carbonSegmentedControl!.setWidth(80, forSegmentAtIndex: 1)
-        carbonTabSwipeNavigation.carbonSegmentedControl!.setWidth(80, forSegmentAtIndex: 2)
-        carbonTabSwipeNavigation.carbonSegmentedControl!.setWidth(80, forSegmentAtIndex: 3)
+        for var i = 0; i < items.count; i++ {
+            carbonTabSwipeNavigation.carbonSegmentedControl!.setWidth(80, forSegmentAtIndex: i)
+        }
         
         carbonTabSwipeNavigation.setNormalColor(UIColor.blackColor().colorWithAlphaComponent(0.6))
         carbonTabSwipeNavigation.setSelectedColor(color, font: UIFont.boldSystemFontOfSize(14))
