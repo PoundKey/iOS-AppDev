@@ -18,7 +18,7 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Profile"
-
+        
         
         scrollView = UIScrollView(frame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height))
         scrollView.contentSize.height = CGFloat(self.view.frame.size.height + 100)
@@ -43,6 +43,8 @@ class ProfileViewController: UIViewController {
         // Add empty padding to the tableView
         let footerView = UIView(frame: CGRectZero)
         tableView.tableFooterView = footerView
+        
+        setNavBarItems()
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -50,27 +52,11 @@ class ProfileViewController: UIViewController {
         let navigationBar = self.navigationController?.navigationBar
         navigationBar?.hideBottomHairline()
     }
+
     
-    func scrollViewDidScroll(scrollView: UIScrollView) {
+    func setNavBarItems(){
         
-        if(scrollView == self.tableView){
-            
-            if (scrollView.contentOffset.y<=30&&scrollView.contentOffset.y>=0) {
-                
-                scrollView.contentInset = UIEdgeInsetsMake(-scrollView.contentOffset.y, 0, 0, 0);
-                
-            } else if (scrollView.contentOffset.y>=30) {
-                
-                scrollView.contentInset = UIEdgeInsetsMake(-30, 0, 0, 0);
-                
-            }
-        }
-        
-    }
-    
-    func AsetNavBarItems(){
-        
-        let leftItem = UIBarButtonItem(title:"Message",style:.Plain,target:self,action:"updateMessage");
+        let leftItem = UIBarButtonItem(title:"Info",style:.Plain,target:self,action:"updateInfo");
         leftItem.tintColor = UIColor.whiteColor();
         self.navigationItem.leftBarButtonItem = leftItem;
         
@@ -80,7 +66,7 @@ class ProfileViewController: UIViewController {
         
     }
     
-    func updateMessage() {
+    func updateInfo() {
         
     }
     
