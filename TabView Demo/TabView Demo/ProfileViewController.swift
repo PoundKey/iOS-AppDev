@@ -32,7 +32,7 @@ class ProfileViewController: UIViewController {
         headerView.backgroundColor = UIColor(red: 55.0/255.0, green: 168.0/255.0, blue: 122.0/255.0, alpha: 1.0)
         scrollView.addSubview(headerView)
         
-        tableView = UITableView(frame: CGRectMake(0, 150, self.view.frame.size.width, self.view.frame.size.height - 170))
+        tableView = UITableView(frame: CGRectMake(0, 150, self.view.frame.size.width, self.view.frame.size.height - 120))
         tableView.dataSource = self
         tableView.delegate = self
         tableView.scrollEnabled = false
@@ -83,7 +83,7 @@ extension ProfileViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return 4
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -109,5 +109,10 @@ extension ProfileViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
     }
+    
+    func tableView(tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        return nil
+    }
+
     
 }

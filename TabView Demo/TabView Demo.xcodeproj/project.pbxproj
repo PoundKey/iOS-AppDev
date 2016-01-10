@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7637730E1C41D45700037868 /* DiscoverTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7637730D1C41D45700037868 /* DiscoverTableCell.swift */; };
+		763773101C41D46600037868 /* DiscoverTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7637730F1C41D46600037868 /* DiscoverTableCell.xib */; };
+		763773121C41D48E00037868 /* DiscoverSectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 763773111C41D48E00037868 /* DiscoverSectionView.xib */; };
+		763773141C41D4A400037868 /* DiscoverSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763773131C41D4A400037868 /* DiscoverSectionView.swift */; };
 		76B17C831C40D120009E24D0 /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B17C821C40D120009E24D0 /* ArticleViewController.swift */; };
 		76B17C851C40D13F009E24D0 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B17C841C40D13F009E24D0 /* QuestionViewController.swift */; };
 		76B17C871C40D156009E24D0 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B17C861C40D156009E24D0 /* DiscoverViewController.swift */; };
@@ -34,6 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7637730D1C41D45700037868 /* DiscoverTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverTableCell.swift; sourceTree = "<group>"; };
+		7637730F1C41D46600037868 /* DiscoverTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DiscoverTableCell.xib; sourceTree = "<group>"; };
+		763773111C41D48E00037868 /* DiscoverSectionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DiscoverSectionView.xib; sourceTree = "<group>"; };
+		763773131C41D4A400037868 /* DiscoverSectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverSectionView.swift; sourceTree = "<group>"; };
 		76B17C821C40D120009E24D0 /* ArticleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
 		76B17C841C40D13F009E24D0 /* QuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		76B17C861C40D156009E24D0 /* DiscoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
@@ -100,6 +108,10 @@
 			children = (
 				76B17C8E1C40E1CF009E24D0 /* ProfileHeaderView.swift */,
 				76B17C911C40E237009E24D0 /* ProfileHeaderView.xib */,
+				7637730D1C41D45700037868 /* DiscoverTableCell.swift */,
+				7637730F1C41D46600037868 /* DiscoverTableCell.xib */,
+				763773131C41D4A400037868 /* DiscoverSectionView.swift */,
+				763773111C41D48E00037868 /* DiscoverSectionView.xib */,
 			);
 			name = SubViews;
 			sourceTree = "<group>";
@@ -228,7 +240,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				76E4A7331C38F0F200EC9755 /* LaunchScreen.storyboard in Resources */,
+				763773121C41D48E00037868 /* DiscoverSectionView.xib in Resources */,
 				76E4A7301C38F0F200EC9755 /* Assets.xcassets in Resources */,
+				763773101C41D46600037868 /* DiscoverTableCell.xib in Resources */,
 				76E4A72E1C38F0F200EC9755 /* Main.storyboard in Resources */,
 				76B17C921C40E237009E24D0 /* ProfileHeaderView.xib in Resources */,
 			);
@@ -257,6 +271,8 @@
 				76E4A7291C38F0F200EC9755 /* AppDelegate.swift in Sources */,
 				76B17C871C40D156009E24D0 /* DiscoverViewController.swift in Sources */,
 				76B17C8F1C40E1CF009E24D0 /* ProfileHeaderView.swift in Sources */,
+				7637730E1C41D45700037868 /* DiscoverTableCell.swift in Sources */,
+				763773141C41D4A400037868 /* DiscoverSectionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

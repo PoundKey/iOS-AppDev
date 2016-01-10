@@ -1,4 +1,4 @@
-## iOS UISearchController
+## iOS CarbonKit Demo
 
 > Implemented a News-like client with TabbedView and CarbonKit.
 
