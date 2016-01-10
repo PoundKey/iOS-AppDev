@@ -16,6 +16,6 @@
  
 ---
 
-### ToDos-List
+### To-Dos List:
 - Practice using UIPageControl
 
