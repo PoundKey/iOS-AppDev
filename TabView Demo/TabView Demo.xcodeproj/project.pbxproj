@@ -11,6 +11,9 @@
 		763773101C41D46600037868 /* DiscoverTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7637730F1C41D46600037868 /* DiscoverTableCell.xib */; };
 		763773121C41D48E00037868 /* DiscoverSectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 763773111C41D48E00037868 /* DiscoverSectionView.xib */; };
 		763773141C41D4A400037868 /* DiscoverSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763773131C41D4A400037868 /* DiscoverSectionView.swift */; };
+		763773181C43428100037868 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763773171C43428100037868 /* NewsViewController.swift */; };
+		7637731A1C4342AE00037868 /* RumorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763773191C4342AE00037868 /* RumorViewController.swift */; };
+		7637731C1C4342BF00037868 /* HotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7637731B1C4342BF00037868 /* HotViewController.swift */; };
 		76B17C831C40D120009E24D0 /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B17C821C40D120009E24D0 /* ArticleViewController.swift */; };
 		76B17C851C40D13F009E24D0 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B17C841C40D13F009E24D0 /* QuestionViewController.swift */; };
 		76B17C871C40D156009E24D0 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B17C861C40D156009E24D0 /* DiscoverViewController.swift */; };
@@ -42,6 +45,9 @@
 		7637730F1C41D46600037868 /* DiscoverTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DiscoverTableCell.xib; sourceTree = "<group>"; };
 		763773111C41D48E00037868 /* DiscoverSectionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DiscoverSectionView.xib; sourceTree = "<group>"; };
 		763773131C41D4A400037868 /* DiscoverSectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverSectionView.swift; sourceTree = "<group>"; };
+		763773171C43428100037868 /* NewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
+		763773191C4342AE00037868 /* RumorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RumorViewController.swift; sourceTree = "<group>"; };
+		7637731B1C4342BF00037868 /* HotViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HotViewController.swift; sourceTree = "<group>"; };
 		76B17C821C40D120009E24D0 /* ArticleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
 		76B17C841C40D13F009E24D0 /* QuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		76B17C861C40D156009E24D0 /* DiscoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
@@ -80,11 +86,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7637731D1C4342CA00037868 /* ArticleViewController */ = {
+			isa = PBXGroup;
+			children = (
+				76B17C821C40D120009E24D0 /* ArticleViewController.swift */,
+				763773171C43428100037868 /* NewsViewController.swift */,
+				7637731B1C4342BF00037868 /* HotViewController.swift */,
+				763773191C4342AE00037868 /* RumorViewController.swift */,
+			);
+			name = ArticleViewController;
+			sourceTree = "<group>";
+		};
 		76B17C8C1C40D22D009E24D0 /* TabViewController */ = {
 			isa = PBXGroup;
 			children = (
 				76B17C901C40E1F2009E24D0 /* SubViews */,
-				76B17C821C40D120009E24D0 /* ArticleViewController.swift */,
+				7637731D1C4342CA00037868 /* ArticleViewController */,
 				76B17C841C40D13F009E24D0 /* QuestionViewController.swift */,
 				76B17C861C40D156009E24D0 /* DiscoverViewController.swift */,
 				76B17C881C40D16E009E24D0 /* SearchViewController.swift */,
@@ -266,12 +283,15 @@
 				76E4A72B1C38F0F200EC9755 /* ViewController.swift in Sources */,
 				76B17C831C40D120009E24D0 /* ArticleViewController.swift in Sources */,
 				76B17C851C40D13F009E24D0 /* QuestionViewController.swift in Sources */,
+				7637731C1C4342BF00037868 /* HotViewController.swift in Sources */,
 				76B17C941C40E8C0009E24D0 /* UIBarExtension.swift in Sources */,
+				763773181C43428100037868 /* NewsViewController.swift in Sources */,
 				76B17C8B1C40D17E009E24D0 /* ProfileViewController.swift in Sources */,
 				76E4A7291C38F0F200EC9755 /* AppDelegate.swift in Sources */,
 				76B17C871C40D156009E24D0 /* DiscoverViewController.swift in Sources */,
 				76B17C8F1C40E1CF009E24D0 /* ProfileHeaderView.swift in Sources */,
 				7637730E1C41D45700037868 /* DiscoverTableCell.swift in Sources */,
+				7637731A1C4342AE00037868 /* RumorViewController.swift in Sources */,
 				763773141C41D4A400037868 /* DiscoverSectionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
