@@ -48,7 +48,6 @@ class ArticleViewController: UIViewController {
         
         loadTopViewSlider()
         loadCurrentViewController(0)
-
     }
     
     override func viewWillDisappear(animated: Bool) {
@@ -74,7 +73,6 @@ class ArticleViewController: UIViewController {
         currentViewController.didMoveToParentViewController(self)
         currentViewController.view.frame = self.contentView.bounds
         contentView.addSubview(currentViewController.view)
-        
     }
     
     
