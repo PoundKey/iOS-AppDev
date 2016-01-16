@@ -10,6 +10,7 @@
 
 ### Goals / API Used: 
 - [Alamofire](https://github.com/Alamofire/Alamofire): Elegant HTTP Networking in Swift
+- [SwifyJSON](https://github.com/SwiftyJSON/SwiftyJSON)
 - CoreData: Pure CoreData without MagicalRecord wrapper
 - [Translink Open API](https://developer.translink.ca)
 - Drag down update.

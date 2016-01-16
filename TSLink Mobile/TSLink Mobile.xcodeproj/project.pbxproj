@@ -7,16 +7,62 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7655C7A41C4A0776002097E1 /* Alamofire.xcworkspace in Resources */ = {isa = PBXBuildFile; fileRef = 7655C7891C4A0776002097E1 /* Alamofire.xcworkspace */; };
+		7655C7A51C4A0776002097E1 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7655C78E1C4A0776002097E1 /* Alamofire.swift */; };
+		7655C7A61C4A0776002097E1 /* Download.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7655C78F1C4A0776002097E1 /* Download.swift */; };
+		7655C7A71C4A0776002097E1 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7655C7901C4A0776002097E1 /* Error.swift */; };
+		7655C7A81C4A0776002097E1 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7655C7911C4A0776002097E1 /* Info.plist */; };
+		7655C7A91C4A0776002097E1 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7655C7921C4A0776002097E1 /* Manager.swift */; };
+		7655C7AA1C4A0776002097E1 /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7655C7931C4A0776002097E1 /* MultipartFormData.swift */; };
+		7655C7AB1C4A0776002097E1 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7655C7941C4A0776002097E1 /* ParameterEncoding.swift */; };
+		7655C7AC1C4A0776002097E1 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7655C7951C4A0776002097E1 /* Request.swift */; };
+		7655C7AD1C4A0776002097E1 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7655C7961C4A0776002097E1 /* Response.swift */; };
+		7655C7AE1C4A0776002097E1 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7655C7971C4A0776002097E1 /* ResponseSerialization.swift */; };
+		7655C7AF1C4A0776002097E1 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7655C7981C4A0776002097E1 /* Result.swift */; };
+		7655C7B01C4A0776002097E1 /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7655C7991C4A0776002097E1 /* ServerTrustPolicy.swift */; };
+		7655C7B11C4A0776002097E1 /* Stream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7655C79A1C4A0776002097E1 /* Stream.swift */; };
+		7655C7B21C4A0776002097E1 /* Upload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7655C79B1C4A0776002097E1 /* Upload.swift */; };
+		7655C7B31C4A0776002097E1 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7655C79C1C4A0776002097E1 /* Validation.swift */; };
+		7655C7BA1C4A0782002097E1 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7655C7B71C4A0776002097E1 /* Alamofire.framework */; };
+		7655C7BB1C4A0782002097E1 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7655C7B71C4A0776002097E1 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7655C7C01C4A0EB9002097E1 /* Translink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7655C7BF1C4A0EB9002097E1 /* Translink.swift */; };
+		7655C7C31C4A0F4C002097E1 /* RouteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7655C7C21C4A0F4C002097E1 /* RouteViewController.swift */; };
+		7655C7C51C4A0F75002097E1 /* RouteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7655C7C41C4A0F75002097E1 /* RouteCell.swift */; };
+		7655C7C71C4A0FD5002097E1 /* RouteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7655C7C61C4A0FD5002097E1 /* RouteCell.xib */; };
+		7655C7C91C4A1237002097E1 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7655C7C81C4A1237002097E1 /* Route.swift */; };
+		7655C7CD1C4A15A2002097E1 /* SearchTVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7655C7CC1C4A15A2002097E1 /* SearchTVController.swift */; };
 		76F3EFD11C49F3A400B68477 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F3EFD01C49F3A400B68477 /* AppDelegate.swift */; };
-		76F3EFD31C49F3A400B68477 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F3EFD21C49F3A400B68477 /* ViewController.swift */; };
+		76F3EFD31C49F3A400B68477 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F3EFD21C49F3A400B68477 /* MainViewController.swift */; };
 		76F3EFD61C49F3A400B68477 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76F3EFD41C49F3A400B68477 /* Main.storyboard */; };
 		76F3EFD91C49F3A400B68477 /* TSLink_Mobile.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 76F3EFD71C49F3A400B68477 /* TSLink_Mobile.xcdatamodeld */; };
 		76F3EFDB1C49F3A400B68477 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76F3EFDA1C49F3A400B68477 /* Assets.xcassets */; };
 		76F3EFDE1C49F3A400B68477 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76F3EFDC1C49F3A400B68477 /* LaunchScreen.storyboard */; };
 		76F3EFE91C49F3A400B68477 /* TSLink_MobileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F3EFE81C49F3A400B68477 /* TSLink_MobileTests.swift */; };
+		76F3EFF51C49FD2900B68477 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F3EFF41C49FD2900B68477 /* SwiftyJSON.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		7655C7B61C4A0776002097E1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7655C7861C4A0776002097E1 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8111E3319A95C8B0040E7D1;
+			remoteInfo = "Alamofire iOS";
+		};
+		7655C7B81C4A0776002097E1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7655C7861C4A0776002097E1 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4DD67C0B1A5C55C900ED2280;
+			remoteInfo = "Alamofire OSX";
+		};
+		7655C7BC1C4A0782002097E1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7655C7861C4A0776002097E1 /* Alamofire.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
+			remoteInfo = "Alamofire iOS";
+		};
 		76F3EFE51C49F3A400B68477 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 76F3EFC51C49F3A400B68477 /* Project object */;
@@ -26,10 +72,48 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		76F3F0BF1C49FF6200B68477 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				7655C7BB1C4A0782002097E1 /* Alamofire.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		7655C7861C4A0776002097E1 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Alamofire.xcodeproj; sourceTree = "<group>"; };
+		7655C7891C4A0776002097E1 /* Alamofire.xcworkspace */ = {isa = PBXFileReference; lastKnownFileType = wrapper.workspace; path = Alamofire.xcworkspace; sourceTree = "<group>"; };
+		7655C78D1C4A0776002097E1 /* Alamofire.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Alamofire.h; sourceTree = "<group>"; };
+		7655C78E1C4A0776002097E1 /* Alamofire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alamofire.swift; sourceTree = "<group>"; };
+		7655C78F1C4A0776002097E1 /* Download.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Download.swift; sourceTree = "<group>"; };
+		7655C7901C4A0776002097E1 /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		7655C7911C4A0776002097E1 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7655C7921C4A0776002097E1 /* Manager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
+		7655C7931C4A0776002097E1 /* MultipartFormData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipartFormData.swift; sourceTree = "<group>"; };
+		7655C7941C4A0776002097E1 /* ParameterEncoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParameterEncoding.swift; sourceTree = "<group>"; };
+		7655C7951C4A0776002097E1 /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		7655C7961C4A0776002097E1 /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		7655C7971C4A0776002097E1 /* ResponseSerialization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseSerialization.swift; sourceTree = "<group>"; };
+		7655C7981C4A0776002097E1 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		7655C7991C4A0776002097E1 /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerTrustPolicy.swift; sourceTree = "<group>"; };
+		7655C79A1C4A0776002097E1 /* Stream.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stream.swift; sourceTree = "<group>"; };
+		7655C79B1C4A0776002097E1 /* Upload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Upload.swift; sourceTree = "<group>"; };
+		7655C79C1C4A0776002097E1 /* Validation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
+		7655C7BF1C4A0EB9002097E1 /* Translink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Translink.swift; sourceTree = "<group>"; };
+		7655C7C21C4A0F4C002097E1 /* RouteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteViewController.swift; sourceTree = "<group>"; };
+		7655C7C41C4A0F75002097E1 /* RouteCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteCell.swift; sourceTree = "<group>"; };
+		7655C7C61C4A0FD5002097E1 /* RouteCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RouteCell.xib; sourceTree = "<group>"; };
+		7655C7C81C4A1237002097E1 /* Route.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
+		7655C7CC1C4A15A2002097E1 /* SearchTVController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTVController.swift; sourceTree = "<group>"; };
 		76F3EFCD1C49F3A400B68477 /* TSLink Mobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TSLink Mobile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		76F3EFD01C49F3A400B68477 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		76F3EFD21C49F3A400B68477 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		76F3EFD21C49F3A400B68477 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		76F3EFD51C49F3A400B68477 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		76F3EFD81C49F3A400B68477 /* TSLink_Mobile.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TSLink_Mobile.xcdatamodel; sourceTree = "<group>"; };
 		76F3EFDA1C49F3A400B68477 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -38,6 +122,7 @@
 		76F3EFE41C49F3A400B68477 /* TSLink MobileTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TSLink MobileTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		76F3EFE81C49F3A400B68477 /* TSLink_MobileTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSLink_MobileTests.swift; sourceTree = "<group>"; };
 		76F3EFEA1C49F3A400B68477 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		76F3EFF41C49FD2900B68477 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +130,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7655C7BA1C4A0782002097E1 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +144,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7655C7851C4A0776002097E1 /* Alamofire */ = {
+			isa = PBXGroup;
+			children = (
+				7655C7861C4A0776002097E1 /* Alamofire.xcodeproj */,
+				7655C7891C4A0776002097E1 /* Alamofire.xcworkspace */,
+				7655C78C1C4A0776002097E1 /* Source */,
+			);
+			path = Alamofire;
+			sourceTree = "<group>";
+		};
+		7655C7871C4A0776002097E1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7655C7B71C4A0776002097E1 /* Alamofire.framework */,
+				7655C7B91C4A0776002097E1 /* Alamofire.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7655C78C1C4A0776002097E1 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				7655C78D1C4A0776002097E1 /* Alamofire.h */,
+				7655C78E1C4A0776002097E1 /* Alamofire.swift */,
+				7655C78F1C4A0776002097E1 /* Download.swift */,
+				7655C7901C4A0776002097E1 /* Error.swift */,
+				7655C7911C4A0776002097E1 /* Info.plist */,
+				7655C7921C4A0776002097E1 /* Manager.swift */,
+				7655C7931C4A0776002097E1 /* MultipartFormData.swift */,
+				7655C7941C4A0776002097E1 /* ParameterEncoding.swift */,
+				7655C7951C4A0776002097E1 /* Request.swift */,
+				7655C7961C4A0776002097E1 /* Response.swift */,
+				7655C7971C4A0776002097E1 /* ResponseSerialization.swift */,
+				7655C7981C4A0776002097E1 /* Result.swift */,
+				7655C7991C4A0776002097E1 /* ServerTrustPolicy.swift */,
+				7655C79A1C4A0776002097E1 /* Stream.swift */,
+				7655C79B1C4A0776002097E1 /* Upload.swift */,
+				7655C79C1C4A0776002097E1 /* Validation.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
 		76F3EFC41C49F3A400B68477 = {
 			isa = PBXGroup;
 			children = (
@@ -80,7 +208,11 @@
 			isa = PBXGroup;
 			children = (
 				76F3EFD01C49F3A400B68477 /* AppDelegate.swift */,
-				76F3EFD21C49F3A400B68477 /* ViewController.swift */,
+				76F3EFF61C49FD2C00B68477 /* Libraries */,
+				76F3EFF31C49FA2E00B68477 /* Model */,
+				76F3EFD21C49F3A400B68477 /* MainViewController.swift */,
+				7655C7C21C4A0F4C002097E1 /* RouteViewController.swift */,
+				7655C7CC1C4A15A2002097E1 /* SearchTVController.swift */,
 				76F3EFD41C49F3A400B68477 /* Main.storyboard */,
 				76F3EFDA1C49F3A400B68477 /* Assets.xcassets */,
 				76F3EFDC1C49F3A400B68477 /* LaunchScreen.storyboard */,
@@ -99,6 +231,26 @@
 			path = "TSLink MobileTests";
 			sourceTree = "<group>";
 		};
+		76F3EFF31C49FA2E00B68477 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7655C7BF1C4A0EB9002097E1 /* Translink.swift */,
+				7655C7C81C4A1237002097E1 /* Route.swift */,
+				7655C7C41C4A0F75002097E1 /* RouteCell.swift */,
+				7655C7C61C4A0FD5002097E1 /* RouteCell.xib */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		76F3EFF61C49FD2C00B68477 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				7655C7851C4A0776002097E1 /* Alamofire */,
+				76F3EFF41C49FD2900B68477 /* SwiftyJSON.swift */,
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -109,10 +261,12 @@
 				76F3EFC91C49F3A400B68477 /* Sources */,
 				76F3EFCA1C49F3A400B68477 /* Frameworks */,
 				76F3EFCB1C49F3A400B68477 /* Resources */,
+				76F3F0BF1C49FF6200B68477 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				7655C7BD1C4A0782002097E1 /* PBXTargetDependency */,
 			);
 			name = "TSLink Mobile";
 			productName = "TSLink Mobile";
@@ -169,6 +323,12 @@
 			mainGroup = 76F3EFC41C49F3A400B68477;
 			productRefGroup = 76F3EFCE1C49F3A400B68477 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 7655C7871C4A0776002097E1 /* Products */;
+					ProjectRef = 7655C7861C4A0776002097E1 /* Alamofire.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				76F3EFCC1C49F3A400B68477 /* TSLink Mobile */,
@@ -177,13 +337,33 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		7655C7B71C4A0776002097E1 /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = 7655C7B61C4A0776002097E1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		7655C7B91C4A0776002097E1 /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = 7655C7B81C4A0776002097E1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		76F3EFCB1C49F3A400B68477 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				76F3EFDE1C49F3A400B68477 /* LaunchScreen.storyboard in Resources */,
+				7655C7C71C4A0FD5002097E1 /* RouteCell.xib in Resources */,
+				7655C7A41C4A0776002097E1 /* Alamofire.xcworkspace in Resources */,
 				76F3EFDB1C49F3A400B68477 /* Assets.xcassets in Resources */,
+				7655C7A81C4A0776002097E1 /* Info.plist in Resources */,
 				76F3EFD61C49F3A400B68477 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -203,8 +383,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				76F3EFD91C49F3A400B68477 /* TSLink_Mobile.xcdatamodeld in Sources */,
-				76F3EFD31C49F3A400B68477 /* ViewController.swift in Sources */,
+				7655C7A51C4A0776002097E1 /* Alamofire.swift in Sources */,
+				7655C7AB1C4A0776002097E1 /* ParameterEncoding.swift in Sources */,
+				7655C7B11C4A0776002097E1 /* Stream.swift in Sources */,
+				7655C7B31C4A0776002097E1 /* Validation.swift in Sources */,
+				76F3EFD31C49F3A400B68477 /* MainViewController.swift in Sources */,
+				7655C7AF1C4A0776002097E1 /* Result.swift in Sources */,
+				7655C7AD1C4A0776002097E1 /* Response.swift in Sources */,
+				7655C7AC1C4A0776002097E1 /* Request.swift in Sources */,
+				7655C7A91C4A0776002097E1 /* Manager.swift in Sources */,
+				7655C7C01C4A0EB9002097E1 /* Translink.swift in Sources */,
+				7655C7A61C4A0776002097E1 /* Download.swift in Sources */,
 				76F3EFD11C49F3A400B68477 /* AppDelegate.swift in Sources */,
+				7655C7C91C4A1237002097E1 /* Route.swift in Sources */,
+				7655C7AA1C4A0776002097E1 /* MultipartFormData.swift in Sources */,
+				7655C7CD1C4A15A2002097E1 /* SearchTVController.swift in Sources */,
+				7655C7B21C4A0776002097E1 /* Upload.swift in Sources */,
+				7655C7A71C4A0776002097E1 /* Error.swift in Sources */,
+				7655C7B01C4A0776002097E1 /* ServerTrustPolicy.swift in Sources */,
+				7655C7AE1C4A0776002097E1 /* ResponseSerialization.swift in Sources */,
+				7655C7C31C4A0F4C002097E1 /* RouteViewController.swift in Sources */,
+				76F3EFF51C49FD2900B68477 /* SwiftyJSON.swift in Sources */,
+				7655C7C51C4A0F75002097E1 /* RouteCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,6 +419,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		7655C7BD1C4A0782002097E1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Alamofire iOS";
+			targetProxy = 7655C7BC1C4A0782002097E1 /* PBXContainerItemProxy */;
+		};
 		76F3EFE61C49F3A400B68477 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 76F3EFCC1C49F3A400B68477 /* TSLink Mobile */;
@@ -331,7 +536,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = "TSLink Mobile/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dyl.herokuapp.TSLink-Mobile";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -342,7 +549,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = "TSLink Mobile/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dyl.herokuapp.TSLink-Mobile";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -392,6 +601,7 @@
 				76F3EFEF1C49F3A400B68477 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		76F3EFF01C49F3A400B68477 /* Build configuration list for PBXNativeTarget "TSLink MobileTests" */ = {
 			isa = XCConfigurationList;
@@ -400,6 +610,7 @@
 				76F3EFF21C49F3A400B68477 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

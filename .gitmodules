@@ -1,0 +1,3 @@
+[submodule "TSLink Mobile/Alamofire"]
+	path = TSLink Mobile/Alamofire
+	url = https://github.com/Alamofire/Alamofire.git

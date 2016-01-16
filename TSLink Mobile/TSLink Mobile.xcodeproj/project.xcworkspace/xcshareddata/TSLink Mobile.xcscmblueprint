@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "D7F8BEFFF858D1B34CC6A4683AE3D61360BCA34A",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "67620B5EFA902936DF04070AF595B76AB0333747" : 0,
+    "D7F8BEFFF858D1B34CC6A4683AE3D61360BCA34A" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "3B73A563-B085-4676-B85E-1C7306F4EFF7",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "67620B5EFA902936DF04070AF595B76AB0333747" : "iOS-AppDev\/TSLink%20Mobile\/Alamofire\/",
+    "D7F8BEFFF858D1B34CC6A4683AE3D61360BCA34A" : "iOS-AppDev\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "TSLink Mobile",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "TSLink Mobile\/TSLink Mobile.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Alamofire\/Alamofire.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "67620B5EFA902936DF04070AF595B76AB0333747"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/PoundKey\/iOS-AppDev.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "D7F8BEFFF858D1B34CC6A4683AE3D61360BCA34A"
+    }
+  ]
+}
