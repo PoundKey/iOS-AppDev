@@ -19,5 +19,4 @@
 ### To-Dos List:
 - Add AutoLayoutConstraint with [SnapKit](http://snapkit.io) or [PureLayout](https://github.com/PureLayout/PureLayout) or [SDAutoLayout](https://github.com/gsdios/SDAutoLayout)
 - Practice using UIPageControl
-- 一些棒极的 iOS 库归纳: (Github Link)[https://github.com/Tim9Liu9/TimLiu-iOS#AutoLayout]
 
