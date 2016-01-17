@@ -58,9 +58,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="sSS-KA-ozA"/>
-                    <navigationItem key="navigationItem" title="Route: 63335" id="yYv-hT-Y8J">
-                        <barButtonItem key="rightBarButtonItem" systemItem="trash" id="vbI-cb-08Z"/>
+                    <navigationItem key="navigationItem" title="Route: 63335" id="NUf-yo-doB">
+                        <barButtonItem key="rightBarButtonItem" systemItem="trash" id="ERo-uB-Jsv"/>
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
@@ -83,6 +82,10 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ijJ-Ug-W2n">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="FvR-Zm-dDo"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="JLc-yl-1n3"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -95,6 +98,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="tableView" destination="ijJ-Ug-W2n" id="Zuk-YV-8F8"/>
                         <segue destination="ev6-7W-szW" kind="showDetail" identifier="routeDetail" id="MDQ-Bs-uKN"/>
                     </connections>
                 </viewController>
