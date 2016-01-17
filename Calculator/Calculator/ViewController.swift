@@ -12,18 +12,16 @@ class ViewController: UIViewController {
     
     var screenLabel: UILabel!
     var pressedButton: UIButton?
-    var sign: String = "+"
-    var input1: String?
-    var input2: String?
     
+    var result = "0"
+    var currentInput: String?
+    var operation: String?
     
     let buttons = [["AC", "+/-", "%", "÷"],
                    ["7", "8", "9", "x"],
                    ["4", "5", "6", "-"],
                    ["1", "2", "3", "+"],
                    ["0", "E", ".", "="]]
-    
-    let buttonTargets = []
     
     var buttonWidth: Float = 0.0
     
@@ -32,7 +30,7 @@ class ViewController: UIViewController {
         self.view.backgroundColor = UIColor.blackColor()
         buttonWidth = Float(self.view.frame.size.width) / 4
         
-        initScreenLabel()
+        initScreen()
         initButtons()
     }
     
@@ -40,7 +38,7 @@ class ViewController: UIViewController {
         return .LightContent
     }
     
-    func initScreenLabel() {
+    func initScreen() {
         let labelWidth = self.view.frame.size.width - 10
         let labelHeight = self.view.frame.size.height - CGFloat(5 * buttonWidth)
         
@@ -69,15 +67,13 @@ class ViewController: UIViewController {
                 button.layer.borderColor = UIColor.blackColor().CGColor
                 button.setTitle(buttons[j][i], forState: .Normal)
                 button.setTitleColor(UIColor.lightGrayColor(), forState: .Highlighted)
-                button.titleLabel?.font = UIFont.systemFontOfSize(36)
+                button.titleLabel?.font = UIFont(name: "HelveticaNeue-Light", size: 36)
                 button.setTitleColor(UIColor.blackColor(), forState: .Normal)
                 setButtonColor(button)
+                button.addTarget(self, action: "handleButtonPress:", forControlEvents: .TouchUpInside)
                 self.view.addSubview(button)
-                
             }
         }
-        
-
     }
     
     func setButtonColor(button: UIButton) {
@@ -87,30 +83,48 @@ class ViewController: UIViewController {
             button.backgroundColor = UIColor.grayColor()
         case "÷", "x", "-", "+", "=":
             button.backgroundColor = UIColor.orangeColor()
+            button.setTitleColor(UIColor.whiteColor(), forState: .Normal)
         case "0":
             button.frame = CGRectMake(button.frame.origin.x, button.frame.origin.y, button.frame.width * 2, button.frame.height)
         case "E":
-            button.frame = CGRectMake(button.frame.origin.x, button.frame.origin.y, 0, 0)
+            button.frame = CGRectMake(0, 0, 0, 0)
         default:
             break
         }
     }
     
-    func clear() {
-        
+    func handleButtonPress(button: UIButton) {
+        let title: String = (button.titleLabel?.text)!
+        switch title {
+        case "%", "÷", "x", "-", "+":
+            break
+        case "AC":
+            break
+        case "+/-":
+            break
+        default:
+            // When button pressed is digit or dot
+            break
+        }
     }
     
-    func changeSign() {
-        
+    func evaluate() {
+        if let input = currentInput, op = operation {
+            
+            
+        }
     }
     
-    func mod() {
-        
-    }
     
-    func sum() {
-        
+    func updateScreen() {
+        if let op = operation {
+            
+        } else {
+            
+            
+        }
     }
 
+    
 }
 
