@@ -1,6 +1,6 @@
 ## iOS DevAPI Trend
 
-> Discover the hot DevAPI trend on CocoaPod, NPM.js, and Github.
+> Discover and keep eyes on the trend of hot Development APIs on CocoaPod, NPM.js, and Github.
 
 <p align="center">
 <img src="./images/1.0.gif" height="480" width="270"> &nbsp; &nbsp; &nbsp;
