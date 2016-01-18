@@ -11,19 +11,35 @@ import XCTest
 
 class CalculatorTests: XCTestCase {
     
+    var controller = CalViewController()
+    
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
+        
     }
     
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
-    
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+
+    func testCalculate() {
+        var res = controller.calculate("10", input: "30", op: "x")
+        XCTAssertEqual(res, "300")
+        
+        res = controller.calculate("10", input: "30", op: "+")
+        XCTAssertEqual(res, "40")
+        
+        res = controller.calculate("10", input: "30", op: "-")
+        XCTAssertEqual(res, "-20")
+        
+        res = controller.calculate("30", input: "10", op: "÷")
+        XCTAssertEqual(res, "3")
+        
+        res = controller.calculate("2", input: "10", op: "÷")
+        XCTAssertEqual(res, "0.2")
+        
     }
     
     func testPerformanceExample() {
