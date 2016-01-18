@@ -1,4 +1,4 @@
-## iOS TabbedView Demo
+## Calculator on iOS
 
 > Implementation of a basic iOS Calculator App with clear logic and unit test.
 
