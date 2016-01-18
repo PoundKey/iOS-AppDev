@@ -118,8 +118,7 @@ class CalViewController: UIViewController {
             updateScreen(result)
         }
     }
-    
-    
+
     func clear() {
         result = "0"
         operation = nil
@@ -154,11 +153,8 @@ class CalViewController: UIViewController {
     }
     
     func updateOperations(input: String) {
-        let isPrevResult = (screenLabel.text != "0" && operation == nil && currentInput == nil)
-        if isPrevResult {
-            self.result = (screenLabel.text)!
-        }
         
+        updatePrevResult()
         if let _ = currentInput, _ = operation {
             evaluate()
         }
@@ -176,6 +172,7 @@ class CalViewController: UIViewController {
     }
     
     func updateSign() {
+        updatePrevResult()
         if let input = currentInput, _ = operation {
             let val = NSDecimalNumber(string:input).decimalNumberByMultiplyingBy(-1)
             currentInput = String(val)
@@ -209,6 +206,13 @@ class CalViewController: UIViewController {
                 }
             }
             updateScreen(currentInput!)
+        }
+    }
+    
+    func updatePrevResult() {
+        let isPrevResult = (screenLabel.text != "0" && operation == nil && currentInput == nil)
+        if isPrevResult {
+            self.result = (screenLabel.text)!
         }
     }
     

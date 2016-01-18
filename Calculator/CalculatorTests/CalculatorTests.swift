@@ -40,6 +40,7 @@ class CalculatorTests: XCTestCase {
         res = controller.calculate("2", input: "10", op: "÷")
         XCTAssertEqual(res, "0.2")
         
+        
     }
     
     func testPerformanceExample() {

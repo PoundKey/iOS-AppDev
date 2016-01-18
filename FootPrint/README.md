@@ -3,17 +3,24 @@
 > FootPrint keeps track of the places that you have visited and marked, categorizes and presents them for future reference in a neat fashion.
 
 <p align="center">
-<img src="./images/1.0.png" height="568" width="320"> &nbsp; &nbsp; &nbsp;
-<img src="./images/1.1.png" height="568" width="320"> <br> <br>
-<img src="./images/1.2.png" height="568" width="320"> &nbsp; &nbsp; &nbsp;
-<img src="./images/1.3.png" height="568" width="320"> <br> <br>
-<img src="./images/1.4.png" height="568" width="320"> &nbsp; &nbsp; &nbsp;
-<img src="./images/1.5.png" height="568" width="320"> <br> <br>
-<img src="./images/1.6.png" height="568" width="320"> &nbsp; &nbsp; &nbsp;
-<img src="./images/1.7.png" height="568" width="320"> <br> <br>
-<img src="./images/2.0.gif" height="568" width="320"> &nbsp; &nbsp; &nbsp;
-<img src="./images/2.1.gif" height="568" width="320"> <br> <br>
+<img src="./images/1.0.png" height="480" width="270"> &nbsp; &nbsp; &nbsp;
+<img src="./images/1.1.png" height="480" width="270"> &nbsp; &nbsp; &nbsp;
+<img src="./images/1.2.png" height="480" width="270">
+<hr>
+</p>
 
+<p align="center">
+<img src="./images/1.3.png" height="480" width="270"> &nbsp; &nbsp; &nbsp;
+<img src="./images/1.4.png" height="480" width="270"> &nbsp; &nbsp; &nbsp;
+<img src="./images/1.5.png" height="480" width="270">
+<hr>
+</p>
+
+<p align="center">
+<img src="./images/1.7.png" height="480" width="270"> &nbsp; &nbsp; &nbsp;
+<img src="./images/2.0.gif" height="480" width="270"> &nbsp; &nbsp; &nbsp;
+<img src="./images/2.1.gif" height="480" width="270"> 
+<hr>
 </p>
 
 ---
