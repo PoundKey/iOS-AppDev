@@ -13,7 +13,9 @@ class CocoaPodViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
-    var viewList = [APIModel]()
+    var trendDaily = [APIModel]()
+    var trendOverall = [APIModel]()
+   
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,17 +54,34 @@ class CocoaPodViewController: UIViewController {
 
 extension CocoaPodViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
-        return 1
+        return 2
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        switch section {
+        case 0:
+            return trendDaily.count
+        case 1:
+            return trendOverall.count
+        default:
+            return 0
+        }
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as! APICell
-        cell.title.text = "Title: \(indexPath.row)"
-        cell.detail.text = "Description of the APICell."
+        
+        let APIitem: APIModel
+        switch indexPath.section {
+        case 0:
+            APIitem = trendDaily[indexPath.row]
+        case 1:
+            APIitem = trendOverall[indexPath.row]
+        default:
+            APIitem = APIModel(title: "nil", detail: "null", url: "undefined")
+        }
+        cell.title.text = APIitem.title
+        cell.detail.text = APIitem.detail
         return cell
     }
     
