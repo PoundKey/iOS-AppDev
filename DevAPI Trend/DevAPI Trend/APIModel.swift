@@ -21,4 +21,8 @@ class APIModel {
         self.url    = url
         self.star   = star
     }
+    
+    func describe() {
+        print("Title: \(self.title), Star: \(star), Detail: \(detail), GitHub: \(url)")
+    }
 }
