@@ -11,6 +11,5 @@ import UIKit
 class APICell: UICollectionViewCell {
     
     @IBOutlet weak var title: UILabel!
-    
     @IBOutlet weak var detail: UITextView!
 }

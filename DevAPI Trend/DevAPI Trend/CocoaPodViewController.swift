@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import HTMLReader
 
 class CocoaPodViewController: UIViewController {
     
@@ -16,13 +17,12 @@ class CocoaPodViewController: UIViewController {
     var trendDaily = [APIModel]()
     var trendOverall = [APIModel]()
    
-
+    var responseString: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "CocoaPods"
         initViewList()
-
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,16 +39,27 @@ class CocoaPodViewController: UIViewController {
         parseHTML()
     }
     
-    func fetchHTML() -> String {
-        
-        return ""
+    func fetchHTML() {
+        let url = "https://trendingcocoapods.github.io"
+        Alamofire.request(.GET, url).responseString { res in
+            switch res.result {
+            case .Success(let value):
+                 self.responseString = value
+            case .Failure:
+                print("No Internet Connection Error: DX21")
+            }
+        }
     }
     
     func parseHTML() {
-        
+        if let res = responseString {
+            
+        }
     }
     
-    
+    func refreshView() {
+        
+    }
 
 }
 
@@ -78,7 +89,7 @@ extension CocoaPodViewController: UICollectionViewDataSource, UICollectionViewDe
         case 1:
             APIitem = trendOverall[indexPath.row]
         default:
-            APIitem = APIModel(title: "nil", detail: "null", url: "undefined")
+            APIitem = APIModel(title: "nil", detail: "null", url: "undefined", star: 0)
         }
         cell.title.text = APIitem.title
         cell.detail.text = APIitem.detail

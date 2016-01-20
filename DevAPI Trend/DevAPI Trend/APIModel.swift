@@ -13,10 +13,12 @@ class APIModel {
     let title: String
     let detail: String
     let url: String
+    let star: Int
     
-    init(title: String, detail: String, url: String) {
-        self.title = title
+    init(title: String, detail: String, url: String, star: Int) {
+        self.title  = title
         self.detail = detail
-        self.url = url
+        self.url    = url
+        self.star   = star
     }
 }

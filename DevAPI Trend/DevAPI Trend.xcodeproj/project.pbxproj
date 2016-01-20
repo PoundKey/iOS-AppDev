@@ -12,7 +12,6 @@
 		76A98C301C4CC0390010199F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76A98C2F1C4CC0390010199F /* Assets.xcassets */; };
 		76A98C331C4CC0390010199F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76A98C311C4CC0390010199F /* LaunchScreen.storyboard */; };
 		76A98C3E1C4CC0390010199F /* DevAPI_TrendTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A98C3D1C4CC0390010199F /* DevAPI_TrendTests.swift */; };
-		76DDDDA51C4F41C200670299 /* CocoaPodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DDDDA41C4F41C200670299 /* CocoaPodViewController.swift */; };
 		76DDDDA71C4F41D700670299 /* NpmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DDDDA61C4F41D700670299 /* NpmViewController.swift */; };
 		76DDDDA91C4F41EE00670299 /* GitHubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DDDDA81C4F41EE00670299 /* GitHubViewController.swift */; };
 		76DDDDC91C4F42EF00670299 /* Alamofire.xcworkspace in Resources */ = {isa = PBXBuildFile; fileRef = 76DDDDAE1C4F42EF00670299 /* Alamofire.xcworkspace */; };
@@ -36,6 +35,7 @@
 		76DDDDE71C4F43D200670299 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DDDDE61C4F43D200670299 /* SwiftyJSON.swift */; };
 		76DDDDE91C4F731D00670299 /* APIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DDDDE81C4F731D00670299 /* APIModel.swift */; };
 		76DDDDED1C4F7C8B00670299 /* APICell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DDDDEC1C4F7C8B00670299 /* APICell.swift */; };
+		76DDDE851C4F89D700670299 /* CocoaPodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DDDE841C4F89D700670299 /* CocoaPodViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,7 +93,6 @@
 		76A98C391C4CC0390010199F /* DevAPI TrendTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DevAPI TrendTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		76A98C3D1C4CC0390010199F /* DevAPI_TrendTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevAPI_TrendTests.swift; sourceTree = "<group>"; };
 		76A98C3F1C4CC0390010199F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		76DDDDA41C4F41C200670299 /* CocoaPodViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CocoaPodViewController.swift; sourceTree = "<group>"; };
 		76DDDDA61C4F41D700670299 /* NpmViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NpmViewController.swift; sourceTree = "<group>"; };
 		76DDDDA81C4F41EE00670299 /* GitHubViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubViewController.swift; sourceTree = "<group>"; };
 		76DDDDAB1C4F42EF00670299 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Alamofire.xcodeproj; sourceTree = "<group>"; };
@@ -117,6 +116,7 @@
 		76DDDDE61C4F43D200670299 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		76DDDDE81C4F731D00670299 /* APIModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIModel.swift; sourceTree = "<group>"; };
 		76DDDDEC1C4F7C8B00670299 /* APICell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APICell.swift; sourceTree = "<group>"; };
+		76DDDE841C4F89D700670299 /* CocoaPodViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CocoaPodViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,7 +161,7 @@
 				76DDDDEB1C4F733300670299 /* Libraries */,
 				76DDDDEA1C4F732300670299 /* Model */,
 				76A98C281C4CC0390010199F /* AppDelegate.swift */,
-				76DDDDA41C4F41C200670299 /* CocoaPodViewController.swift */,
+				76DDDE841C4F89D700670299 /* CocoaPodViewController.swift */,
 				76DDDDA81C4F41EE00670299 /* GitHubViewController.swift */,
 				76DDDDA61C4F41D700670299 /* NpmViewController.swift */,
 				76A98C2C1C4CC0390010199F /* Main.storyboard */,
@@ -444,7 +444,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76DDDDA51C4F41C200670299 /* CocoaPodViewController.swift in Sources */,
 				76DDDDCA1C4F42EF00670299 /* Alamofire.swift in Sources */,
 				76DDDDD01C4F42EF00670299 /* ParameterEncoding.swift in Sources */,
 				76DDDDD61C4F42EF00670299 /* Stream.swift in Sources */,
@@ -464,6 +463,7 @@
 				76DDDDCC1C4F42EF00670299 /* Error.swift in Sources */,
 				76DDDDD51C4F42EF00670299 /* ServerTrustPolicy.swift in Sources */,
 				76DDDDD31C4F42EF00670299 /* ResponseSerialization.swift in Sources */,
+				76DDDE851C4F89D700670299 /* CocoaPodViewController.swift in Sources */,
 				76DDDDA91C4F41EE00670299 /* GitHubViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -547,7 +547,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -585,7 +585,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
