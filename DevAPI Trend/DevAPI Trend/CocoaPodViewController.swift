@@ -12,7 +12,7 @@ import Kanna
 
 class CocoaPodViewController: UIViewController {
     
-    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet var tableView: UITableView!
     
     var trendDaily = [APIModel]()
     var trendOverall = [APIModel]()
@@ -23,6 +23,9 @@ class CocoaPodViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "CocoaPods"
+        
+        tableView.registerNib(UINib(nibName: "APICell", bundle:nil), forCellReuseIdentifier: "cell")
+        
         initViewList()
     
     }
@@ -48,7 +51,7 @@ class CocoaPodViewController: UIViewController {
                 //print("Successful in retrieving html page")
                 self.responseString = value
                 self.parseHTML()
-                self.collectionView.reloadData()
+                self.tableView.reloadData()
             case .Failure:
                 print("No Internet Connection Error: DX21")
             }
@@ -97,6 +100,63 @@ class CocoaPodViewController: UIViewController {
 
 }
 
+extension CocoaPodViewController: UITableViewDataSource, UITableViewDelegate {
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 2
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        switch section {
+        case 0:
+            return trendDaily.count
+        case 1:
+            return trendOverall.count
+        default:
+            return 0
+        }
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! APICell
+        let APIitem: APIModel
+        switch indexPath.section {
+        case 0:
+            APIitem = trendDaily[indexPath.row]
+        case 1:
+            APIitem = trendOverall[indexPath.row]
+        default:
+            APIitem = APIModel(title: "nil", detail: "null", url: "undefined", star: 0)
+        }
+        cell.title.text = APIitem.title
+        cell.detail.text = APIitem.detail
+        cell.star.text = "Star: \(APIitem.star)"
+        return cell
+    }
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 64
+    }
+    
+    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 36
+    }
+    
+    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        switch section {
+        case 0:
+            return "CocoaPods Daily Trend"
+        case 1:
+            return "CocoaPods Overall Trend"
+        default:
+            return ""
+        }
+    }
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+    }
+}
+
+/*
 extension CocoaPodViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         return 2
@@ -135,5 +195,6 @@ extension CocoaPodViewController: UICollectionViewDataSource, UICollectionViewDe
         print("selected: \(indexPath.row)")
     }
 }
+*/
 
 

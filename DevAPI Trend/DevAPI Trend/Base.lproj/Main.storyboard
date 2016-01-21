@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -29,88 +28,18 @@
         <scene sceneID="Dn5-tM-Rlb">
             <objects>
                 <viewController id="3GU-SS-zrS" customClass="CocoaPodViewController" customModule="DevAPI_Trend" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="NCo-jI-vLu"/>
-                        <viewControllerLayoutGuide type="bottom" id="QAo-yf-E2s"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bS-F5-3UI">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="eiv-Rb-ghp">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="jdN-qh-00W">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="EuY-Ml-Rmk">
-                                    <size key="itemSize" width="560" height="121"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="ggj-ld-H3O" customClass="APICell" customModule="DevAPI_Trend" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="64" width="560" height="121"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="560" height="121"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GnD-Dz-N9E">
-                                                    <rect key="frame" x="8" y="8" width="544" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stars: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kuL-bj-Nil">
-                                                    <rect key="frame" x="8" y="32" width="294" height="21"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="294" id="9k1-hQ-5A4"/>
-                                                        <constraint firstAttribute="height" constant="21" id="NGG-zC-r84"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Mph-hw-A1M">
-                                                    <rect key="frame" x="8" y="52" width="544" height="61"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                </textView>
-                                            </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </view>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="bottomMargin" secondItem="kuL-bj-Nil" secondAttribute="bottom" constant="60" id="6fC-AB-xmk"/>
-                                            <constraint firstItem="kuL-bj-Nil" firstAttribute="top" secondItem="GnD-Dz-N9E" secondAttribute="bottom" constant="3" id="Kub-gD-msf"/>
-                                            <constraint firstItem="GnD-Dz-N9E" firstAttribute="top" secondItem="ggj-ld-H3O" secondAttribute="topMargin" id="Miw-Go-78s"/>
-                                            <constraint firstItem="Mph-hw-A1M" firstAttribute="trailing" secondItem="GnD-Dz-N9E" secondAttribute="trailing" id="S7y-Lr-Tek"/>
-                                            <constraint firstItem="Mph-hw-A1M" firstAttribute="top" secondItem="GnD-Dz-N9E" secondAttribute="bottom" constant="23" id="SAc-QF-zhe"/>
-                                            <constraint firstItem="kuL-bj-Nil" firstAttribute="leading" secondItem="GnD-Dz-N9E" secondAttribute="leading" id="U3A-3N-4Pp"/>
-                                            <constraint firstItem="Mph-hw-A1M" firstAttribute="bottom" secondItem="ggj-ld-H3O" secondAttribute="bottomMargin" id="ZuR-Za-l5v"/>
-                                            <constraint firstItem="kuL-bj-Nil" firstAttribute="leading" secondItem="Mph-hw-A1M" secondAttribute="leading" id="pbA-9v-0jR"/>
-                                            <constraint firstItem="Mph-hw-A1M" firstAttribute="trailing" secondItem="ggj-ld-H3O" secondAttribute="trailingMargin" id="tE1-1t-QN5"/>
-                                            <constraint firstItem="Mph-hw-A1M" firstAttribute="leading" secondItem="ggj-ld-H3O" secondAttribute="leadingMargin" id="udd-EX-xcx"/>
-                                        </constraints>
-                                        <connections>
-                                            <outlet property="detail" destination="Mph-hw-A1M" id="da6-bu-RoY"/>
-                                            <outlet property="star" destination="kuL-bj-Nil" id="qwf-iE-kEw"/>
-                                            <outlet property="title" destination="GnD-Dz-N9E" id="xeU-SG-KcR"/>
-                                        </connections>
-                                    </collectionViewCell>
-                                </cells>
-                                <connections>
-                                    <outlet property="dataSource" destination="3GU-SS-zrS" id="SEf-Dp-tKt"/>
-                                    <outlet property="delegate" destination="3GU-SS-zrS" id="fov-Jk-36P"/>
-                                </connections>
-                            </collectionView>
-                        </subviews>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
+                        <connections>
+                            <outlet property="dataSource" destination="3GU-SS-zrS" id="JLj-yl-xbs"/>
+                            <outlet property="delegate" destination="3GU-SS-zrS" id="L5u-g8-26o"/>
+                        </connections>
+                    </tableView>
                     <navigationItem key="navigationItem" id="gzI-lj-Y0j"/>
                     <connections>
-                        <outlet property="collectionView" destination="jdN-qh-00W" id="eLr-tz-n30"/>
+                        <outlet property="tableView" destination="eiv-Rb-ghp" id="DZS-Cg-0mr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Wg-7Y-Elk" userLabel="First Responder" sceneMemberID="firstResponder"/>

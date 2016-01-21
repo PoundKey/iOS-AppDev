@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		761F10C11C50803500AFE28C /* Kanna.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 761F10C01C50803500AFE28C /* Kanna.framework */; };
+		761F10C21C50803500AFE28C /* Kanna.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 761F10C01C50803500AFE28C /* Kanna.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		761F10C41C50895E00AFE28C /* APICell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 761F10C31C50895E00AFE28C /* APICell.xib */; };
 		76A98C291C4CC0390010199F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A98C281C4CC0390010199F /* AppDelegate.swift */; };
 		76A98C2E1C4CC0390010199F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76A98C2C1C4CC0390010199F /* Main.storyboard */; };
 		76A98C301C4CC0390010199F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76A98C2F1C4CC0390010199F /* Assets.xcassets */; };
 		76A98C331C4CC0390010199F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76A98C311C4CC0390010199F /* LaunchScreen.storyboard */; };
 		76A98C3E1C4CC0390010199F /* DevAPI_TrendTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A98C3D1C4CC0390010199F /* DevAPI_TrendTests.swift */; };
-		76C8854F1C5042C8007D69AF /* Kanna.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76C8854E1C5042C8007D69AF /* Kanna.framework */; };
-		76C885501C5042C8007D69AF /* Kanna.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 76C8854E1C5042C8007D69AF /* Kanna.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		76DDDDA71C4F41D700670299 /* NpmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DDDDA61C4F41D700670299 /* NpmViewController.swift */; };
 		76DDDDA91C4F41EE00670299 /* GitHubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DDDDA81C4F41EE00670299 /* GitHubViewController.swift */; };
 		76DDDDC91C4F42EF00670299 /* Alamofire.xcworkspace in Resources */ = {isa = PBXBuildFile; fileRef = 76DDDDAE1C4F42EF00670299 /* Alamofire.xcworkspace */; };
@@ -78,7 +79,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				76C885501C5042C8007D69AF /* Kanna.framework in Embed Frameworks */,
+				761F10C21C50803500AFE28C /* Kanna.framework in Embed Frameworks */,
 				76DDDDE01C4F431A00670299 /* Alamofire.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -87,6 +88,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		761F10C01C50803500AFE28C /* Kanna.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kanna.framework; path = "DevAPI Trend/Kanna.framework"; sourceTree = "<group>"; };
+		761F10C31C50895E00AFE28C /* APICell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = APICell.xib; sourceTree = "<group>"; };
 		76A98C251C4CC0390010199F /* DevAPI Trend.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DevAPI Trend.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		76A98C281C4CC0390010199F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		76A98C2D1C4CC0390010199F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -96,7 +99,6 @@
 		76A98C391C4CC0390010199F /* DevAPI TrendTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DevAPI TrendTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		76A98C3D1C4CC0390010199F /* DevAPI_TrendTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevAPI_TrendTests.swift; sourceTree = "<group>"; };
 		76A98C3F1C4CC0390010199F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		76C8854E1C5042C8007D69AF /* Kanna.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kanna.framework; path = "DevAPI Trend/Kanna.framework"; sourceTree = "<group>"; };
 		76DDDDA61C4F41D700670299 /* NpmViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NpmViewController.swift; sourceTree = "<group>"; };
 		76DDDDA81C4F41EE00670299 /* GitHubViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubViewController.swift; sourceTree = "<group>"; };
 		76DDDDAB1C4F42EF00670299 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Alamofire.xcodeproj; sourceTree = "<group>"; };
@@ -128,7 +130,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76C8854F1C5042C8007D69AF /* Kanna.framework in Frameworks */,
+				761F10C11C50803500AFE28C /* Kanna.framework in Frameworks */,
 				76DDDDDF1C4F431A00670299 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -146,7 +148,7 @@
 		76A98C1C1C4CC0390010199F = {
 			isa = PBXGroup;
 			children = (
-				76C8854E1C5042C8007D69AF /* Kanna.framework */,
+				761F10C01C50803500AFE28C /* Kanna.framework */,
 				76A98C271C4CC0390010199F /* DevAPI Trend */,
 				76A98C261C4CC0390010199F /* Products */,
 			);
@@ -307,6 +309,7 @@
 			children = (
 				76DDDDE81C4F731D00670299 /* APIModel.swift */,
 				76DDDDEC1C4F7C8B00670299 /* APICell.swift */,
+				761F10C31C50895E00AFE28C /* APICell.xib */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -430,6 +433,7 @@
 			files = (
 				76A98C331C4CC0390010199F /* LaunchScreen.storyboard in Resources */,
 				76DDDDC91C4F42EF00670299 /* Alamofire.xcworkspace in Resources */,
+				761F10C41C50895E00AFE28C /* APICell.xib in Resources */,
 				76A98C301C4CC0390010199F /* Assets.xcassets in Resources */,
 				76DDDDCD1C4F42EF00670299 /* Info.plist in Resources */,
 				76A98C2E1C4CC0390010199F /* Main.storyboard in Resources */,
@@ -520,7 +524,7 @@
 		76A98C401C4CC0390010199F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -567,7 +571,7 @@
 		76A98C411C4CC0390010199F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -607,13 +611,10 @@
 		76A98C431C4CC0390010199F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/DevAPI",
-					Trend,
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/DevAPI Trend";
 				INFOPLIST_FILE = "DevAPI Trend/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -626,13 +627,10 @@
 		76A98C441C4CC0390010199F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/DevAPI",
-					Trend,
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/DevAPI Trend";
 				INFOPLIST_FILE = "DevAPI Trend/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

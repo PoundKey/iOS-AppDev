@@ -8,9 +8,13 @@
 
 import UIKit
 
-class APICell: UICollectionViewCell {
+class APICell: UITableViewCell {
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
     
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var star: UILabel!
-    @IBOutlet weak var detail: UITextView!
+    @IBOutlet weak var detail: UILabel!
 }
