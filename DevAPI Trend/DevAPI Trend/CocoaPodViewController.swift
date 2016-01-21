@@ -48,6 +48,7 @@ class CocoaPodViewController: UIViewController {
                 //print("Successful in retrieving html page")
                 self.responseString = value
                 self.parseHTML()
+                self.collectionView.reloadData()
             case .Failure:
                 print("No Internet Connection Error: DX21")
             }
@@ -69,7 +70,6 @@ class CocoaPodViewController: UIViewController {
                     }
                 }
         }
-        print("Daily Trend: \(trendDaily.count) ---> Overall Trend: \(trendOverall.count)")
     }
     
     func setHtmlPageMeta(doc: HTMLDocument) {
@@ -127,6 +127,7 @@ extension CocoaPodViewController: UICollectionViewDataSource, UICollectionViewDe
         }
         cell.title.text = APIitem.title
         cell.detail.text = APIitem.detail
+        cell.star.text = "Star: \(APIitem.star)"
         return cell
     }
     
