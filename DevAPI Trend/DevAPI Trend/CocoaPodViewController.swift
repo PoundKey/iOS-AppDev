@@ -18,7 +18,8 @@ class CocoaPodViewController: UIViewController {
     var trendOverall = [APIModel]()
    
     var responseString: String?
-    var htmlPageMeta = [String]()
+    var htmlPageTitle: String?
+    var htmlPageLastUpdated: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -76,8 +77,10 @@ class CocoaPodViewController: UIViewController {
     }
     
     func setHtmlPageMeta(doc: HTMLDocument) {
-        self.htmlPageMeta.append(doc.title!)
-        //TODO:
+        if let title = doc.title, updatedTime = doc.at_css("body > div > p:nth-child(3)")?.text {
+            self.htmlPageTitle = title
+            self.htmlPageLastUpdated = updatedTime
+        }
     }
     
     func setTrendList(inout trend: [APIModel], table: XMLElement) {
@@ -138,19 +141,29 @@ extension CocoaPodViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 36
+        return 30
+    }
+    
+    func tableView(tableView: UITableView, titleForFooterInSection section: Int) -> String? {
+        if let updated = htmlPageLastUpdated {
+            return updated
+        }
+        return nil
     }
     
     func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        let title: String
         switch section {
         case 0:
-            return "CocoaPods Daily Trend"
+            title = "Daily Trend"
         case 1:
-            return "CocoaPods Overall Trend"
+            title = "Overall Trend"
         default:
-            return ""
+            title = ""
         }
+        return title
     }
+    
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
     }

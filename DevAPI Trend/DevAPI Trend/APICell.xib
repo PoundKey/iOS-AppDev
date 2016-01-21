@@ -16,9 +16,9 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nx2-de-8TD">
-                        <rect key="frame" x="8" y="8" width="38" height="16"/>
+                        <rect key="frame" x="8" y="8" width="38" height="21"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="16" id="gxy-6f-TG9"/>
+                            <constraint firstAttribute="height" constant="21" id="gxy-6f-TG9"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -43,7 +43,7 @@
                 <constraints>
                     <constraint firstItem="Nx2-de-8TD" firstAttribute="leading" secondItem="npd-vr-vgm" secondAttribute="leadingMargin" id="0k2-2A-FpF"/>
                     <constraint firstAttribute="trailing" secondItem="K0E-mH-e6F" secondAttribute="trailing" id="5fB-be-gD3"/>
-                    <constraint firstItem="K0E-mH-e6F" firstAttribute="top" secondItem="Nx2-de-8TD" secondAttribute="bottom" constant="8" symbolic="YES" id="Zhz-AX-qwh"/>
+                    <constraint firstItem="K0E-mH-e6F" firstAttribute="top" secondItem="Nx2-de-8TD" secondAttribute="bottom" constant="3" id="Zhz-AX-qwh"/>
                     <constraint firstItem="SaX-60-9KM" firstAttribute="top" secondItem="npd-vr-vgm" secondAttribute="topMargin" constant="6" id="aku-f6-GdN"/>
                     <constraint firstItem="SaX-60-9KM" firstAttribute="centerY" secondItem="npd-vr-vgm" secondAttribute="centerY" id="jig-sb-Xde"/>
                     <constraint firstItem="SaX-60-9KM" firstAttribute="trailing" secondItem="npd-vr-vgm" secondAttribute="trailingMargin" id="q2e-OK-i8k"/>
